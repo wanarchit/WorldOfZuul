@@ -9,19 +9,19 @@ package javaapplication2;
  *
  * @author Marin
  */
-private class Player {
-    int BarreKarma;
+public class Player {
+    private int barreKarma;
     
     
-    Player(){
+    public Player(){
     }
     
     private int getKarma(){
-    println("permet d'avoir le karma");
+    return barreKarma;
     }
 
-    private int setKarma(){
-    println("modif karma");
+    private void setKarma(){
+        
     }
     
 }

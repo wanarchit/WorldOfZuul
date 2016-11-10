@@ -1,3 +1,4 @@
+package javaapplication2;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,27 +9,29 @@
  *
  * @author saspaanithy
  */
-private class Coffre {
+public class Coffre {
     
-    Room actualRoom;
-    int Argent;
-    int Inventaire;
+    private Room actualRoom;
+    private int argent;
+    private Inventaire inv;
     
     
     private Coffre(){
     }
     
-    private argent setArgent(){
-    return null;
+    private void setArgent(){
+        
     }
     
-    private argent getArgent(){
+    private int getArgent(){
+        return argent;
     }
     
-    private Inventaire setInventaire(){
+    private void setInventaire(){
     }
     
     private Inventaire getInventaire(){
+        return inv;
     }
 
 }
