@@ -18,6 +18,7 @@ public class JavaApplication2 {
         String str25="Test Marin";
         //coucou de Jo
         //nananananannana
+        //TEST
 }
     /**
      * @param args the command line arguments
