@@ -5,6 +5,9 @@
  */
 package javaapplication2;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  *
  * @author Marin
@@ -13,8 +16,8 @@ public class Room {
     private boolean clear;
     private ArrayList<PNJ> persoRoom;
     private String nomRoom;
-    private Hashmap<String, Room>();
-}
+    private HashMap <String, Room> sorties;
+
 
 public Room(){}
 
@@ -22,7 +25,8 @@ public boolean isClear(){
 return clear;
 }
 
-public String getNomRoom(){}
+public String getNomRoom(){
+return nomRoom;}
 
 public void setClear(){}
 
