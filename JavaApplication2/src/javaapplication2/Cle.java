@@ -1,3 +1,6 @@
+
+import javaapplication2.LockedDoor;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,12 +13,14 @@
  */
 public class Cle {
     private LockedDoor nameDoor;
-}
 
-public cle(){}
+
+public Cle(){}
 
 public void use(){}
 
-public LockedDoor getDoor(){}
+public LockedDoor getDoor(){
+return nameDoor;
+}
 
 }

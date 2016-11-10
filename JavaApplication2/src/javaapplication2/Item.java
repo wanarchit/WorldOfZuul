@@ -11,15 +11,17 @@ package javaapplication2;
  */
 public class Item {
     private String nomItem;
-    private Img skin;
+    //private Img skin;
     private Inventaire inv;
     private int prix;    
-}
+
 
 public Item(){}
 
 public void use(){}
 
-public int getPrix(){}
+public int getPrix(){
+return prix;
+}
 
 }

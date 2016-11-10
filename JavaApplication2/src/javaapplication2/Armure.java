@@ -12,10 +12,12 @@ package javaapplication2;
  */
 public class Armure {
     private int defense;
-}
+
 
 public void use(){}
 
-public int getDefense(){}
+public int getDefense(){
+return defense;
+}
 
 }
