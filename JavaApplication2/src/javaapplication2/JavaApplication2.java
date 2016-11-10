@@ -14,6 +14,7 @@ public class JavaApplication2 {
     public JavaApplication2() {
         int i = 2;
         String str = "blabla";
+        String str2 = "TEST PAUL";
 }
     /**
      * @param args the command line arguments
