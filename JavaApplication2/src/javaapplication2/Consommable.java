@@ -24,13 +24,10 @@ public Consommable(){
     
 }
 
-public void use() {
+public void use(Personnage pers) {
 }
 
 public int getBonus(){
     return bonus;
 }
-
-
-
 }
