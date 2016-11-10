@@ -32,9 +32,9 @@ public class Personnage {
         return inv;
     }
 
-    public void echange(P1,P2){
+    //public void echange(P1,P2){
         
-    }
+    //}
 
     public int getPV(){
         return pV;
