@@ -17,6 +17,7 @@ public class JavaApplication2 {
         String str2 = "TEST PAUL";
         String str25="Test Marin"
         //coucou de Jo
+        //nananananannana
 }
     /**
      * @param args the command line arguments
@@ -29,4 +30,4 @@ public class JavaApplication2 {
         System.out.println("YES!");
     }
 }
-kkkkk
+
