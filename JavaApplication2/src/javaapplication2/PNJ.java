@@ -14,20 +14,20 @@ public class PNJ {
     boolean hostile;
     String parole; 
     
-    private PNJ(){
+    public PNJ(){
     }
     
     
-    private String getParole(){
+    public String getParole(){
     return parole;
     }
    
     
-    private boolean isHostile(){
+    public boolean isHostile(){
         return hostile;
     }
     
-    private void setHostile(){
+    public void setHostile(){
         
     }
     
