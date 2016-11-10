@@ -9,7 +9,7 @@ package javaapplication2;
  *
  * @author Marin
  */
-public class Player extends Personnage{
+public class Player{
     private int barreKarma = 50;
     
     
