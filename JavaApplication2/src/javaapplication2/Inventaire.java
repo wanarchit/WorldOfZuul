@@ -25,4 +25,8 @@ public int getSize(){
 return size;
 }
 
+public void ajouterObjet(Item i){}
+
+public void supprimerObjet(Item i){}
+
 }
