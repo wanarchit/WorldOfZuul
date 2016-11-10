@@ -12,7 +12,6 @@ package javaapplication2;
 public class Room {
     private boolean clear;
     private ArrayList<PNJ> persoRoom;
-    private ArrayList<Item> object;
     private String nomRoom;
     private Hashmap<String, Room>();
 }

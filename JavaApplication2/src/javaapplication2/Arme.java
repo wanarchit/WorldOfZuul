@@ -11,5 +11,13 @@ package javaapplication2;
  * @author saspaanithy
  */
 public class Arme {
-    
+    private int degats;
+}
+
+public Arme(){}
+
+public void use(){}
+
+public int getDegat(){}
+
 }

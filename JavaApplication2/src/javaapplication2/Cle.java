@@ -9,5 +9,13 @@
  * @author saspaanithy
  */
 public class Cle {
-    
+    private LockedDoor nameDoor;
+}
+
+public cle(){}
+
+public void use(){}
+
+public LockedDoor getDoor(){}
+
 }

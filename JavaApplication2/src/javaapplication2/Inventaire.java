@@ -9,5 +9,15 @@
  * @author saspaanithy
  */
 public class Inventaire {
-    
+    private ArrayList<Item> inv;
+    private int size;
+    private Personnage pers;
+}
+
+public Inventaire(){}
+
+public void setSize(){}
+
+public int getSize(){}
+
 }

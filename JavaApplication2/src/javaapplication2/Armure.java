@@ -11,5 +11,11 @@ package javaapplication2;
  * @author saspaanithy
  */
 public class Armure {
-    
+    private int defense;
+}
+
+public void use(){}
+
+public int getDefense(){}
+
 }
