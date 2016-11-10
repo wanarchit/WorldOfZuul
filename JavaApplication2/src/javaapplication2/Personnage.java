@@ -14,13 +14,22 @@ public class Personnage {
     private Room salleActu;
     // private Img Skin;
     private Inventaire inv;
-    private int pV;
+    private int pV= 100;
     private int force;
     private int defense;
     private Arme armeEquipee;
     private Armure armureEquipee;
     private int argent;
     
+    public Personnage(String nom,int forc,int def,int arg,Room salle){
+        pV=100;
+        nomPerso=nom;
+        force=forc;
+        defense=def;
+        argent=arg;
+        inv= new Inventaire();
+        salleActu=salle;               
+    }
     
     
     
