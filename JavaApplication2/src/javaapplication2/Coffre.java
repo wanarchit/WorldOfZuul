@@ -16,7 +16,8 @@ public class Coffre extends Item{
     private Inventaire inv;
     
     
-    private Coffre(){
+    private Coffre(String nI, Inventaire inve, int px){
+        super(nI, inve, px);
     }
     
     private void setArgent(){

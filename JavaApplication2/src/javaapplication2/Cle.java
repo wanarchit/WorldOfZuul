@@ -1,4 +1,5 @@
 
+import javaapplication2.Inventaire;
 import javaapplication2.Item;
 import javaapplication2.LockedDoor;
 
@@ -16,7 +17,8 @@ public class Cle extends Item{
     private LockedDoor nameDoor;
 
 
-public Cle(){}
+public Cle(String nI, Inventaire inve, int px){
+super(nI, inve, px);}
 
     public void use(){}
 

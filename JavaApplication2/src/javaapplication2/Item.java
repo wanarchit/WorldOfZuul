@@ -15,8 +15,11 @@ public class Item {
     private Inventaire inv;
     private int prix;    
 
-
-public Item(){}
+public Item(String nI, Inventaire inve, int px){
+    nomItem=nI;
+    inv= inve;
+    prix=px;
+}
 
 public void use(){}
 

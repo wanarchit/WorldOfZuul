@@ -13,7 +13,10 @@ package javaapplication2;
 public class Armure extends Item {
     private int defense;
 
-
+public Armure(String nI, Inventaire inve, int px){
+    super(nI, inve, px);
+    
+}
     public void use(Personnage pers){}
 
 public int getDefense(){

@@ -17,7 +17,10 @@ public class Inventaire {
     private Personnage pers;
 
 
-public Inventaire(){}
+public Inventaire(int s, Personnage p){
+size=s;
+pers=p;
+}
 
 public void setSize(){}
 

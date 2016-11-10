@@ -14,14 +14,11 @@ public class Consommable extends Item{
 private int bonus;
 
 
-
-////METHOD/////////////////////////////////////////////////////////////////////
-
 /*
  *Constructor of the consommable
  */
-public Consommable(){
-    
+public Consommable(String nI, Inventaire inve, int px){
+    super(nI, inve, px);
 }
 
 public void use(Personnage pers) {

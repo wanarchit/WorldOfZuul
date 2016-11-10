@@ -14,7 +14,10 @@ public class Arme extends Item {
     private int degats;
 
 
-public Arme(){}
+public Arme(String nI, Inventaire inve, int px, int dg){
+    super(nI, inve, px);
+    degats = dg;
+}
 
 public void use(Personnage pers){}
 
