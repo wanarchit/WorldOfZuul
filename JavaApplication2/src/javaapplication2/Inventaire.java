@@ -1,7 +1,5 @@
-
+package javaapplication2;
 import java.util.ArrayList;
-import javaapplication2.Item;
-import javaapplication2.Personnage;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
