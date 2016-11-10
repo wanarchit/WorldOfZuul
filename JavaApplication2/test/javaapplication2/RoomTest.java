@@ -37,10 +37,52 @@ public class RoomTest {
     public void tearDown() {
     }
 
+    /**
+     * Test of isClear method, of class Room.
+     */
     @Test
-    public void testSomeMethod() {
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testIsClear() {
+        System.out.println("isClear");
+        Room instance = new Room("Cuisine");
+        boolean expResult = false;
+        boolean result = instance.isClear();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of getNomRoom method, of class Room.
+     */
+    @Test
+    public void testGetNomRoom() {
+        System.out.println("getNomRoom");
+        Room instance = new Room("Cuisine");
+        String expResult = "Cuisine";
+        String result = instance.getNomRoom();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setClear method, of class Room.
+     */
+    @Test
+    public void testSetClear() {
+        System.out.println("setClear");
+        Room instance = new Room("Cuisine");
+        boolean expResult = true;
+        instance.setClear();
+        assertEquals(expResult, instance.isClear());
+    }
+
+    /**
+     * Test of setExit method, of class Room.
+     */
+    @Test
+    public void testSetExit() {
+        System.out.println("setExit");
+        String s = "";
+        Door d = null;
+        Room instance = new Room("Cuisine");
+        instance.setExit(s, d);
     }
     
 }

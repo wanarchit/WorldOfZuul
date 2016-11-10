@@ -16,10 +16,15 @@ public class Room {
     private boolean clear;
     private ArrayList<PNJ> persoRoom;
     private String nomRoom;
-    private HashMap <String, Room> sorties;
+    private HashMap <String, Door> sorties;
 
 
-public Room(){}
+public Room(String name){
+clear = false;
+persoRoom = new ArrayList<PNJ>();
+nomRoom = name;
+sorties = new HashMap<String,Door>();
+}
 
 public boolean isClear(){
 return clear;
@@ -28,8 +33,10 @@ return clear;
 public String getNomRoom(){
 return nomRoom;}
 
-public void setClear(){}
+public void setClear(){
+clear = true;
+}
 
-public void setExit(String s, Room r){}
+public void setExit(String s, Door r){}
 
 }

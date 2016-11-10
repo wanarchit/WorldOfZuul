@@ -11,5 +11,14 @@ package javaapplication2;
  * @author saspaanithy
  */
 public class MagicDoor {
+    String pwd;
     
+public MagicDoor()
+{
+    
+}
+
+public boolean resolve (String essai) {
+        return false;
+}
 }
