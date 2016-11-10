@@ -13,6 +13,7 @@ public class JavaApplication2 {
     
     public JavaApplication2() {
         int i = 2;
+        String str = "blabla";
 }
     /**
      * @param args the command line arguments
