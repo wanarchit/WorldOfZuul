@@ -17,7 +17,6 @@ import static org.junit.Assert.*;
  * @author SERAZIN
  */
 public class ArmeTest {
-    
     public ArmeTest() {
     }
     
