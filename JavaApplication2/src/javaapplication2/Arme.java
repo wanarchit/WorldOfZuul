@@ -12,12 +12,14 @@ package javaapplication2;
  */
 public class Arme {
     private int degats;
-}
+
 
 public Arme(){}
 
 public void use(){}
 
-public int getDegat(){}
+public int getDegat(){
+return degats;
+}
 
 }
