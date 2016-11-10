@@ -15,12 +15,27 @@ public class Door {
     boolean locked;
     Room nextRoom;
     Room actualRoom;
-    
+    boolean L = false; 
+  
+// Test par creation d'une porte 
+public Door(){    
+    locked = true;
+    }
+// **************************    
+
     public boolean getLocked(){
         return locked;
     }
 
     public void setLocked(){
+        if(L == false){
+            locked = false;
+        }
+        
+        else{
+            locked = true;
+        }
+        
     }
 
     public Room getNextRoom(){
