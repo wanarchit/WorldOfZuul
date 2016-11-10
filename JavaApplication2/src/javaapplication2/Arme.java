@@ -10,13 +10,13 @@ package javaapplication2;
  *
  * @author saspaanithy
  */
-public class Arme {
+public class Arme extends Item {
     private int degats;
 
 
 public Arme(){}
 
-public void use(){}
+public void use(Personnage pers){}
 
 public int getDegat(){
 return degats;

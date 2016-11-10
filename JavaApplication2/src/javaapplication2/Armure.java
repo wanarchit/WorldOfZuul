@@ -10,11 +10,11 @@ package javaapplication2;
  *
  * @author saspaanithy
  */
-public class Armure {
+public class Armure extends Item {
     private int defense;
 
 
-public void use(){}
+    public void use(Personnage pers){}
 
 public int getDefense(){
 return defense;

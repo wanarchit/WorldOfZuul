@@ -1,4 +1,5 @@
 
+import javaapplication2.Item;
 import javaapplication2.LockedDoor;
 
 /*
@@ -11,13 +12,13 @@ import javaapplication2.LockedDoor;
  *
  * @author saspaanithy
  */
-public class Cle {
+public class Cle extends Item{
     private LockedDoor nameDoor;
 
 
 public Cle(){}
 
-public void use(){}
+    public void use(){}
 
 public LockedDoor getDoor(){
 return nameDoor;

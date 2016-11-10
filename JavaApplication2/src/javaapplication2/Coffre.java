@@ -9,7 +9,7 @@ package javaapplication2;
  *
  * @author saspaanithy
  */
-public class Coffre {
+public class Coffre extends Item{
     
     private Room actualRoom;
     private int argent;
