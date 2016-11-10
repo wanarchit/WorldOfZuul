@@ -32,6 +32,7 @@ public class JavaApplication2 {
     
     public void Testbabu(){
             System.out.println("Ouai sa maaaaarche !!");
+            System.out.println("Ouai sa maaaaarche !!");
     }
 }
 
