@@ -12,4 +12,26 @@ package javaapplication2;
  */
 public class Door {
     
+    boolean locked;
+    Room nextRoom;
+    Room actualRoom;
+    
+    public boolean getLocked(){
+        return locked;
+    }
+
+    public void setLocked(){
+    }
+
+    public Room getNextRoom(){
+        return nextRoom;
+    }
+
+    public Room getActualRoom(){
+        return actualRoom;
+    }
+
+
+         
+            
 }
