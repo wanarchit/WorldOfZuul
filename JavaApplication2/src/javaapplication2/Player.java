@@ -16,12 +16,12 @@ public class Player {
     public Player(){
     }
     
-    private int getKarma(){
-    return barreKarma;
+    public int getKarma(){
+        return barreKarma;
     }
 
-    private void setKarma(){
-        
+    private void setKarma(int k){
+        barreKarma=k;
     }
     
 }

@@ -11,8 +11,8 @@ package javaapplication2;
  * @author Marin
  */
 public class PNJ {
-    boolean hostile;
-    String parole; 
+    private boolean hostile;
+    private String parole; 
     
     public PNJ(){
     }
@@ -27,8 +27,8 @@ public class PNJ {
         return hostile;
     }
     
-    public void setHostile(){
-        
+    public void setHostile(boolean host){
+        hostile=host;
     }
     
 }
