@@ -9,6 +9,23 @@ package javaapplication2;
  *
  * @author Marin
  */
-public class PNJ {
+private class PNJ {
+    boolean hostile;
+    String parole; 
+    
+    private PNJ(){
+    }
+    
+    
+    private string getParole(){
+    println("methode à utilisé pour parler");
+    }
+   
+    
+    private boolean isHostile(){
+    }
+    
+    private void setHostile(){
+    }
     
 }
