@@ -15,7 +15,7 @@ public class JavaApplication2 {
         int i = 2;
         String str = "blabla";
         String str2 = "TEST PAUL";
-        String str25="Test Marin"
+        String str25="Test Marin";
         //coucou de Jo
         //nananananannana
 }
