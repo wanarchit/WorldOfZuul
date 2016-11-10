@@ -29,5 +29,9 @@ public class JavaApplication2 {
     public void essai(){
         System.out.println("YES!");
     }
+    
+    public void Testbabu(){
+            System.out.println("Ouai sa maaaaarche !!");
+    }
 }
 
