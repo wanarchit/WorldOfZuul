@@ -27,7 +27,7 @@ public class Personnage {
         force=forc;
         defense=def;
         argent=arg;
-        inv= new Inventaire();
+        //inv = new Inventaire();
         salleActu=salle;               
     }
     
