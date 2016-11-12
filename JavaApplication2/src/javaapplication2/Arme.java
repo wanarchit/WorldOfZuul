@@ -19,6 +19,14 @@ public Arme(String nI, Inventaire inve, int px, int dg){
     degats = dg;
 }
 
+    Arme() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    Arme() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 public void use(Personnage pers){}
 
 public int getDegat(){

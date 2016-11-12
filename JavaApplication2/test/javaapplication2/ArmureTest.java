@@ -5,36 +5,31 @@
  */
 package javaapplication2;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import junit.framework.TestCase;
 import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
  * @author SERAZIN
  */
-public class ArmureTest {
+public class ArmureTest extends TestCase {
     
-    public ArmureTest() {
-    }
+    private Armure armure;
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
+    public ArmureTest(int defense) {
+        super(defense)
     }
     
     @Before
-    public void setUp() {
+    protected void setUp() throws Exception {
+    super.setUp();
+    armure = new Armure("defense1");
     }
     
     @After
-    public void tearDown() {
+    protected void tearDown() throws Exception {
+    super.tearDown();
+    armure = null;
     }
 
     /**
@@ -42,12 +37,7 @@ public class ArmureTest {
      */
     @Test
     public void testUse() {
-        System.out.println("use");
-        Personnage pers = null;
-        Armure instance = new Armure();
-        instance.use(pers);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     assertNotNull("L'instance n'est pas créée", armure);
     }
 
     /**
@@ -55,13 +45,7 @@ public class ArmureTest {
      */
     @Test
     public void testGetDefense() {
-        System.out.println("getDefense");
-        Armure instance = new Armure();
-        int expResult = 0;
-        int result = instance.getDefense();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    assertEquals("La défense est incorrecte", defense, defense.getDefense)
     }
     
 }

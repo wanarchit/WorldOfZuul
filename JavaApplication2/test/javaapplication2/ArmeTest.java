@@ -5,48 +5,40 @@
  */
 package javaapplication2;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import junit.framework.TestCase;
 import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
  * @author SERAZIN
  */
-public class ArmeTest {
-    public ArmeTest() {
-    }
+public class ArmeTest extends TestCase {
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
+    private Arme arme;
     
-    @AfterClass
-    public static void tearDownClass() {
+    public ArmeTest(int degat) {
+        super(degat);
     }
     
     @Before
-    public void setUp() {
-    }
+    protected void setUp() throws Exception {
+    super.setUp();
+    arme = new Arme("degat1");
+  }
+    
     
     @After
-    public void tearDown() {
-    }
+    protected void tearDown() throws Exception {
+    super.tearDown();
+    arme = null;
+  }
 
     /**
      * Test of use method, of class Arme.
      */
     @Test
     public void testUse() {
-        System.out.println("use");
-        Personnage pers = null;
-        Arme instance = new Arme();
-        instance.use(pers);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     assertNotNull("L'instance n'est pas créée", arme);
     }
 
     /**
@@ -54,13 +46,7 @@ public class ArmeTest {
      */
     @Test
     public void testGetDegat() {
-        System.out.println("getDegat");
-        Arme instance = new Arme();
-        int expResult = 0;
-        int result = instance.getDegat();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("Le degat est incorrect", degat, degat.getDegat)
     }
     
 }
