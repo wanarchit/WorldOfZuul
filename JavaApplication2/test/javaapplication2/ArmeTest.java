@@ -20,14 +20,13 @@ public class ArmeTest extends TestCase {
         super(degat);
     }
     
-    @Before
+    //before
     protected void setUp() throws Exception {
     super.setUp();
     arme = new Arme("degat1");
   }
     
-    
-    @After
+    //after
     protected void tearDown() throws Exception {
     super.tearDown();
     arme = null;
@@ -36,7 +35,6 @@ public class ArmeTest extends TestCase {
     /**
      * Test of use method, of class Arme.
      */
-    @Test
     public void testUse() {
      assertNotNull("L'instance n'est pas créée", arme);
     }
@@ -44,9 +42,9 @@ public class ArmeTest extends TestCase {
     /**
      * Test of getDegat method, of class Arme.
      */
-    @Test
+
     public void testGetDegat() {
-        assertEquals("Le degat est incorrect", degat, degat.getDegat)
+        assertEquals("Le degat est incorrect", degat, degat.getDegat);
     }
     
 }

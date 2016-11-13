@@ -17,16 +17,16 @@ public class ArmureTest extends TestCase {
     private Armure armure;
     
     public ArmureTest(int defense) {
-        super(defense)
+        super(defense);
     }
     
-    @Before
+    //Before
     protected void setUp() throws Exception {
     super.setUp();
     armure = new Armure("defense1");
     }
     
-    @After
+    //After
     protected void tearDown() throws Exception {
     super.tearDown();
     armure = null;
@@ -35,7 +35,6 @@ public class ArmureTest extends TestCase {
     /**
      * Test of use method, of class Armure.
      */
-    @Test
     public void testUse() {
      assertNotNull("L'instance n'est pas créée", armure);
     }
@@ -43,9 +42,9 @@ public class ArmureTest extends TestCase {
     /**
      * Test of getDefense method, of class Armure.
      */
-    @Test
+
     public void testGetDefense() {
-    assertEquals("La défense est incorrecte", defense, defense.getDefense)
+    assertEquals("La défense est incorrecte", defense, defense.getDefense);
     }
     
 }

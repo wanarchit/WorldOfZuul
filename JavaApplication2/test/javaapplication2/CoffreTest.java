@@ -5,29 +5,20 @@
  */
 package javaapplication2;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import junit.framework.TestCase;
 import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-
 /**
  *
  * @author SERAZIN
  */
-public class CoffreTest {
+public class CoffreTest extends TestCase {
+    private Coffre coffre;
     
-    public CoffreTest() {
+    public CoffreTest(String nI, Inventaire inve, int px) {
+        super(nI, inve, px);
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
     
-    @AfterClass
-    public static void tearDownClass() {
-    }
     
     @Before
     public void setUp() {

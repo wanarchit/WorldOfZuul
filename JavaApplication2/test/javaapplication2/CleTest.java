@@ -12,51 +12,38 @@ import org.junit.Before;
  *
  * @author SERAZIN
  */
-public class CleTest {
+public class CleTest extends TestCase{
+    private Cle cle;
     
-    public CleTest() {
+    public CleTest(LockedDoor nameDoor) {
+        super(nameDoor);
+    }
+
+    //Before
+    public void setUp() throws Exception {
+    super.setUp();
+    cle = new Cle("nameDoor1");
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
+    //After
+    protected void tearDown() throws Exception {
+    super.tearDown();
+    cle = null;
+  }
 
     /**
      * Test of use method, of class Cle.
      */
-    @Test
+
     public void testUse() {
-        System.out.println("use");
-        Cle instance = new Cle();
-        instance.use();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     assertNotNull("L'instance n'est pas créée", cle);
     }
 
     /**
      * Test of getDoor method, of class Cle.
      */
-    @Test
-    public void testGetDoor() {
-        System.out.println("getDoor");
-        Cle instance = new Cle();
-        LockedDoor expResult = null;
-        LockedDoor result = instance.getDoor();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     public void testGetDegat() {
+        assertEquals("La prochaine salle est incorrect", nameDoor, nameDoor.getDoor);
     }
     
 }
