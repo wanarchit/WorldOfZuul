@@ -20,14 +20,17 @@ package javaapplication2;
 public class LockedDoor {
     
     private Key clef;
+    private String name;
+     
     
     /**
     * This constructor allowed the creation of a Locked Door
+     * @param name
     */   
     
-    public LockedDoor(){
-    
+    public LockedDoor(String name){
     }
+
     
 
     /**
@@ -38,7 +41,6 @@ public class LockedDoor {
     
     public boolean checkKey(){
         return true;
+        }
     }
-    
-      
-}
+

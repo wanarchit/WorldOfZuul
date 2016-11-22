@@ -37,16 +37,18 @@ public class MagicDoorTest {
     public void tearDown() {
     }
 
+    
+    
     /**
      * Test of resolve method, of class MagicDoor.
      */
     @Test
     public void testResolve() {
         System.out.println("resolve");
-        String essai = "";
-        MagicDoor instance = new MagicDoor();
+        String pwd = "";
+        MagicDoor md = new MagicDoor();
         boolean expResult = false;
-        boolean result = instance.resolve(essai);
+        boolean result = md.resolve(pwd);
         assertEquals(expResult, result);
     }
     

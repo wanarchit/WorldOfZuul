@@ -17,6 +17,10 @@ import static org.junit.Assert.*;
  * @author Jonathan
  */
 public class RoomTest {
+    Room r;
+    NPC character1, character2;
+    Chest c1, c2;
+    Door d1, d2;
     
     public RoomTest() {
     }
@@ -31,6 +35,7 @@ public class RoomTest {
     
     @Before
     public void setUp() {
+        r = new Room("Cuisine", true);
     }
     
     @After
@@ -43,10 +48,7 @@ public class RoomTest {
     @Test
     public void testIsClear() {
         System.out.println("isClear");
-        Room instance = new Room("Cuisine");
-        boolean expResult = false;
-        boolean result = instance.isClear();
-        assertEquals(expResult, result);
+        assertEquals(true, r.isClear());
     }
 
     /**
@@ -55,10 +57,7 @@ public class RoomTest {
     @Test
     public void testGetNomRoom() {
         System.out.println("getNomRoom");
-        Room instance = new Room("Cuisine");
-        String expResult = "Cuisine";
-        String result = instance.getNomRoom();
-        assertEquals(expResult, result);
+        assertEquals("Cuisine", r.getNameRoom());
     }
 
     /**
@@ -67,22 +66,49 @@ public class RoomTest {
     @Test
     public void testSetClear() {
         System.out.println("setClear");
-        Room instance = new Room("Cuisine");
-        boolean expResult = true;
-        instance.setClear();
-        assertEquals(expResult, instance.isClear());
+        r.setClear();
+        assertEquals(false, r.isClear());
+        r.setClear();
+        assertEquals(true, r.isClear());
     }
 
     /**
-     * Test of setExit method, of class Room.
+     * Test if a NPC is in a room twice
      */
     @Test
-    public void testSetExit() {
-        System.out.println("setExit");
-        String s = "";
-        Door d = null;
-        Room instance = new Room("Cuisine");
-        instance.setExit(s, d);
+    public void testNPCTwice() {
+        System.out.println("NPCTwice");
+        character1 = new NPC("Toto",3,4,50,10, null,null,false, "Hey");
+        character2 = new NPC("Toto",3,4,50,10, null,null,false, "Yo");
+        r.addNPC(character1);
+        r.addNPC(character2);
+        assertNull(r.getLineNPCList(1));
+    }
+    
+    /**
+     * Test if a chest is in a room twice
+     */
+    @Test
+    public void testChestTwice() {
+        System.out.println("ChestTwice");
+        c1 = new Chest("c1", 5, 18);
+        c2 = new Chest("c2", 5, 18);
+        r.addChest(c1);
+        r.addChest(c2);
+        assertNull(r.getLineChestList(1));
+    }
+    
+    
+    /**
+     * Test if the same door is not twice in the room
+     */
+    @Test
+    public void testDoorTwice() {
+        System.out.println("DoorTwice");
+        d1 = new Door(true, new Room("salon", true), new Room("chambre", true));
+        r.setExit("North", d1);
+        r.setExit("North", d1);
+        assertNull(r.getHashMapLine(1));
     }
     
 }

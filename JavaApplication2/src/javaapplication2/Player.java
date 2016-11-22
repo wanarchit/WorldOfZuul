@@ -23,7 +23,7 @@ public class Player extends Character
         return karmaBar;
     }
 
-    private void setKarma(int k){
+    public void setKarma(int k){
         karmaBar=k;
     }
     
@@ -50,5 +50,20 @@ public class Player extends Character
         }
         else setKarma(karmaBar-10);
     }
-    
+    /**
+     * 
+     * @return the room where the player is
+     */
+    public Room getActualRoom()
+    {
+        return actualRoom;
+    }
+    /**
+     * 
+     * @param r which is the actualRoom value which will be set
+     */
+    public void setActualRoom(Room r)
+    {
+        actualRoom=r;
+    }
 }

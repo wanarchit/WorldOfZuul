@@ -5,6 +5,7 @@
  */
 package javaapplication2;
 
+import java.awt.RenderingHints.Key;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -18,6 +19,12 @@ import static org.junit.Assert.*;
  */
 public class LockedDoorTest {
     
+        Key myKey;
+        Door mydoor;
+        String ld;
+        String ld1;
+        String namekey="yolo";
+        
     public LockedDoorTest() {
     }
     
@@ -31,7 +38,6 @@ public class LockedDoorTest {
     
     @Before
     public void setUp() {
-        LockedDoor dl = new LockedDoor
     }
     
     @After
@@ -46,21 +52,24 @@ public class LockedDoorTest {
 
     /**
      * Test of checkKey method, of class LockedDoor.
-     */
+     */  
+    
     @Test
-    public void testCheckKey() {
-        System.out.println("checkKey");
-        checkKey();
-        assertequal(true, checkKey);
-        checkKey();
-        assertequal( false, checkKey);
+    public void testcheckKey(){
+         
         
+        myKey = new Key(namekey);
+        ld = new LockedDoor("yolo");
         
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+        check = ld.checkKey();
+        assertEquals(true, check);
+        
+        ld1 = new LockedDoor("haha");
+        
+        check = ld1.checkKey();
+        assertEquals(false, check);
+
     
-    
     }
+}
 
