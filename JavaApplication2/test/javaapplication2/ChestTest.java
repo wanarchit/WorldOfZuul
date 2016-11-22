@@ -17,7 +17,7 @@ public class ChestTest {
     @Before
     public void setUp() 
     {
-        chest = new Chest("chest1",inv1, 50);
+        chest = new Chest("chest1", 50);
     }
     
     @After
