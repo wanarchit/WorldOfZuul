@@ -8,13 +8,13 @@ package javaapplication2;
 
 /**
  *
- * @author Marin
+ * @author Paul
  */
-public class PNJ {
+public class NPC {
     private boolean hostile;
     private String parole; 
     
-    public PNJ(){
+    public NPC(){
     }
     
     

@@ -42,7 +42,7 @@ public class PlayerTest {
      */
     @Test
     public void testGetKarma() {
-        System.out.println("getKarma");
+        System.out.println("getKarma");                                                                                                                                                                                                                            
         Player instance = new Player();
         int expResult = 100;
         int result = instance.getKarma();
