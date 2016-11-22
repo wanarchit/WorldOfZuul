@@ -17,13 +17,15 @@ import static org.junit.Assert.*;
 public class NPCTest {
     
     private NPC myNPC;
+    private Weapon wea;
+    private Armor amo;
     
      /**
      * Default constructor for test class NPCTest
      */
     public NPCTest() 
     {
-        myNPC= new NPC (true,"");
+        myNPC= new NPC ("toto",3,3,3,3,wea,amo,true,"");
     }
     
     @BeforeClass
