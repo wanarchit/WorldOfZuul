@@ -23,7 +23,7 @@ public class Player extends Character
         return karmaBar;
     }
 
-    private void setKarma(int k){
+    public void setKarma(int k){
         karmaBar=k;
     }
     
