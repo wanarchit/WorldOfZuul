@@ -42,5 +42,11 @@ public class LockedDoor {
     public boolean checkKey(){
         return true;
         }
+    
+    public boolean getLockedDoor(){
+    
+        return true;
     }
+    
+}
 

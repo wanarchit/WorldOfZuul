@@ -21,9 +21,11 @@ public class LockedDoorTest {
     
         Key myKey;
         Door mydoor;
-        String ld;
-        String ld1;
+        LockedDoor ld;
+        LockedDoor ld1;
+        LockedDoor ld2;
         String namekey="yolo";
+        
         
     public LockedDoorTest() {
     }
@@ -68,8 +70,15 @@ public class LockedDoorTest {
         
         check = ld1.checkKey();
         assertEquals(false, check);
-
     
+    }
+    
+    public void testgetLockedDoor(){
+        
+        System.out.println("getLockedDoor");
+        boolean result = ld2.getLockedDoor();
+        assertEquals(true, result);
+        
     }
 }
 
