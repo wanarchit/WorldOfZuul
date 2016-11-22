@@ -5,7 +5,7 @@ public class Chest {
     private int money;
     private Inventory inv;
     
-    public Chest(Inventory inve, int px, int m){
+    public Chest(int m){
         money = m;
     }
     
