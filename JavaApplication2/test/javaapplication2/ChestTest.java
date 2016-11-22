@@ -17,8 +17,7 @@ public class ChestTest {
     @Before
     public void setUp() 
     {
-        inv1 = new Inventory(2);
-        chest = new Chest( inv1, 5, 5);
+        chest = new Chest("chest1",inv1, 50);
     }
     
     @After

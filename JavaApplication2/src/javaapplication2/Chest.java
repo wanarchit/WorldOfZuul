@@ -4,9 +4,12 @@ public class Chest {
     
     private int money;
     private Inventory inv;
+    private String nameChest;
     
-    public Chest(int m){
+    public Chest(String name, Inventory inv1, int m){
         money = m;
+        inv = inv1;
+        nameChest = name;
     }
     
     private void setMoney()
@@ -16,6 +19,11 @@ public class Chest {
     public int getMoney() 
     {
         return money;
+    }
+    
+    public String getNameChest()
+    {
+        return nameChest;
     }
     
     public void setInventaire()
