@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * 
+ * 
  */
 package javaapplication2;
 
@@ -10,19 +10,27 @@ package javaapplication2;
  * @author Marin
  */
 public class Item {
-    private String nameItem;
+    private  String nameItem;
     //private Img skin;
     private Inventory inv;
     private int price;    
 
-public Item(String nI, Inventory inve, int px){
+public Item(String nI, Inventory inve, int pc){
     nameItem=nI;
     inv= inve;
-    price=px;
+    price=pc;
 }
 
+/**
+ * 
+ */
 public void use(){}
 
+
+/**
+ * 
+ * @return 
+ */
 public int getPrice(){
 return price;
 }

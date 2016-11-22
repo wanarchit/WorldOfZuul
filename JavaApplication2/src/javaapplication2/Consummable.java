@@ -11,25 +11,13 @@ import java.util.ArrayList;
  *
  * @author saspaanithy
  */
-public class Inventory {
-    private ArrayList<Item> inv;
-    private int size;
-    private Character character;
-
-
-public Inventory(int s, Character c){
-size=s;
-character=c;
+public class Consumable {
+    
+    
+    
+    
+    
+    
+    
 }
-
-public void setSize(){}
-
-public int getSize(){
-return size;
-}
-
-public void addObject(Item i){}
-
-public void deleteObject(Item i){}
-
-}
+    

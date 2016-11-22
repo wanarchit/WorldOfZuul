@@ -14,8 +14,8 @@ public class Weapon extends Item {
     private int damage;
 
 
-public Weapon(String nI, Inventaire inve, int px, int dg){
-    super(nI, inve, px);
+public Weapon(String nI, Inventory inve, int pc, int dg){
+    super(nI, inve, pc);
     damage = dg;
 }
 
@@ -27,7 +27,7 @@ public Weapon(String nI, Inventaire inve, int px, int dg){
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-public void use(Personnage pers){}
+public void use(Character cha){}
 
 public int getDamage(){
 return damage;
