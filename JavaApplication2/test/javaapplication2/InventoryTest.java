@@ -32,17 +32,5 @@ public class InventoryTest {
     @Test
     public void testGetSize() {
      assertEquals(5, inv1.getSize());
-    }
-
-    /**
-     * Test of addObject method, of class Inventory.
-     
-    @Test
-    public void testAddObject() {
-        inv1.addObject(armor);
-        assertEquals(armor, inv1.getObject)
-    }
-    * //
-
- 
+    } 
 }
