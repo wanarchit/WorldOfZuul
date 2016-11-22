@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
  * @author saspaanithy
  */
 public class DoorTest {
-    
+    Door d;
     public DoorTest() {
     }
     
@@ -31,7 +31,7 @@ public class DoorTest {
     
     @Before
     public void setUp() {
-        Door d = new Door(false, ("Cuisine", true), ("Salon", false));
+        d = new Door(false, new Room("Cuisine", true), new Room("Salon", false));
     }
     
     @After
@@ -67,7 +67,7 @@ public class DoorTest {
     public void testNameGetNextRoom() {
         System.out.println("getNextRoom");
         Room result = d.getNextRoom();
-        assertEquals("Salon", result.nameRoom);
+        assertEquals("Salon", result.getNameRoom());
     }
     
     /**
@@ -77,7 +77,7 @@ public class DoorTest {
     public void testClearGetNextRoom() {
         System.out.println("getNextRoom");
         Room result = d.getNextRoom();
-        assertEquals(false, result.clear);
+        assertEquals(false, result.isClear());
     }
 
     /**
@@ -87,7 +87,7 @@ public class DoorTest {
     public void testNameGetActualRoom() {
         System.out.println("getActualRoom");
         Room result = d.getActualRoom();
-        assertEquals("Cuisine", result.nameRoom);
+        assertEquals("Cuisine", result.getNameRoom());
     }
     
     /**
@@ -97,6 +97,15 @@ public class DoorTest {
     public void testGetActualRoom() {
         System.out.println("getActualRoom");;
         Room result = d.getActualRoom();
-        assertEquals(true, result.clear);
+        assertEquals(true, result.isClear());
+    }
+    
+    /**
+     * Test if actual et nextRoom are not the same. Test must fail.
+     */
+    @Test
+    public void testActualNextRoomSame() {
+        System.out.println("actual and Next Room same");
+        assertEquals(d.actualRoom, d.nextRoom);
     }
 }

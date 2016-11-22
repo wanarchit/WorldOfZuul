@@ -43,7 +43,7 @@ public class Room {
      * Get the name of the Room
      * @return a String, the name of the Room
      */
-    public String getNomRoom(){
+    public String getNameRoom(){
         return null;
     }
 
