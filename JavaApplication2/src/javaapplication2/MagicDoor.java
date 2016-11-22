@@ -34,8 +34,13 @@ public class MagicDoor {
      */
     
     public boolean resolve (String pwd) {
+        
+        if (pwd.equals("")){
         return true;
+        
+        }
+        else{
+        return false;
+        }
     }
-    
-
 }

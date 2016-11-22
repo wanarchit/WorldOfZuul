@@ -37,6 +37,8 @@ public class MagicDoorTest {
     public void tearDown() {
     }
 
+    
+    
     /**
      * Test of resolve method, of class MagicDoor.
      */

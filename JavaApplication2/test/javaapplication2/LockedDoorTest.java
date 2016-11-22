@@ -5,6 +5,7 @@
  */
 package javaapplication2;
 
+import java.awt.RenderingHints.Key;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -18,6 +19,12 @@ import static org.junit.Assert.*;
  */
 public class LockedDoorTest {
     
+        Key myKey;
+        Door mydoor;
+        String ld;
+        
+        String namekey="yolo";
+        
     public LockedDoorTest() {
     }
     
@@ -45,25 +52,18 @@ public class LockedDoorTest {
 
     /**
      * Test of checkKey method, of class LockedDoor.
-     */
+     */  
+    
     @Test
-    public void testCheckKey() {
+    public void testcheckKey(){
+         
         
-        System.out.println("checkKey");
-        LockedDoor dl = new LockedDoor();
-        dl.checkKey();
-        assertequal(false, dl.checkKey());
-        dl.checkKey();
-        assertequal(true, dl.checkKey());
-        
-        fail("The test case is a prototype.");
-    }
-
-    private void assertequal(boolean b, boolean checkKey) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
+        myKey = new Key(namekey);
+        ld = new LockedDoor("yolo");
+              
+        check = ld.checkKey();
+        assertEquals(true, check);
     
     }
+}
 
