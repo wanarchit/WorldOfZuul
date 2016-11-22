@@ -16,14 +16,15 @@ import java.util.HashMap;
  */
 public class Room {
     private boolean clear;
-    private ArrayList<NPC> characterRoom;
-    private ArrayList<Chest> chestRoom;
+    private ArrayList<NPC> characterRoom; //pas deux fois le meme
+    private ArrayList<Chest> chestRoom; // pas deux fois le meme
     private String nameRoom;
-    private HashMap <String, Door> exit;
+    private HashMap <String, Door> exit; //pas deux fois la meme porte
 
 
     /**
-     * Constructor of a Room
+     * Constructor of a Room, the HashMap and the ArrayList are empty when the 
+     * class is created.
      * @param name if there is no name, it automatically set to "Room"
      * @param empty set the boolean clear in the constructor
      */
@@ -65,4 +66,31 @@ public class Room {
         
     }
     
+    public void addNPC (NPC truc) {
+        
+    } 
+    
+    public void addChest (Chest c) {
+        
+    }
+    
+    public NPC getLineCharList(int i){
+        
+    }
+    
+    public Chest getLineChestList(int i){
+        
+    }
+    
+    public int getSizeChestList(int i) {
+        
+    }
+    
+    public int getSizeCharList(int i) {
+        
+    }
+    
+    public int getHashMapLine(int i) {
+        
+    }
 }
