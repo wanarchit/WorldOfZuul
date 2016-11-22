@@ -17,10 +17,10 @@ import static org.junit.Assert.*;
  * @author Jonathan
  */
 public class RoomTest {
-    Room r;
-    NPC character1, character2;
-    Chest c1, c2;
-    Door d1, d2;
+    private Room r;
+    private NPC character1, character2;
+    private Chest c1, c2;
+    private Door d1, d2;
     
     public RoomTest() {
     }

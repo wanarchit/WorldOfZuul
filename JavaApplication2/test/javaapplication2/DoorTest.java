@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
  * @author saspaanithy
  */
 public class DoorTest {
-    Door d;
+    private Door d;
     public DoorTest() {
     }
     
