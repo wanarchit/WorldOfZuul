@@ -1,4 +1,7 @@
 package javaapplication2;
+
+import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.String;
+
 /*
  * This class inherite from the character class
  * It will be used to implement NPC (none playable character) into our game
@@ -9,15 +12,16 @@ package javaapplication2;
  *
  * @author Marin and Paul
  */
-public class NPC 
+public class NPC extends Character
 {
     //Attribute specific to this class
     private boolean hostile;//Define if the NPC is or isn't hostile to the player
     private String speech;// Contain the speech the NPC will deliver when interacting with it
     
 //NPC Constructor
-    public NPC(boolean host,String txt)
+    public NPC(String name,int stren, int def, int mon,int sizeInt, Weapon wea, Armor amo,boolean host,String txt)
     {
+        super(name,stren,def,mon,sizeInt,wea,amo);
         hostile=host;
         speech=txt;
     }

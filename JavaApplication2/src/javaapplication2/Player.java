@@ -7,12 +7,16 @@ package javaapplication2;
  *
  * @author Marin
  */
-public class Player{
+public class Player extends Character
+{
     private int karmaBar = 50;
+    private Room actualRoom;
     
     
-    public Player()
+    public Player(String name,int stren, int def, int mon,int sizeInt, Weapon wea, Armor amo,Room r1)
     {
+        super(name,stren,def,mon,sizeInt,wea,amo);
+        actualRoom=r1;
     }
     
     public int getKarma(){
@@ -34,8 +38,7 @@ public class Player{
         }
         else setKarma(karmaBar+10);
     }
-    
-    
+   
     /*
     * This method allow to delete 10 points to the karma bar of the player
     */
@@ -47,4 +50,5 @@ public class Player{
         }
         else setKarma(karmaBar-10);
     }
+    
 }
