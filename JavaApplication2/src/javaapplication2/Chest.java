@@ -11,7 +11,11 @@ public class Chest {
     private Inventory inv; // inventary presents in the chest created
     private String nameChest; // name of the chest created
     
-    //Constructor which allows the creation of the chest
+    /**
+     * Constructor which allows the creation of the chest
+     * @param name name of the chest to do a difference between the different chest
+     * @param m money presents in the chest
+     */
     public Chest(String name, int m){
         money = m;
         nameChest = name;

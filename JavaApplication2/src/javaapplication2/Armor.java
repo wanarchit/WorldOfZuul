@@ -6,16 +6,27 @@
 package javaapplication2;
 
 //the class Armor is a heiress class of the class Item.
+
 public class Armor extends Item {
     private int defense; // creation of the object's defense
 
-//Constructor with the parameteers of the class Item and the defense pararmeter.
+
+/**
+ * Constructor with the parameteers of the class Item and the defense pararmeter.
+ * @param nI name of the inventary
+ * @param inve inventary
+ * @param px price of the object
+ * @param def defense 
+ */
 public Armor(String nI, Inventory inve, int px, int def){
     super(nI, inve, px);
     defense = def;   
 }
 
-//the method allows Characters to use an item allowing the defense.
+/**
+ * the method allows Characters to use an item allowing the defense.
+ * @param character 
+ */
 public void use(Character character){}
 
 //The method returns the value of the defense of the Character.
