@@ -31,6 +31,7 @@ public class LockedDoorTest {
     
     @Before
     public void setUp() {
+        LockedDoor dl = new LockedDoor
     }
     
     @After
@@ -42,5 +43,24 @@ public class LockedDoorTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of checkKey method, of class LockedDoor.
+     */
+    @Test
+    public void testCheckKey() {
+        System.out.println("checkKey");
+        checkKey();
+        assertequal(true, checkKey);
+        checkKey();
+        assertequal( false, checkKey);
+        
+        
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
-}
+    
+    }
+
