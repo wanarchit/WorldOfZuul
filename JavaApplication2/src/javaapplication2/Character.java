@@ -13,33 +13,33 @@ public class Character {
     private String namePerso;
     private Room actualRoom;
     // private Img Skin;
-    private Inventory inv;
+  //  private Inventory inv;
     private int hP= 100;
     private int strength;
     private int defense;
-    private Weapon weaponEquipped;
-    private Armor armorEquipped;
+   // private Weapon weaponEquipped;
+  //  private Armor armorEquipped;
     private int money;
     
-    public Character(String nom,int stren, int def, int mon, Room r1){
+    public Character(String name,int stren, int def, int mon, Room r1){
         hP=100;
         namePerso=name;
         strength=stren;
         defense=def;
         money=mon;
-        //inv = new Inventaire();
+       // inv = new Inventory();
         actualRoom=r1;               
     }
     
     
     
-    public void setInv(){
+  //  private void setInv(){
     
-    }
+   // }
 
-    public Inventaire getInv(){
-        return inv;
-    }
+   // public Inventaire getInv(){
+    //    return inv;
+   // }
 
     //public void echange(P1,P2){
         
@@ -49,9 +49,24 @@ public class Character {
         return hP;
     }
 
-    public void setHP( int nb){
+    private void setHP(int nbHP){
+        hP = nbHP;
     }
 
+    public void LoseHP(int nbLoseHP){
+        int life = getHP();
+        if (life-nbLoseHP < 0){
+            setHP(0);}
+        else{setHP(nbLoseHP);}
+    }
+    
+    public void GainHP(int nbGainHP){
+        int life = getHP();
+        if (life+nbGainHP > 100){
+            setHP(100);}
+        else{setHP(nbGainHP);}
+    }
+    
     public String getName(){
         return namePerso;
     }
@@ -60,10 +75,11 @@ public class Character {
         return actualRoom;
     }
 
-    public void setActualRoom(){
+    public void setActualRoom(Room newRoom){
+        actualRoom = newRoom;
     }
 
-    public int getForce(){
+    public int getStrength(){
         return strength;
     }
 
@@ -71,18 +87,18 @@ public class Character {
         return defense;
     }
 
-    public Arme getWeaponEquipped(){
-        return weaponEquipped;
-    }
+//        return weaponEquipped;
+ //   }
 
-    public void setWeaponEquipped(){
-    }
+  //  private void setWeaponEquipped(){
+ //   }
 
     public int getMoney(){
         return money;
     }
 
-    public void setMoney(){
+    public void setMoney(int newMoney){
+        money = newMoney;
 }
 
 }
