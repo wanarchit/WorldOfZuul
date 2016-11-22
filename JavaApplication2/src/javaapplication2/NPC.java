@@ -12,14 +12,14 @@ package javaapplication2;
  */
 public class NPC {
     private boolean hostile;
-    private String parole; 
+    private String speech; 
     
     public NPC(){
     }
     
     
-    public String getParole(){
-    return parole;
+    public String getSpeech(){
+    return speech;
     }
    
     

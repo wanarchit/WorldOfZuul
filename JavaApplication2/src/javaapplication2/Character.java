@@ -10,25 +10,25 @@ package javaapplication2;
  * @author paul
  */
 public class Character {
-    private String nomPerso;
-    private Room salleActu;
+    private String namePerso;
+    private Room actualRoom;
     // private Img Skin;
-    private Inventaire inv;
-    private int pV= 100;
-    private int force;
+    private Inventory inv;
+    private int hP= 100;
+    private int strength;
     private int defense;
-    private Arme armeEquipee;
-    private Armure armureEquipee;
-    private int argent;
+    private Weapon weaponEquipped;
+    private Armor armorEquipped;
+    private int money;
     
-    public character(String nom,int forc,int def,int arg,Room salle){
-        pV=100;
-        nomPerso=nom;
-        force=forc;
+    public Character(String nom,int stren, int def, int mon, Room r1){
+        hP=100;
+        namePerso=name;
+        strength=stren;
         defense=def;
-        argent=arg;
+        money=mon;
         //inv = new Inventaire();
-        salleActu=salle;               
+        actualRoom=r1;               
     }
     
     
@@ -45,44 +45,44 @@ public class Character {
         
     //}
 
-    public int getPV(){
-        return pV;
+    public int getHP(){
+        return hP;
     }
 
-    public void setPV( int nb){
+    public void setHP( int nb){
     }
 
-    public String getNom(){
-        return nomPerso;
+    public String getName(){
+        return namePerso;
     }
 
-    public Room getSalleActu(){
-        return salleActu;
+    public Room getActualRoom(){
+        return actualRoom;
     }
 
-    public void setSalleActu(){
+    public void setActualRoom(){
     }
 
     public int getForce(){
-        return force;
+        return strength;
     }
 
     public int getDefense(){
         return defense;
     }
 
-    public Arme getArmeEquipee(){
-        return armeEquipee;
+    public Arme getWeaponEquipped(){
+        return weaponEquipped;
     }
 
-    public void setArmeEquipee(){
+    public void setWeaponEquipped(){
     }
 
-    public int getArgent(){
-        return argent;
+    public int getMoney(){
+        return money;
     }
 
-    public void setArgent(){
+    public void setMoney(){
 }
 
 }
