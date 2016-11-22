@@ -29,6 +29,7 @@ public class Door {
      * @return the boolean locked
      */
     public boolean getLocked(){  
+        return false;
     }
 
     /**
@@ -42,7 +43,8 @@ public class Door {
      * Get which Room is behind the door
      * @return the next Room
      */
-    public Room getNextRoom(){   
+    public Room getNextRoom(){
+        return null; 
     }
 
     /**
@@ -50,5 +52,6 @@ public class Door {
      * @return the actual room
      */
     public Room getActualRoom(){  
+        return null;
     }
 }

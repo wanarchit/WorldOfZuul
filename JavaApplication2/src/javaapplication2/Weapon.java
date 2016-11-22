@@ -19,14 +19,6 @@ public Weapon(String nI, Inventory inve, int pc, int dg){
     damage = dg;
 }
 
-    Weapon() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    Weapon() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 public void use(Character cha){}
 
 public int getDamage(){

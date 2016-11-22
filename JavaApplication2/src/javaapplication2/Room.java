@@ -16,7 +16,7 @@ import java.util.HashMap;
  */
 public class Room {
     private boolean clear;
-    private ArrayList<PNJ> characterRoom;
+    private ArrayList<NPC> characterRoom;
     private ArrayList<Chest> chestRoom;
     private String nameRoom;
     private HashMap <String, Door> exit;
@@ -36,7 +36,7 @@ public class Room {
      * @return a boolean depending if the room is clear or not
      */
     public boolean isClear(){
-        
+        return false;
     }
 
     /**
@@ -44,7 +44,7 @@ public class Room {
      * @return a String, the name of the Room
      */
     public String getNomRoom(){
-        
+        return null;
     }
 
     /**
