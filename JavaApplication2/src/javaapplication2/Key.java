@@ -1,26 +1,17 @@
 package javaapplication2;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author saspaanithy
- */
 public class Key extends Item{
     private LockedDoor nameDoor;
 
-
-public Key(String nI, Inventory inve, int pc){
-super(nI, inve, pc);}
-
-    public void use(){}
-
-public LockedDoor getDoor(){
-return nameDoor;
+public Key(String nI, Inventory inve, int pc, LockedDoor d1)
+{
+    super(nI, inve, pc);
+    nameDoor=d1;
 }
 
+public void use(){}
+
+public LockedDoor getDoor(){
+    return nameDoor;
+}
 }

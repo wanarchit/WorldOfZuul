@@ -1,40 +1,30 @@
 package javaapplication2;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author saspaanithy
- */
-public class Chest extends Item{
+public class Chest {
     
-    private Room actualRoom;
     private int money;
     private Inventory inv;
     
-    
-    public Chest(String nI, Inventory inve, int px, int m){
-        super(nI, inve, px);
+    public Chest(Inventory inve, int px, int m){
         money = m;
     }
     
-    private void setMoney(){
-        
+    private void setMoney()
+    {  
     }
     
-    public int getMoney() {
+    public int getMoney() 
+    {
         return money;
     }
     
-    public void setInventaire(){
+    public void setInventaire()
+    {
     }
     
-    public Inventory getInventory(){
+    public Inventory getInventory()
+    {
         return inv;
-
-}
+    }
 }
 
