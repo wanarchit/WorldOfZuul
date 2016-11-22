@@ -6,8 +6,10 @@ package javaapplication2;
  */
 
 /**
- *
+ * The class Character
+ * 
  * @author paul
+ * @version 22/11/2016
  */
 public class Character {
     private String namePerso;
@@ -21,8 +23,26 @@ public class Character {
     private Armor armorEquipped;
     private int money;
     
+    /**
+     * Constructor with name parameter
+     * 
+     * Stength and defense of character are using for battle
+     * Money cannot be negative but has not positive limit
+     * Armor and Weapon can are null at the begining
+     * 
+     * @param name : it is the name of character (NPC or Player)
+     * @param stren : it is the strength point of the character
+     * @param def : it is the defense point of the caracter
+     * @param mon : it the money of character
+     * @param r1 : it is the actual room where the character is
+     * @param sizeInt : it is the size of inventory
+     * @param wea : it is the weapon which is carried by character
+     * @param amo : it is the armor which is carried by character
+     */
     public Character(String name,int stren, int def, int mon, Room r1, int sizeInt, Weapon wea, Armor amo){
         hP=100;
+        if (name.equals("")){
+            name="Tata";}
         namePerso=name;
         strength=stren;
         defense=def;

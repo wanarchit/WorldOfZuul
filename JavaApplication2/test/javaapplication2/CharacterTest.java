@@ -29,18 +29,29 @@ public class CharacterTest {
     /**
      * 
      */
+    @Before
     public void setUp()
     {
         myRoom = new Room("Enter",true);
-        myCharacter = new Character("Toto",3,3,50,myRoom,10, null,null);
+        myCharacter = new Character("Toto",3,4,50,myRoom,10, null,null);
         Inventory inv = myCharacter.getInv();
-        myWeapon = new Weapon("Axe",inv,5,4);
+        myWeapon = new Weapon("axe",inv,5,4);
         myArmor = new Armor("head",inv,6,5);
     }
+    
+    /**
+     * 
+     */
+    @After
+    public void tearDown(){
+        //
+    }
+    
     /**
      * Method testNameToto
      * Checks if the name given as parameter in the constructor is correctly set to the attribute
      */
+    @Test
     public void testNameToto(){
         // The parameter "Toto" must be set as the name attribute
         assertEquals("Toto",myCharacter.getName());
@@ -50,6 +61,7 @@ public class CharacterTest {
      * Method testDefaultName
      * Checks that the default name is "Tata", if the given name is empty
      */
+    @Test
     public void testDefaultName(){
         Character bad = new Character("",3,4,50,myRoom,10, null,null);
         assertEquals("Tata", bad.getName());
@@ -59,10 +71,11 @@ public class CharacterTest {
      * Method testHealthNeg
      * Checks if the loosing of HP cannot be under 0 value
      */
+    @Test
     public void testHealthNeg(){
         // The parameter HP can not be negative, it initialized at 100
         // So if charcter loose 110 HP, HP has to be at 0 and not -10 (negative)
-        myCharacter.LoseHP(-110);
+        myCharacter.LoseHP(110);
         assertEquals(0,myCharacter.getHP());
     }
     
@@ -70,6 +83,7 @@ public class CharacterTest {
      * Method testHealth100
      * Checks if the adding HP cannot be superior to 100
      */
+    @Test
     public void testHealth100(){
         // The parameter HP can not be negative, it initialized at 100
         // So if charcter gain 10 HP, HP has to be at 1000 and not 110
@@ -81,6 +95,7 @@ public class CharacterTest {
      * Method testStrength
      * Check if value returned by method getStrenght return the good value
      */
+    @Test
     public void testGetStrength(){
         assertEquals(3,myCharacter.getStrength());
     }
@@ -89,6 +104,7 @@ public class CharacterTest {
      * Method testDefense
      * Check if value returned by method getDefense return the good value
      */
+    @Test
     public void testGetDefense(){
         assertEquals(4,myCharacter.getDefense());
     }
@@ -97,6 +113,7 @@ public class CharacterTest {
      * Method testMoney
      * Check if value returned by method getMoney return the good value
      */
+    @Test
     public void testGetMoney(){
         // here, Money is initialized at 50
         assertEquals(50,myCharacter.getMoney());
@@ -106,6 +123,7 @@ public class CharacterTest {
      * Method testSetMoney
      * Checks if setter works well
      */
+    @Test
     public void testSetMoney(){
         // Money is initialized at 50 so if setter works well, value has to change at 80.
         myCharacter.setMoney(80);
@@ -115,6 +133,7 @@ public class CharacterTest {
     /**
      * 
      */
+    @Test
     public void testGetRoom(){
         assertEquals(myRoom,myCharacter.getActualRoom());
     }
@@ -122,6 +141,7 @@ public class CharacterTest {
     /**
      * Method testSetRoom
      */
+    @Test
     public void testSetRoom(){
         Room actuNewRoom = new Room("room1",true);
         myCharacter.setActualRoom(actuNewRoom);
@@ -132,6 +152,7 @@ public class CharacterTest {
      * Method testGetArmor
      * Checks if armor null is possible 
      */
+    @Test
     public void testGetArmor(){
         assertEquals(null,myCharacter.getArmorEquipped());
     }
@@ -140,6 +161,7 @@ public class CharacterTest {
      * Method testGetWeapon
      * Checks if weapon null is possible
      */
+    @Test
     public void testGetWeapon(){
         assertEquals(null,myCharacter.getWeaponEquipped());
     }
