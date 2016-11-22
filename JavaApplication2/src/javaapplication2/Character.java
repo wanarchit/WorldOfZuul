@@ -66,7 +66,7 @@ public class Character
         strength=stren;
         defense=def;
         money=mon;
-        inv = new Inventory(sizeInt, this);
+        inv = new Inventory(sizeInt);
         weaponEquipped=wea;
         armorEquipped=amo;        
     }
