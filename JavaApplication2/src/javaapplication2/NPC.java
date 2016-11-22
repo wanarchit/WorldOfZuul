@@ -16,9 +16,10 @@ public class NPC
     private String speech;// Contain the speech the NPC will deliver when interacting with it
     
 //NPC Constructor
-    public NPC(boolean host)
+    public NPC(boolean host,String txt)
     {
         hostile=host;
+        speech=txt;
     }
     
 /**

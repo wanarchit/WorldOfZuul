@@ -23,12 +23,13 @@ public class NPCTest {
      */
     public NPCTest() 
     {
+        myNPC= new NPC (true,"");
     }
     
     @BeforeClass
-    public void setUpClass() 
+    public static void setUpClass() 
     {
-        myNPC= new NPC (true);
+
     }
     
     @AfterClass
