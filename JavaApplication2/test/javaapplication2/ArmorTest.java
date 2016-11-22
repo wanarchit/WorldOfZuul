@@ -27,7 +27,7 @@ public class ArmorTest {
     
     @Before
     public void setUp() {
-        r1 = new Room("enter");
+        r1 = new Room("enter", true);
         character1 = new Character ("toto", 5, 5, 10, r1);
         inv1 = new Inventory(2, character1);
         armor = new Armor ("name1", inv1, 5, 5);
