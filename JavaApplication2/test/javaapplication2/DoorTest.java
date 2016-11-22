@@ -39,7 +39,7 @@ public class DoorTest {
     @Test
     public void testGetLocked() {
         System.out.println("getLocked");
-        boolean result = d.getLocked();
+        boolean result = d.isLocked();
         assertEquals(false, result);
     }
 
@@ -50,9 +50,9 @@ public class DoorTest {
     public void testSetLocked() {
         System.out.println("setLocked");
         d.setLocked();
-        assertEquals(true, d.locked);
+        assertEquals(true, d.isLocked());
         d.setLocked();
-        assertEquals(false, d.locked);
+        assertEquals(false, d.isLocked());
     }
 
     /**
@@ -101,6 +101,6 @@ public class DoorTest {
     @Test
     public void testActualNextRoomSame() {
         System.out.println("actual and Next Room same");
-        assertNotSame(d.actualRoom, d.nextRoom);
+        assertNotSame(d.getActualRoom(), d.getNextRoom());
     }
 }

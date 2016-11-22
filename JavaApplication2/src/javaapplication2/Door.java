@@ -25,8 +25,8 @@ public class Door {
      * get the boolean locked (true : the door is locked, false : it is not)
      * @return the boolean locked
      */
-    public boolean getLocked(){  
-        return false;
+    public boolean isLocked(){  
+
     }
 
     /**
