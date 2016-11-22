@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Jonathan
+ * @author Jonathan, Babujhi
  */
 public class MagicDoorTest {
     
@@ -41,7 +41,11 @@ public class MagicDoorTest {
     
     /**
      * Test of resolve method, of class MagicDoor.
+     * This test allowed check if the method send a boolean true if 
+     * the password enter by the user is similar to the password of the magic 
+     * door.  If the boolean is on false password are not similar.
      */
+    
     @Test
     public void testResolve() {
         System.out.println("resolve");

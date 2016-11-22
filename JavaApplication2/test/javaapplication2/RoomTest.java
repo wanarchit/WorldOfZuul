@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Jonathan
+ * @author Jonathan, Babujhi
  */
 public class RoomTest {
     private Room r;
