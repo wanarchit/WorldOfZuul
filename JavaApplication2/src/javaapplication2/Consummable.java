@@ -9,7 +9,13 @@ package javaapplication2;
 public class Consummable extends Item{
     private int bonus; // bonus is a specific attribut of consummable
 
-//Constructor of the consummable object, allows its creation
+    /**
+     * Constructor of the consummable object, allows its creation
+     * @param nI name of the inventary
+     * @param inve inventary
+     * @param px price 
+     * @param bns bonus obtained thanks to the consummable
+     */
 public Consummable(String nI, Inventory inve, int px, int bns){
     super(nI, inve, px);
     bonus = bns; 
