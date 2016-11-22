@@ -9,6 +9,12 @@ public class KeyTest {
     private Key key;
     private Inventory inv1;
     private LockedDoor r1;
+    
+     /**
+     *  /**
+     * Default constructor for the class KeyTest.
+     * @author Marion, Clément
+     */
     public KeyTest() {
     }
         
@@ -25,6 +31,9 @@ public class KeyTest {
         key = null;
     }
 
+    /**
+     * Test if the key open the door
+     */
     @Test
     public void testGetDoor() 
     {
