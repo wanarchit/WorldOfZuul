@@ -66,31 +66,62 @@ public class Room {
         
     }
     
-    public void addNPC (NPC truc) {
+    /**
+     * Add a NPC in the ArrayList characterRoom
+     * @param n a NPC who is in the room
+     */
+    public void addNPC (NPC n) {
         
     } 
     
+    /**
+     * Add a Chest in the ArrayList chestRoom
+     * @param c a Chest which is in the Room
+     */
     public void addChest (Chest c) {
         
     }
     
-    public NPC getLineCharList(int i){
+    /**
+     * Get a NPC in the ArrayList
+     * @param i the number of the line of the List
+     * @return a NPC
+     */
+    public NPC getLineNPCList(int i){
         
     }
     
+    /**
+     * Get a Chest in the ArrayList
+     * @param i the number of the line of the List
+     * @return a Chest
+     */
     public Chest getLineChestList(int i){
         
     }
     
-    public int getSizeChestList(int i) {
+    /**
+     * Get the size of the Chest list
+     * @return the size of the list
+     */
+    public int getSizeChestList() {
         
     }
     
-    public int getSizeCharList(int i) {
+    /**
+     * Get the size of the NPC list
+     * @return the size of the list
+     */
+    public int getSizeNPCList() {
         
     }
     
-    public int getHashMapLine(int i) {
+    /**
+     * Get a Door in the HashMap
+     * @param i the number of the line of the HashMap
+     * @return a Door
+     */
+    public Door getHashMapLine(int i) {
         
     }
 }

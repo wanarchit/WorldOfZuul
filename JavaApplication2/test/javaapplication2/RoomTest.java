@@ -78,11 +78,11 @@ public class RoomTest {
     @Test
     public void testNPCTwice() {
         System.out.println("NPCTwice");
-        character1 = new NPC(false, "Hey","Toto",3,4,50,10, null,null);
-        character2 = new NPC(false, "Yo","Toto",3,4,50,10, null,null);
+        character1 = new NPC("Toto",3,4,50,10, null,null,false, "Hey");
+        character2 = new NPC("Toto",3,4,50,10, null,null,false, "Yo");
         r.addNPC(character1);
         r.addNPC(character2);
-        assertNull(r.getLineCharList(1));
+        assertNull(r.getLineNPCList(1));
     }
     
     /**
