@@ -37,6 +37,6 @@ public class ChestTest {
     @Test
     public void testGetInventory() 
     {
-        assertEquals( inv1, chest.getInventory());
+        assertEquals(inv1, chest.getInventory());
     }   
 }

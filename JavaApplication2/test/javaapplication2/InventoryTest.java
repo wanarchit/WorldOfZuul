@@ -31,7 +31,7 @@ public class InventoryTest {
 
     @Test
     public void testGetSize() {
-     assertEquals( 5, inv1.getSize());
+     assertEquals(5, inv1.getSize());
     }
 
     /**
@@ -44,17 +44,5 @@ public class InventoryTest {
     }
     * //
 
-    /**
-     * Test of deleteObject method, of class Inventory.
-     
-    @Test
-    public void testDeleteObject() {
-        System.out.println("deleteObject");
-        Item i = null;
-        Inventory instance = null;
-        instance.deleteObject(i);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    */
+ 
 }
