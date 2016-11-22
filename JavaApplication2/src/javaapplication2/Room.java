@@ -22,44 +22,46 @@ public class Room {
     private HashMap <String, Door> exit;
 
 
-/**
- * Constructor of a Room
- * @param name if there is no name, it automatically set to "Room"
- */
-public Room(String name){
+    /**
+     * Constructor of a Room
+     * @param name if there is no name, it automatically set to "Room"
+     */
+    public Room(String name){
+        
+    }
 
-}
+    /**
+     * Get if the room is clear (true : clear, false : not clear)
+     * @return a boolean depending if the room is clear or not
+     */
+    public boolean isClear(){
+        
+    }
 
-/**
- * Get if the room is clear (true : clear, false : not clear)
- * @return a boolean depending if the room is clear or not
- */
-public boolean isClear(){
+    /**
+     * Get the name of the Room
+     * @return a String, the name of the Room
+     */
+    public String getNomRoom(){
+        
+    }
+
+    /**
+     * Allows to modify the parameter clear, which is a boolean. If the boolean is 
+     * true it becomes false and vice versa.
+     */
+    public void setClear(){
+        
+    }
+
+    /**
+     * Create a new exit and put it in the exit Hashmap. If the name is empty, it is 
+     * set to "North".
+     * @param s the direction of the exit
+     * @param d a Door between two Rooms (knows actual and next room)
+     */
+    public void setExit(String s, Door d){
+        
+    }
     
-}
-
-/**
- * Get the name of the Room
- * @return a String, the name of the Room
- */
-public String getNomRoom(){
-
-}
-
-/**
- * Allows to modify the parameter clear, which is a boolean. If the boolean is 
- * true it becomes false and vice versa.
- */
-public void setClear(){
-
-}
-
-/**
- * Create a new exit and put it in the exit Hashmap. If the name is empty, it is 
- * set to "North".
- * @param s the direction of the exit
- * @param d a Door between two Rooms (knows actual and next room)
- */
-public void setExit(String s, Door d){}
-
 }
