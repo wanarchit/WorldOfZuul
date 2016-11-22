@@ -31,6 +31,7 @@ public class DoorTest {
     
     @Before
     public void setUp() {
+        Door d = new Door(false, ("Cuisine", true), ("Salon", false));
     }
     
     @After
@@ -43,10 +44,8 @@ public class DoorTest {
     @Test
     public void testGetLocked() {
         System.out.println("getLocked");
-        Door instance = new Door();
-        boolean expResult = true;
-        boolean result = instance.getLocked();
-        assertEquals(expResult, result);
+        boolean result = d.getLocked();
+        assertEquals(false, result);
     }
 
     /**
@@ -55,33 +54,49 @@ public class DoorTest {
     @Test
     public void testSetLocked() {
         System.out.println("setLocked");
-        Door instance = new Door();
-        instance.setLocked();
+        d.setLocked();
+        assertEquals(true, d.locked);
+        d.setLocked();
+        assertEquals(false, d.locked);
     }
 
     /**
      * Test of getNextRoom method, of class Door.
      */
     @Test
-    public void testGetNextRoom() {
+    public void testNameGetNextRoom() {
         System.out.println("getNextRoom");
-        Door instance = new Door();
-        Room expResult = null;
-        Room result = instance.getNextRoom();
-        assertEquals(expResult, result);
-
+        Room result = d.getNextRoom();
+        assertEquals("Salon", result.nameRoom);
+    }
+    
+    /**
+     * Test of getNextRoom method, of class Door.
+     */
+    @Test
+    public void testClearGetNextRoom() {
+        System.out.println("getNextRoom");
+        Room result = d.getNextRoom();
+        assertEquals(false, result.clear);
     }
 
     /**
      * Test of getActualRoom method, of class Door.
      */
     @Test
-    public void testGetActualRoom() {
+    public void testNameGetActualRoom() {
         System.out.println("getActualRoom");
-        Door instance = new Door();
-        Room expResult = null;
-        Room result = instance.getActualRoom();
-        assertEquals(expResult, result);
- 
+        Room result = d.getActualRoom();
+        assertEquals("Cuisine", result.nameRoom);
+    }
+    
+    /**
+     * Test of getActualRoom method, of class Door.
+     */
+    @Test
+    public void testGetActualRoom() {
+        System.out.println("getActualRoom");;
+        Room result = d.getActualRoom();
+        assertEquals(true, result.clear);
     }
 }

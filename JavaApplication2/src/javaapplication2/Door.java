@@ -18,8 +18,10 @@ public class Door {
     /**
      * Constructor of a Door
      * @param l a boolean to set the door to locked or not
+     * @param actual the room in which the door is
+     * @param next the room behind the door
      */
-    public Door(boolean l){       
+    public Door(boolean l, Room actual, Room next){       
     }
     
     /**

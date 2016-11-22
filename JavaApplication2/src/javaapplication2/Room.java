@@ -25,8 +25,9 @@ public class Room {
     /**
      * Constructor of a Room
      * @param name if there is no name, it automatically set to "Room"
+     * @param empty set the boolean clear in the constructor
      */
-    public Room(String name){
+    public Room(String name, boolean empty){
         
     }
 
