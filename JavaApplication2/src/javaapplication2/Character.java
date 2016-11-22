@@ -72,12 +72,7 @@ public class Character
         weaponEquipped=wea;
         armorEquipped=amo;        
     }
-    
-    
-    
-  //  private void setInv(){
-    
-   // }
+
 /**
  * Utility function to get the inventory of character
  * 
@@ -165,7 +160,7 @@ public class Character
      * The carried weapon can be null and the weapon has to be in inventory character
      * @param newWeapon which will be carried by character
      */
-    private void setWeaponEquipped(Weapon newWeapon){
+    public void setWeaponEquipped(Weapon newWeapon){
         weaponEquipped = newWeapon;
     }
     
@@ -182,7 +177,7 @@ public class Character
      * The carried armor can be null and the armor has to be in inventory character
      * @param newArmor which will be carried by character
      */
-    private void setArmorEquipped(Armor newArmor){
+    public void setArmorEquipped(Armor newArmor){
         armorEquipped = newArmor;
     }
     

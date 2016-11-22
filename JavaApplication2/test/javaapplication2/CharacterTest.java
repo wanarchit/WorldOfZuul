@@ -129,6 +129,17 @@ public class CharacterTest {
     }
     
     /**
+     * Method testSetMoney2
+     * Checks if loose of money cannot be negative, minimum is 0
+     */
+    @Test
+    public void testSetMoney2(){
+        // Money is initialized at 50 so if character loose 100 the newvalue must be 0 and not -50.
+        myCharacter.setMoney(-100);
+        assertEquals(0,myCharacter.getMoney());
+    }
+    
+    /**
      * Method testGetArmor
      * Checks if armor null is possible 
      */
@@ -146,4 +157,25 @@ public class CharacterTest {
         assertEquals(null,myCharacter.getWeaponEquipped());
     }
     
+    /**
+     * Method testSetArmor
+     * Checks if armor is well change, the first value is "null"
+     * The value has to change to "myArmor"
+     */
+    @Test
+    public void testSetArmor(){
+        myCharacter.setArmorEquipped(myArmor);
+        assertEquals(myArmor,myCharacter.getArmorEquipped());
+    }
+    
+    /**
+     * Method testSetWeapon
+     * Checks if weapon is well change, the first value is "null"
+     * The value has to change to "myWeapon"
+     */
+    @Test
+    public void testSetWeapon(){
+        myCharacter.setWeaponEquipped(myWeapon);
+        assertEquals(myWeapon,myCharacter.getWeaponEquipped());
+    }
 }
