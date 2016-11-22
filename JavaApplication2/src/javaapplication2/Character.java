@@ -28,7 +28,7 @@ public class Character {
      * 
      * Stength and defense of character are using for battle
      * Money cannot be negative but has not positive limit
-     * Armor and Weapon can are null at the begining
+     * Armor and Weapon can be null at the begining
      * 
      * @param name : it is the name of character (NPC or Player)
      * @param stren : it is the strength point of the character

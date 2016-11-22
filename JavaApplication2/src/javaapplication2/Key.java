@@ -1,7 +1,4 @@
-
-import javaapplication2.Inventory;
-import javaapplication2.Item;
-import javaapplication2.LockedDoor;
+package javaapplication2;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
