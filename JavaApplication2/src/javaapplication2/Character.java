@@ -13,6 +13,7 @@ package javaapplication2;
  */
 public class Character {
     private String namePerso;
+    private Room actualRoom;
     // private Img Skin;
     private Inventory inv;
     private int hP= 100;
@@ -38,7 +39,7 @@ public class Character {
      * @param wea : it is the weapon which is carried by character
      * @param amo : it is the armor which is carried by character
      */
-    public Character(String name,int stren, int def, int mon,int sizeInt, Weapon wea, Armor amo){
+    public Character(String name,int stren, int def, int mon, int sizeInt, Weapon wea, Armor amo){
         hP=100;
         if (name.equals("")){
             name="Tata";}
@@ -46,7 +47,7 @@ public class Character {
         strength=stren;
         defense=def;
         money=mon;
-        inv = new Inventory(sizeInt, this);
+        inv = new Inventory(sizeInt);
         weaponEquipped=wea;
         armorEquipped=amo;        
     }
