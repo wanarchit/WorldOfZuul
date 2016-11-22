@@ -17,6 +17,7 @@ public class Character
     private final String namePerso;
     // inventory can be empty
     // it is a set of items
+    // private Img Skin;
     private Inventory inv;
     // character is alive when his life is between 1 and 100 HP.
     // character is dead when his life = 0
