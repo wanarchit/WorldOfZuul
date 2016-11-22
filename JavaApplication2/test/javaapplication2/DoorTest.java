@@ -35,7 +35,8 @@ public class DoorTest {
 
     /**
      * Test of getLocked method, of class Door.
-     * This method allowed to check if the method GetLocked
+     * This method allowed to check if the method GetLocked allowed the user to
+     * get a boolean which allowed to know if the door is open or not. 
      */
     @Test
     public void testGetLocked() {
@@ -46,6 +47,9 @@ public class DoorTest {
 
     /**
      * Test of setLocked method, of class Door.
+     * This test allowed to check if the method SetLocked allowed to change the 
+     * boolean of a door. In order to make a door close, open. 
+     * 
      */
     @Test
     public void testSetLocked() {
@@ -58,6 +62,8 @@ public class DoorTest {
 
     /**
      * Test of getNextRoom method, of class Door.
+     * This test allowed to check if the method NameGetNextRoom the correct name 
+     * of the next room of the player.
      */
     @Test
     public void testNameGetNextRoom() {
@@ -68,6 +74,8 @@ public class DoorTest {
     
     /**
      * Test of getNextRoom method, of class Door.
+     * This test allowed to check if the method ClearGetNextRoom will return
+     * the next room of the player after he passed a room.
      */
     @Test
     public void testClearGetNextRoom() {
@@ -78,6 +86,8 @@ public class DoorTest {
 
     /**
      * Test of getActualRoom method, of class Door.
+     * This test allowed to check if the method NameGetActualRoom will allowed the player
+     * to get the actual room name of the player. 
      */
     @Test
     public void testNameGetActualRoom() {
@@ -88,6 +98,8 @@ public class DoorTest {
     
     /**
      * Test of getActualRoom method, of class Door.
+     * This test allowed to check if the method GetActualRoom will return a the
+     * good room were the player is after he pass a room
      */
     @Test
     public void testGetActualRoom() {
