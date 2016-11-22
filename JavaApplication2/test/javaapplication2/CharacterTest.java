@@ -15,7 +15,6 @@ import static org.junit.Assert.*;
 public class CharacterTest {
     
     private Character myCharacter;
-    private Room myRoom;
     private Weapon myWeapon;
     private Armor myArmor;
     //private Inventory myInventory;
@@ -32,8 +31,7 @@ public class CharacterTest {
     @Before
     public void setUp()
     {
-        myRoom = new Room("Enter",true);
-        myCharacter = new Character("Toto",3,4,50,myRoom,10, null,null);
+        myCharacter = new Character("Toto",3,4,50,10, null,null);
         Inventory inv = myCharacter.getInv();
         myWeapon = new Weapon("axe",inv,5,4);
         myArmor = new Armor("head",inv,6,5);
@@ -63,7 +61,7 @@ public class CharacterTest {
      */
     @Test
     public void testDefaultName(){
-        Character bad = new Character("",3,4,50,myRoom,10, null,null);
+        Character bad = new Character("",3,4,50,10, null,null);
         assertEquals("Tata", bad.getName());
     }
     
@@ -128,24 +126,6 @@ public class CharacterTest {
         // Money is initialized at 50 so if setter works well, value has to change at 80.
         myCharacter.setMoney(80);
         assertEquals(80,myCharacter.getMoney());
-    }
-    
-    /**
-     * 
-     */
-    @Test
-    public void testGetRoom(){
-        assertEquals(myRoom,myCharacter.getActualRoom());
-    }
-    
-    /**
-     * Method testSetRoom
-     */
-    @Test
-    public void testSetRoom(){
-        Room actuNewRoom = new Room("room1",true);
-        myCharacter.setActualRoom(actuNewRoom);
-        assertEquals(actuNewRoom,myCharacter.getActualRoom());
     }
     
     /**
