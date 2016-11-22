@@ -9,12 +9,14 @@ package javaapplication2;
 /**
  * This class allows to handle doors. Doors are the object between rooms so doors
  * knows the actual room and the room behind them. A door can be locked (physically
- * or magically).
+ * or magically). Actual room can be the same as next Room.
  * 
  * @author Jonathan, Babujhi
  */
 public class Door {
-  
+    boolean locked;
+    Room actualRoom, nextRoom;
+    
     /**
      * Constructor of a Door
      * @param l a boolean to set the door to locked or not
@@ -29,6 +31,7 @@ public class Door {
      * @return the boolean locked
      */
     public boolean getLocked(){  
+        return false;
     }
 
     /**
@@ -42,7 +45,8 @@ public class Door {
      * Get which Room is behind the door
      * @return the next Room
      */
-    public Room getNextRoom(){   
+    public Room getNextRoom(){
+        return null; 
     }
 
     /**
@@ -50,5 +54,6 @@ public class Door {
      * @return the actual room
      */
     public Room getActualRoom(){  
+        return null;
     }
 }

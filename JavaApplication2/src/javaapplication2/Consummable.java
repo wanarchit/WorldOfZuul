@@ -11,9 +11,11 @@ import java.util.ArrayList;
  *
  * @author saspaanithy
  */
-public class Consumable {
+public class Consummable {
     
-    
+    public Consummable(){
+        //
+    }
     
     
     

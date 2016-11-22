@@ -6,29 +6,50 @@ package javaapplication2;
  */
 
 /**
- *
+ * The class Character
+ * 
  * @author paul
+ * @version 22/11/2016
  */
 public class Character {
     private String namePerso;
     private Room actualRoom;
     // private Img Skin;
-  //  private Inventory inv;
+    private Inventory inv;
     private int hP= 100;
     private int strength;
     private int defense;
-   // private Weapon weaponEquipped;
-  //  private Armor armorEquipped;
+    private Weapon weaponEquipped;
+    private Armor armorEquipped;
     private int money;
     
-    public Character(String name,int stren, int def, int mon, Room r1){
+    /**
+     * Constructor with name parameter
+     * 
+     * Stength and defense of character are using for battle
+     * Money cannot be negative but has not positive limit
+     * Armor and Weapon can be null at the begining
+     * 
+     * @param name : it is the name of character (NPC or Player)
+     * @param stren : it is the strength point of the character
+     * @param def : it is the defense point of the caracter
+     * @param mon : it the money of character
+     * @param r1 : it is the actual room where the character is
+     * @param sizeInt : it is the size of inventory
+     * @param wea : it is the weapon which is carried by character
+     * @param amo : it is the armor which is carried by character
+     */
+    public Character(String name,int stren, int def, int mon, int sizeInt, Weapon wea, Armor amo){
         hP=100;
+        if (name.equals("")){
+            name="Tata";}
         namePerso=name;
         strength=stren;
         defense=def;
         money=mon;
-       // inv = new Inventory();
-        actualRoom=r1;               
+        inv = new Inventory(sizeInt);
+        weaponEquipped=wea;
+        armorEquipped=amo;        
     }
     
     
@@ -37,13 +58,9 @@ public class Character {
     
    // }
 
-   // public Inventaire getInv(){
-    //    return inv;
-   // }
-
-    //public void echange(P1,P2){
-        
-    //}
+   public Inventory getInv(){
+        return inv;
+    }
 
     public int getHP(){
         return hP;
@@ -87,12 +104,22 @@ public class Character {
         return defense;
     }
 
-//        return weaponEquipped;
- //   }
+    public Weapon getWeaponEquipped(){
+        return weaponEquipped;
+    }
 
-  //  private void setWeaponEquipped(){
- //   }
+    private void setWeaponEquipped(Weapon newWeapon){
+        weaponEquipped = newWeapon;
+    }
 
+    public Armor getArmorEquipped(){
+        return armorEquipped;
+    }
+
+    private void setArmorEquipped(Armor newArmor){
+        armorEquipped = newArmor;
+    }
+    
     public int getMoney(){
         return money;
     }

@@ -1,37 +1,31 @@
 package javaapplication2;
 import java.util.ArrayList;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author saspaanithy
- */
 public class Inventory {
     private ArrayList<Item> inv;
     private int size;
-    private Character character;
 
-
-public Inventory(int s, Character c){
+public Inventory(int s)
+{
 size=s;
-character=c;
 }
 
-
-public void setSize(){}
-
-public int getSize(){
-return size;
+public void setSize()
+{
 }
 
-public void addObject(Item i){}
+public int getSize()
+{
+    return size;
+}
 
-public void deleteObject(Item i){}
+public void addObject(Item i)
+{
+}
+
+public void deleteObject(Item i)
+{
+}
 
 }
 
