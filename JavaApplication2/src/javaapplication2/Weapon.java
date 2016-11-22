@@ -21,8 +21,16 @@ public Weapon(String nI, Inventory inve, int pc, int dg){
     damage = dg;
 }
 
+/**
+ * This method allows to use the weapon to deal damage
+ * @param cha the character who uses the weapon
+ */
 public void use(Character cha){}
 
+/**
+ * Get the amount the damage the weapon deals
+ * @return the damage of the weapon
+ */
 public int getDamage(){
     return damage;
 }
