@@ -14,7 +14,8 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Paul
+ * @author Marin and Paul
+ * @version 22/11/16
  */
 public class PlayerTest {
     private Player myPlayer;
@@ -42,19 +43,18 @@ public class PlayerTest {
 
     /**
      * Test of getKarma method, of class Player.
+     * Test that the expected result fit with the default karma value
      */
     @Test
-    public void testGetKarma() {
-        System.out.println("getKarma");                                                                                                                                                                                                                            
-        Player instance = new Player();
-        int expResult = 100;
-        int result = instance.getKarma();
-        assertEquals(expResult, result);
-
+    public void testGetKarma()
+    {   
+        //The default karma value being 50
+        assertEquals(50,myPlayer.getKarma());
     }
     
     /**
-     * Test of setKarm method of class Player
+     * Test of setKarma method of class Player
+     * Test that the setter correctly set the attribute
      */
     @Test
     public void testSetKarma()
@@ -65,6 +65,7 @@ public class PlayerTest {
     
     /**
      * Test of add10Karma of class Player
+     * Test the methode correctly add 10 karma to the attribute
      */
     @Test
     public void testAdd10Karma()
@@ -76,6 +77,7 @@ public class PlayerTest {
     
     /**
      * Test del10Karma method of Player class
+     * Test the method correctly delete 10 karma to the attribute
      */
     @Test
     public void testDel10Karma()
@@ -87,6 +89,7 @@ public class PlayerTest {
     
     /**
      * Test getActualRoom method of Player class
+     * Test the getter return the correct constructor value
      */
     @Test
     public void testGetActualRoom()
@@ -97,6 +100,7 @@ public class PlayerTest {
     
     /**
      * Test setActualRoom method of Player class
+     * Test the setter correctly set the attribute value
      */
     @Test
     public void testSetActualRoom()

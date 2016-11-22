@@ -82,7 +82,8 @@ public class Room {
      * @param i the number of the line of the List
      * @return a NPC
      */
-    public NPC getLineNPCList(int i){
+    public NPC getLineNPCList(int i)
+    {
         
     }
     
