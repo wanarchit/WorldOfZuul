@@ -22,7 +22,7 @@ public class LockedDoorTest {
         Key myKey;
         Door mydoor;
         String ld;
-        
+        String ld1;
         String namekey="yolo";
         
     public LockedDoorTest() {
@@ -60,9 +60,15 @@ public class LockedDoorTest {
         
         myKey = new Key(namekey);
         ld = new LockedDoor("yolo");
-              
+        
         check = ld.checkKey();
         assertEquals(true, check);
+        
+        ld1 = new LockedDoor("haha");
+        
+        check = ld1.checkKey();
+        assertEquals(false, check);
+
     
     }
 }
