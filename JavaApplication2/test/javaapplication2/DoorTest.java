@@ -35,6 +35,7 @@ public class DoorTest {
 
     /**
      * Test of getLocked method, of class Door.
+     * This method allowed to check if the method GetLocked
      */
     @Test
     public void testGetLocked() {

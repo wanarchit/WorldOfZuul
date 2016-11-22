@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Jonathan
+ * @author Jonathan, Babujhi
  */
 public class LockedDoorTest {
     
@@ -54,6 +54,8 @@ public class LockedDoorTest {
 
     /**
      * Test of checkKey method, of class LockedDoor.
+     * The test allowed to check if the methof checkKey work well
+     * In this test we look if the name of the key and the name of the door are similar.
      */  
     
     @Test
@@ -73,11 +75,18 @@ public class LockedDoorTest {
     
     }
     
+    /**
+     * Test of getLockedDoor;
+     * The test allowed to check if the method getLockedDoor work well
+     * In this test we look if we get the Door boolean in order to know if the door
+     * is open or not.
+     */  
+    
     public void testgetLockedDoor(){
         
         System.out.println("getLockedDoor");
         boolean result = ld2.getLockedDoor();
-        assertEquals(true, result);
+        assertEquals(false, result);
         
     }
 }
