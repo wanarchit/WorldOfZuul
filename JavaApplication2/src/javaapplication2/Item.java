@@ -7,7 +7,7 @@ package javaapplication2;
  * The class Item
  * 
  * @author Marion
- * @version 22/11/2016
+ * @version 22/11/2016 
  */
 public class Item {
     // Name of item, it cannot be changed
