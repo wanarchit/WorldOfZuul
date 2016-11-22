@@ -31,7 +31,6 @@ public class LockedDoorTest {
     
     @Before
     public void setUp() {
-        LockedDoor dl = new LockedDoor
     }
     
     @After
@@ -49,17 +48,21 @@ public class LockedDoorTest {
      */
     @Test
     public void testCheckKey() {
+        
         System.out.println("checkKey");
-        checkKey();
-        assertequal(true, checkKey);
-        checkKey();
-        assertequal( false, checkKey);
+        LockedDoor dl = new LockedDoor();
+        dl.checkKey();
+        assertequal(false, dl.checkKey());
+        dl.checkKey();
+        assertequal(true, dl.checkKey());
         
-        
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
+    private void assertequal(boolean b, boolean checkKey) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
     
     }
