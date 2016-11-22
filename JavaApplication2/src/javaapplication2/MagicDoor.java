@@ -8,17 +8,34 @@ package javaapplication2;
 
 /**
  *
- * @author saspaanithy
+ * @author Jonathan, Babujhi
  */
+
+
 public class MagicDoor {
-    String pwd;
+    String pwd; 
     
-public MagicDoor()
+/* The constructor allowed the creation of a MagicDoor
+ * The magic door is closed and can only be open thanks to a code.
+*/
+    public MagicDoor()
 {
     
 }
 
-public boolean resolve (String essai) {
-        return false;
-}
+    /*
+    The method resolve allowed the user to enter a string and compare the pwd
+    with the code of the Magic door.
+    */
+    
+    /**
+     * @param pwd
+     * @return boolean
+     */
+    
+    public boolean resolve (String pwd) {
+        return true;
+    }
+    
+
 }
