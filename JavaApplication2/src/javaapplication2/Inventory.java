@@ -22,6 +22,7 @@ size=s;
 character=c;
 }
 
+
 public void setSize(){}
 
 public int getSize(){
@@ -33,3 +34,4 @@ public void addObject(Item i){}
 public void deleteObject(Item i){}
 
 }
+

@@ -5,10 +5,9 @@
  */
 package javaapplication2;
 
+import java.util.ArrayList;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -17,24 +16,29 @@ import static org.junit.Assert.*;
  * @author SERAZIN
  */
 public class ArmorTest {
+    private Armor armor;
+     private Inventory inv1;
+    private Character character1;
+    private ArrayList<Item> list1;
+    private Room r1;
     
     public ArmorTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
     @Before
     public void setUp() {
+        r1 = new Room("enter");
+        character1 = new Character ("toto", 5, 5, 10, r1);
+        inv1 = new Inventory(2, character1);
+        armor = new Armor ("name1", inv1, 5, 5);
     }
     
     @After
     public void tearDown() {
+        r1 = null;
+        character1 = null;
+        inv1 = null;
+        armor = null;
     }
 
     /**
@@ -42,12 +46,7 @@ public class ArmorTest {
      */
     @Test
     public void testUse() {
-        System.out.println("use");
-        Character character = null;
-        Armor instance = null;
-        instance.use(character);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -55,13 +54,7 @@ public class ArmorTest {
      */
     @Test
     public void testGetDefense() {
-        System.out.println("getDefense");
-        Armor instance = null;
-        int expResult = 0;
-        int result = instance.getDefense();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals("The defense is not correct", 5, armor.getDefense());
     }
     
 }

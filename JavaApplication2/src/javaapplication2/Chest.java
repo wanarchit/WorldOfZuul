@@ -16,23 +16,25 @@ public class Chest extends Item{
     private Inventory inv;
     
     
-    private Chest(String nI, Inventory inve, int px){
+    public Chest(String nI, Inventory inve, int px, int m){
         super(nI, inve, px);
+        money = m;
     }
     
     private void setMoney(){
         
     }
     
-    private int getMoney{
-        return argent;
+    public int getMoney() {
+        return money;
     }
     
-    private void setInventaire(){
+    public void setInventaire(){
     }
     
-    private Inventaire getInventory(){
+    public Inventory getInventory(){
         return inv;
 
+}
 }
 

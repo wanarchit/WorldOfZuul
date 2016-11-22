@@ -5,10 +5,9 @@
  */
 package javaapplication2;
 
+import java.util.ArrayList;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -17,24 +16,27 @@ import static org.junit.Assert.*;
  * @author SERAZIN
  */
 public class InventoryTest {
+    private Inventory inv1;
+    private Character character1;
+    private ArrayList<Item> list1;
+    private Room r1;
     
     public InventoryTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
     @Before
-    public void setUp() {
+    public void setUp() 
+    {
+        r1 = new Room("enter");
+        character1 = new Character ("toto", 5, 5, 10, r1);
+        inv1 = new Inventory(2, character1);
     }
     
     @After
     public void tearDown() {
+        r1= null;
+        character1 = null;
+        inv1 = null;
     }
 
     /**
@@ -42,11 +44,7 @@ public class InventoryTest {
      */
     @Test
     public void testSetSize() {
-        System.out.println("setSize");
-        Inventory instance = null;
-        instance.setSize();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     assertEquals("The size is not correct", 5, inv1.getSize());
     }
 
     /**
@@ -54,31 +52,22 @@ public class InventoryTest {
      */
     @Test
     public void testGetSize() {
-        System.out.println("getSize");
-        Inventory instance = null;
-        int expResult = 0;
-        int result = instance.getSize();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     assertEquals("The price is not correct", 5, inv1.getSize());
     }
 
     /**
      * Test of addObject method, of class Inventory.
-     */
+     
     @Test
     public void testAddObject() {
-        System.out.println("addObject");
-        Item i = null;
-        Inventory instance = null;
-        instance.addObject(i);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        inv1.addObject(armor);
+        assertEquals(armor, inv1.getObject)
     }
+    * //
 
     /**
      * Test of deleteObject method, of class Inventory.
-     */
+     
     @Test
     public void testDeleteObject() {
         System.out.println("deleteObject");
@@ -88,5 +77,5 @@ public class InventoryTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+    */
 }
