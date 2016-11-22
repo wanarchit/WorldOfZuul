@@ -5,6 +5,10 @@
 */
 package javaapplication2;
 
+/**
+ *
+ * @author Paul
+ */
 public class Chest {
     
     private int money;//the money contained in the chest.
@@ -28,23 +32,42 @@ public class Chest {
     }
     
     //method which returns the money in the chest 
+
+    /**
+     *
+     * @return
+     */
     public int getMoney() 
     {
         return money;
     }
     
     //method which returns the name of the chest 
+
+    /**
+     *
+     * @return
+     */
     public String getNameChest()
     {
         return nameChest;
     }
     
     //method which allows the modification of the inventory, for example to modify the list 
+
+    /**
+     *
+     */
     public void setInventory()
     {
     }
     
     //method which returns the inventory presents in the chest 
+
+    /**
+     *
+     * @return
+     */
     public Inventory getInventory()
     {
         return inv;

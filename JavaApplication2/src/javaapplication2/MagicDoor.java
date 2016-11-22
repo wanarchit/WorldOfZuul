@@ -18,6 +18,11 @@ public class MagicDoor {
 /* The constructor allowed the creation of a MagicDoor
  * The magic door is closed and can only be open thanks to a code.
 */
+
+    /**
+     *
+     */
+
     public MagicDoor()
 {
     

@@ -43,6 +43,10 @@ public class LockedDoor {
         return true;
         }
     
+    /**
+     *
+     * @return
+     */
     public boolean getLockedDoor(){
     
         return true;

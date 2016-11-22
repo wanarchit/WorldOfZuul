@@ -8,6 +8,10 @@
 package javaapplication2;
 import java.util.ArrayList;
 
+/**
+ *
+ * @author Paul
+ */
 public class Inventory {
     private ArrayList<Item> inv; //Array list of item composing the inventory
     private int size; // size of the inventory (of the array list)

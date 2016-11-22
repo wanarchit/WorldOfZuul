@@ -30,7 +30,10 @@ public Item(String nI, Inventory inve, int pc){
     price=pc;
 }
 
-public void use()
+    /**
+     *
+     */
+    public void use()
 {
 }
 

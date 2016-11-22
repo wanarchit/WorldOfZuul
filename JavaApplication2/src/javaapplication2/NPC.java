@@ -30,7 +30,6 @@ public class NPC extends Character
      * @param stren : it is the strength point of the character
      * @param def : it is the defense point of the caracter
      * @param mon : it the money of character
-     * @param r1 : it is the actual room where the character is
      * @param sizeInt : it is the size of inventory
      * @param wea : it is the weapon which is carried by character
      * @param amo : it is the armor which is carried by character

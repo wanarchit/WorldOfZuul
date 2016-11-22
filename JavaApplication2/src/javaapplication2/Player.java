@@ -26,7 +26,6 @@ public class Player extends Character
      * @param sizeInt : it is the size of inventory
      * @param wea : it is the weapon which is carried by character
      * @param amo : it is the armor which is carried by character
-     * @param r1: actual room where the player is
      */
     public Player(String name,int stren, int def, int mon,int sizeInt, Weapon wea, Armor amo,Room r1)
     {
@@ -36,6 +35,12 @@ public class Player extends Character
     /*
     * get for karma attribute
     */
+
+    /**
+     *
+     * @return
+     */
+
     public int getKarma(){
         return karmaBar;
     }
@@ -50,6 +55,11 @@ public class Player extends Character
     /*
     * This method allow to add 10 points to the karma bar of the player
     */   
+
+    /**
+     *
+     */
+   
     public void add10Karma()
     {
         if(karmaBar >= 90)
@@ -62,6 +72,11 @@ public class Player extends Character
     /*
     * This method allow to delete 10 points to the karma bar of the player
     */
+
+    /**
+     *
+     */
+
     public void del10Karma()
     {
         if(karmaBar <= 10)
