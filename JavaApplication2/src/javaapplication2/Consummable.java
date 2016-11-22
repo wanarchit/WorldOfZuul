@@ -1,25 +1,19 @@
 package javaapplication2;
-import java.util.ArrayList;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+public class Consummable extends Item{
+    private int bonus;
 
-/**
- *
- * @author saspaanithy
- */
-public class Consummable {
-    
-    public Consummable(){
-        //
-    }
-    
-    
-    
-    
-    
+public Consummable(String nI, Inventory inve, int px, int bns){
+    super(nI, inve, px);
+    bonus = bns;
+        
 }
+
+public void use(Character character){}
+
+public int getBonus(){
+    return bonus;
+}
+}
+
     

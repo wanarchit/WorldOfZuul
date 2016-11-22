@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
  * @author saspaanithy
  */
 public class DoorTest {
-    Door d;
+    private Door d;
     public DoorTest() {
     }
     
@@ -95,7 +95,7 @@ public class DoorTest {
      */
     @Test
     public void testGetActualRoom() {
-        System.out.println("getActualRoom");;
+        System.out.println("getActualRoom");
         Room result = d.getActualRoom();
         assertEquals(true, result.isClear());
     }
@@ -106,6 +106,6 @@ public class DoorTest {
     @Test
     public void testActualNextRoomSame() {
         System.out.println("actual and Next Room same");
-        assertEquals(d.actualRoom, d.nextRoom);
+        assertNotSame(d.actualRoom, d.nextRoom);
     }
 }

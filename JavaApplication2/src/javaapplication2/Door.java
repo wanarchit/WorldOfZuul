@@ -14,8 +14,8 @@ package javaapplication2;
  * @author Jonathan, Babujhi
  */
 public class Door {
-    boolean locked;
-    Room actualRoom, nextRoom;
+    private boolean locked;
+    private Room actualRoom, nextRoom;
     
     /**
      * Constructor of a Door

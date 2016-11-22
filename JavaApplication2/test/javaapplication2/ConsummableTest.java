@@ -1,4 +1,3 @@
-
 package javaapplication2;
 
 import org.junit.After;
@@ -6,36 +5,37 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class ChestTest {
-    private Chest chest;
+public class ConsummableTest {
+    private Consummable consummable;
     private Inventory inv1;
     
-    public ChestTest() 
+    public ConsummableTest() 
     {
     }
-    
+  
     @Before
     public void setUp() 
     {
-        chest = new Chest("chest1", 50);
+        inv1 = new Inventory(2);
+        consummable = new Consummable ("name1", inv1, 5, 5);
     }
     
     @After
     public void tearDown() 
     {
         inv1 = null;
-        chest = null;
+        consummable = null;
+    }
+
+    @Test
+    public void testUse() 
+    {
+    }
+
+    @Test
+    public void testGetBonus() 
+    {
+       assertEquals(5, consummable.getBonus());
     }
     
-    @Test
-    public void testGetDMoney() 
-    {
-        assertEquals(5, chest.getMoney());
-    }
-    
-    @Test
-    public void testGetInventory() 
-    {
-        assertEquals(inv1, chest.getInventory());
-    }   
 }

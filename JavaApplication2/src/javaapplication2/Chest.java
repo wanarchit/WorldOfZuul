@@ -6,10 +6,10 @@ public class Chest {
     private Inventory inv;
     private String nameChest;
     
-    public Chest(String name, Inventory inv1, int m){
+    public Chest(String name, int m){
         money = m;
-        inv = inv1;
         nameChest = name;
+        inv = new Inventory(5);
     }
     
     private void setMoney()

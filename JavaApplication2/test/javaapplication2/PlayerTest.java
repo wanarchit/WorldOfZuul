@@ -17,11 +17,14 @@ import static org.junit.Assert.*;
  * @author Paul
  */
 public class PlayerTest {
-    
-    public PlayerTest() {
-    }
-    
+    private Player myPlayer;
+    private Room r,r2;
+    public PlayerTest() 
+    {
+        myPlayer= new Player("toto",3,3,3,3,null,null,r);
+    }    
     @BeforeClass
+
     public static void setUpClass() {
     }
     
@@ -50,4 +53,55 @@ public class PlayerTest {
 
     }
     
+    /**
+     * Test of setKarm method of class Player
+     */
+    @Test
+    public void testSetKarma()
+    {
+        myPlayer.setKarma(20);
+        assertEquals(20,myPlayer.getKarma());
+    }
+    
+    /**
+     * Test of add10Karma of class Player
+     */
+    @Test
+    public void testAdd10Karma()
+    {
+        //Assuming the value is set to 20
+        myPlayer.add10Karma();
+        assertEquals(30,myPlayer.getKarma());
+    }
+    
+    /**
+     * Test del10Karma method of Player class
+     */
+    @Test
+    public void testDel10Karma()
+    {
+        //Assuming the value is set to 30
+        myPlayer.del10Karma();
+        assertEquals(20,myPlayer.getKarma());
+    }
+    
+    /**
+     * Test getActualRoom method of Player class
+     */
+    @Test
+    public void testGetActualRoom()
+    {
+        //Assuming the actual room is set to r
+        assertEquals(r,myPlayer.getActualRoom());
+    }
+    
+    /**
+     * Test setActualRoom method of Player class
+     */
+    @Test
+    public void testSetActualRoom()
+    {
+       myPlayer.setActualRoom(r2);
+       assertEquals(r2,myPlayer.getActualRoom());
+    }
 }
