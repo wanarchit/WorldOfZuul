@@ -10,21 +10,21 @@ package javaapplication2;
  * @author Marin
  */
 public class Item {
-    private String nomItem;
+    private String nameItem;
     //private Img skin;
-    private Inventaire inv;
-    private int prix;    
+    private Inventory inv;
+    private int price;    
 
-public Item(String nI, Inventaire inve, int px){
-    nomItem=nI;
+public Item(String nI, Inventory inve, int px){
+    nameItem=nI;
     inv= inve;
-    prix=px;
+    price=px;
 }
 
 public void use(){}
 
-public int getPrix(){
-return prix;
+public int getPrice(){
+return price;
 }
 
 }

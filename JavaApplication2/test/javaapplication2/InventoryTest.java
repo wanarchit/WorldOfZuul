@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author SERAZIN
  */
-public class InventaireTest {
+public class InventoryTest {
     
-    public InventaireTest() {
+    public InventoryTest() {
     }
     
     @BeforeClass
@@ -38,24 +38,24 @@ public class InventaireTest {
     }
 
     /**
-     * Test of setSize method, of class Inventaire.
+     * Test of setSize method, of class Inventory.
      */
     @Test
     public void testSetSize() {
         System.out.println("setSize");
-        Inventaire instance = new Inventaire();
+        Inventory instance = null;
         instance.setSize();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getSize method, of class Inventaire.
+     * Test of getSize method, of class Inventory.
      */
     @Test
     public void testGetSize() {
         System.out.println("getSize");
-        Inventaire instance = new Inventaire();
+        Inventory instance = null;
         int expResult = 0;
         int result = instance.getSize();
         assertEquals(expResult, result);
@@ -64,27 +64,27 @@ public class InventaireTest {
     }
 
     /**
-     * Test of ajouterObjet method, of class Inventaire.
+     * Test of addObject method, of class Inventory.
      */
     @Test
-    public void testAjouterObjet() {
-        System.out.println("ajouterObjet");
+    public void testAddObject() {
+        System.out.println("addObject");
         Item i = null;
-        Inventaire instance = new Inventaire();
-        instance.ajouterObjet(i);
+        Inventory instance = null;
+        instance.addObject(i);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of supprimerObjet method, of class Inventaire.
+     * Test of deleteObject method, of class Inventory.
      */
     @Test
-    public void testSupprimerObjet() {
-        System.out.println("supprimerObjet");
+    public void testDeleteObject() {
+        System.out.println("deleteObject");
         Item i = null;
-        Inventaire instance = new Inventaire();
-        instance.supprimerObjet(i);
+        Inventory instance = null;
+        instance.deleteObject(i);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
