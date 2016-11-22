@@ -16,6 +16,9 @@ public class CharacterTest {
     
     private Character myCharacter;
     private Room myRoom;
+    private Weapon myWeapon;
+    private Armor myArmor;
+    //private Inventory myInventory;
     
     /**
      * Default constructor for test class CharacterTest
@@ -28,8 +31,11 @@ public class CharacterTest {
      */
     public void setUp()
     {
-        myRoom = new Room("Enter");
-        myCharacter = new Character("Toto",3,3,50,myRoom);
+        myRoom = new Room("Enter",true);
+        myCharacter = new Character("Toto",3,3,50,myRoom,10, null,null);
+        Inventory inv = myCharacter.getInv();
+        myWeapon = new Weapon("Axe",inv,5,4);
+        myArmor = new Armor("head",inv,6,5);
     }
     /**
      * Method testNameToto
@@ -45,7 +51,7 @@ public class CharacterTest {
      * Checks that the default name is "Tata", if the given name is empty
      */
     public void testDefaultName(){
-        Character bad = new Character("",3,4,50,myRoom);
+        Character bad = new Character("",3,4,50,myRoom,10, null,null);
         assertEquals("Tata", bad.getName());
     }
     
@@ -114,11 +120,28 @@ public class CharacterTest {
     }
     
     /**
-     * 
+     * Method testSetRoom
      */
     public void testSetRoom(){
-        Room actuNewRoom = new Room("room1");
+        Room actuNewRoom = new Room("room1",true);
         myCharacter.setActualRoom(actuNewRoom);
         assertEquals(actuNewRoom,myCharacter.getActualRoom());
     }
+    
+    /**
+     * Method testGetArmor
+     * Checks if armor null is possible 
+     */
+    public void testGetArmor(){
+        assertEquals(null,myCharacter.getArmorEquipped());
+    }
+    
+    /**
+     * Method testGetWeapon
+     * Checks if weapon null is possible
+     */
+    public void testGetWeapon(){
+        assertEquals(null,myCharacter.getWeaponEquipped());
+    }
+    
 }
