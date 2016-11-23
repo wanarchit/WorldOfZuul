@@ -22,19 +22,12 @@ public class PlayerTest {
     private Room r,r2;
     public PlayerTest() 
     {
-        myPlayer= new Player("toto",3,3,3,3,null,null,r);
+        
     }    
-    @BeforeClass
-
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
     
     @Before
     public void setUp() {
+        myPlayer= new Player("toto",3,3,3,3,null,null,r);
     }
     
     @After
@@ -72,7 +65,7 @@ public class PlayerTest {
     {
         //Assuming the value is set to 20
         myPlayer.add10Karma();
-        assertEquals(30,myPlayer.getKarma());
+        assertEquals(60,myPlayer.getKarma());
     }
     
     /**
@@ -84,7 +77,7 @@ public class PlayerTest {
     {
         //Assuming the value is set to 30
         myPlayer.del10Karma();
-        assertEquals(20,myPlayer.getKarma());
+        assertEquals(40,myPlayer.getKarma());
     }
     
     /**

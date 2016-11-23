@@ -38,7 +38,7 @@ public class Player extends Character
 
     /**
      *
-     * @return
+     * @return 
      */
 
     public int getKarma(){

@@ -197,6 +197,9 @@ public class Character
      * @param newMoney : value of adding or losing money
      */
     public void setMoney(int newMoney){
+        if ((money+newMoney)<0){
+            newMoney=0;
+        }
         money = newMoney;
 }
 
