@@ -14,9 +14,9 @@ package javaapplication2;
 
 public class MagicDoor extends Door { 
     
-    String pwd; 
-    String pwd_user;
-    String name;
+    private String pwd; 
+    private String pwd_user;
+    private String name;
     
     
 
@@ -28,19 +28,19 @@ public class MagicDoor extends Door {
 
     /**
      *
-     * @param name
-     * @param pwd
+     * @param n
+     * @param p
      * @param lock
      * @param Actual
      * @param Next
      */
 
-    public MagicDoor( String name, String pwd, Boolean lock, Room Actual, Room Next )
+    public MagicDoor(String n, String p, Boolean lock, Room Actual, Room Next )
 {
             
         super(lock, Actual, Next);
-        String password = pwd;
-        String name_magicdoor = name;
+        pwd = p;
+        name = n; 
 }
 
     /*
@@ -55,11 +55,12 @@ public class MagicDoor extends Door {
     
     public boolean resolve (String pwd_user) {
      
-        if (pwd_user.equals(pwd)){
+        if (pwd_user.equals(pwd))
+        {
         return true;
-        
         }
-        else{
+        else
+        {
         return false;
         }
     }

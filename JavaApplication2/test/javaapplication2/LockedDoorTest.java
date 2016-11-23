@@ -19,12 +19,15 @@ import static org.junit.Assert.*;
  */
 public class LockedDoorTest {
     
-        Key myKey;
-        Door mydoor;
-        LockedDoor ld;
-        LockedDoor ld1;
-        LockedDoor ld2;
-        String namekey="yolo";
+        private Key myKey;
+        private Door mydoor;
+        private LockedDoor ld;
+        private LockedDoor ld1;
+        private LockedDoor ld2;
+        private String namekey="yolo";
+        private Room r1;
+        private Room r2;
+        
         
         
     public LockedDoorTest() {
@@ -33,10 +36,19 @@ public class LockedDoorTest {
     
     @Before
     public void setUp() {
-    }
+        r1 = new Room ("bedroom", false);
+        r2 = new Room ("garden", false);
+        mykey =new Key
+        ld = new LockedDoor (false, r1, r2, "yolo", myKey);
+   
     
     @After
     public void tearDown() {
+        r1 = null;
+        r2 = null;
+        ld = null;
+    }
+        
     }
 
     @Test

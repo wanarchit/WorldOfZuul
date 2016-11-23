@@ -17,24 +17,27 @@ import static org.junit.Assert.*;
  * @author Jonathan, Babujhi
  */
 public class MagicDoorTest {
+    private MagicDoor md;
+    private Room r1;
+    private Room r2;
     
     public MagicDoorTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
     
     @Before
     public void setUp() {
+        r1 = new Room ("kitchen", false);
+        r2 = new Room ("bedroom", false);
+        md = new MagicDoor("magicD","password", false, r1, r2);
     }
     
     @After
     public void tearDown() {
+        r1 = null;
+        r2 = null;
+        md = null;
+        
     }
 
     
@@ -50,7 +53,6 @@ public class MagicDoorTest {
     public void testResolve() {
         System.out.println("resolve");
         String pwd = "";
-        MagicDoor md = new MagicDoor();
         boolean expResult = false;
         boolean result = md.resolve(pwd);
         assertEquals(expResult, result);
