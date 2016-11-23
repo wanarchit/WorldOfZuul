@@ -26,6 +26,7 @@ public class LockedDoorTest {
         private Room r1;
         private Room r2;
         private Inventory v;
+        private boolean check;
         
         
         
@@ -38,8 +39,9 @@ public class LockedDoorTest {
         r1 = new Room ("bedroom", false);
         r2 = new Room ("garden", false);
         v = new Inventory(5);
-        ld = new LockedDoor (false, r1, r2, "yolo", myKey);
-        myKey = new Key ("First_key", v , 3);
+        ld = new LockedDoor (false, r1, r2, namedoor);
+        ld1 = new LockedDoor(false, r1, r2, "haha");
+        myKey = new Key ("First_key", v , 3);   // d1 the door the key open ? 
     }
     
     @After
@@ -65,9 +67,7 @@ public class LockedDoorTest {
                  
         check = ld.checkKey();   
         assertEquals(true, check);
-        
-        ld1 = new LockedDoor("haha");
-        
+                
         check = ld1.checkKey();
         assertEquals(false, check);
     
