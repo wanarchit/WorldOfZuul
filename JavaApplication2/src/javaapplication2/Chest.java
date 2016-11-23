@@ -27,8 +27,9 @@ public class Chest {
     }
     
     //method which allows to change the money in the chest
-    private void setMoney()
+    private void setMoney(int mt)
     {  
+        money = mt;
     }
     
     //method which returns the money in the chest 
@@ -53,14 +54,7 @@ public class Chest {
         return nameChest;
     }
     
-    //method which allows the modification of the inventory, for example to modify the list 
 
-    /**
-     *
-     */
-    public void setInventory()
-    {
-    }
     
     //method which returns the inventory presents in the chest 
 
