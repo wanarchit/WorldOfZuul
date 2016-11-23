@@ -1,7 +1,5 @@
 package javaapplication2;
 
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,7 +15,7 @@ package javaapplication2;
  */
 
 
-public class LockedDoor {
+public class LockedDoor extends Door {
     
     private Key clef;
     private String name;
@@ -28,7 +26,8 @@ public class LockedDoor {
      * @param name
     */   
     
-    public LockedDoor(String n, Key c){
+    public LockedDoor(boolean l, Room actual, Room next, String n, Key c){
+        super(l,actual,next);
         name = n;
         clef = c;
     }
@@ -49,9 +48,13 @@ public class LockedDoor {
      *
      * @return
      */
-    public boolean getLockedDoor(){
+    public Key getKey(key c){
     
-        return true;
+        clef =c;
+    }
+    
+    public String getName(String n){
+        name = n;
     }
     
 }

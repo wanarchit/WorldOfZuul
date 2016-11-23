@@ -33,8 +33,7 @@ public Item(String nI, Inventory inve, int pc){
     /**
      *
      */
-    public void use()
-{
+public void use(){
 }
 
 /**
@@ -44,5 +43,4 @@ public Item(String nI, Inventory inve, int pc){
 public int getPrice(){
     return price;
 }
-
 }

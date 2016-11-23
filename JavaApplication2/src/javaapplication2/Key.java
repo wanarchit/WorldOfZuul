@@ -15,8 +15,7 @@ public class Key extends Item{
      * @param pc the price of the item
      * @param d1 the door the key opens
      */
-public Key(String nI, Inventory inve, int pc, LockedDoor d1)
-{
+public Key(String nI, Inventory inve, int pc, LockedDoor d1){
     super(nI, inve, pc);
     nameDoor=d1;
 }
