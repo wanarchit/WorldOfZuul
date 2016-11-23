@@ -12,11 +12,12 @@ package javaapplication2;
  */
 
 
-public class MagicDoor { 
+public class MagicDoor extends Door { 
     
     String pwd; 
     String pwd_user;
     String name;
+    
     
 
 
@@ -27,11 +28,17 @@ public class MagicDoor {
 
     /**
      *
-     * @param <error>
+     * @param name
+     * @param pwd
+     * @param lock
+     * @param Actual
+     * @param Next
      */
 
-    public MagicDoor( name, pwd )
+    public MagicDoor( String name, String pwd, Boolean lock, Room Actual, Room Next )
 {
+            
+        super(lock, Actual, Next);
         String password = pwd;
         String name_magicdoor = name;
 }
