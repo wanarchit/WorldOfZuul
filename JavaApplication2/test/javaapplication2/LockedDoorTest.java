@@ -7,9 +7,7 @@ package javaapplication2;
 
 import java.awt.RenderingHints.Key;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -24,9 +22,10 @@ public class LockedDoorTest {
         private LockedDoor ld;
         private LockedDoor ld1;
         private LockedDoor ld2;
-        private String namekey="yolo";
+        private final String namedoor="yolo";
         private Room r1;
         private Room r2;
+        private Inventory v;
         
         
         
@@ -38,39 +37,33 @@ public class LockedDoorTest {
     public void setUp() {
         r1 = new Room ("bedroom", false);
         r2 = new Room ("garden", false);
-        mykey =new Key
+        v = new Inventory(5);
         ld = new LockedDoor (false, r1, r2, "yolo", myKey);
-   
+        myKey = new Key ("First_key", v , 3);
+    }
     
     @After
     public void tearDown() {
         r1 = null;
         r2 = null;
         ld = null;
+        v = null;
+        ld = null;
+        myKey = null; 
     }
         
-    }
-
-    @Test
-    public void testSomeMethod() {
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+    
 
     /**
      * Test of checkKey method, of class LockedDoor.
-     * The test allowed to check if the methof checkKey work well
+     * The test allows to check if the method checkKey work well
      * In this test we look if the name of the key and the name of the door are similar.
      */  
     
     @Test
     public void testcheckKey(){
-         
-        
-        myKey = new Key(namekey);
-        ld = new LockedDoor("yolo");
-        
-        check = ld.checkKey();
+                 
+        check = ld.checkKey();   
         assertEquals(true, check);
         
         ld1 = new LockedDoor("haha");
@@ -87,11 +80,10 @@ public class LockedDoorTest {
      * is open or not.
      */  
     
-    public void testgetLockedDoor(){
-        
-        System.out.println("getLockedDoor");
-        boolean result = ld2.getLockedDoor();
-        assertEquals(false, result);
+    public void testgetName(){
+        System.out.println("getName");
+        String result = ld1.getName();
+        assertEquals(namedoor, result);
         
     }
 }

@@ -17,19 +17,28 @@ package javaapplication2;
 
 public class LockedDoor extends Door {
     
-    private Key clef;
-    private String name;
+    private final Key clef;
+    private final String name;
+    private final Inventory v;
+
      
     
     /**
     * This constructor allowed the creation of a Locked Door
-     * @param name
+     * @param l
+     * @param actual
+     * @param next
+     * @param n
     */   
     
-    public LockedDoor(boolean l, Room actual, Room next, String n, Key c){
+    public LockedDoor(boolean l, Room actual, Room next, String n){
+        
         super(l,actual,next);
         name = n;
-        clef = c;
+        v = new Inventory (5);           /// problem inventaire à mettre en paramètre peut être 
+        clef = new Key ("First_key", v , 3);
+
+        
     }
 
     
@@ -41,7 +50,10 @@ public class LockedDoor extends Door {
     */
     
     public boolean checkKey(){
-        return true;
+        if (name.equals()){     // ajouter un getItems(Name) mais pour sa ajouter getItems dans la méthode items.
+            return true;
+        }
+        else return false;
         }
     
     /**
