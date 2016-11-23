@@ -14,7 +14,7 @@ package javaapplication2;
 
 public class MagicDoor { 
     
-    String pwd;
+    String pwd; 
     String pwd_user;
     String name;
     
