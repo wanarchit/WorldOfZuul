@@ -28,9 +28,9 @@ public class LockedDoor {
      * @param name
     */   
     
-    public LockedDoor(String name, Key clef){
-        name_lockeddoor = name;
-        clef = 
+    public LockedDoor(String n, Key c){
+        name = n;
+        clef = c;
     }
 
     

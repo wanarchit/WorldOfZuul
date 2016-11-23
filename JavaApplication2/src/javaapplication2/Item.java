@@ -44,4 +44,5 @@ public Item(String nI, Inventory inve, int pc){
 public int getPrice(){
     return price;
 }
+
 }
