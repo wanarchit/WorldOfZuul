@@ -27,7 +27,7 @@ public class Door {
      */
     public boolean isLocked()
     {  
-
+        return locked;
     }
 
     /**

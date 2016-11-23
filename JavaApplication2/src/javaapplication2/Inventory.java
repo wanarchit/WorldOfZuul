@@ -27,8 +27,10 @@ public Inventory(int s)
 /**
  * Setter for the inventory size
  */
-public void setSize()
+public void setSize(int s)
 {
+    size=s;
+    
 }
 /**
  * getter for the inventory size
