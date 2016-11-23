@@ -61,7 +61,7 @@ public class Room {
      * @param d a Door between two Rooms (knows actual and next room)
      */
     public void setExit(String s, Door d){
-        
+        exit.put(s,d);
     }
     
     /**
@@ -69,7 +69,7 @@ public class Room {
      * @param n a NPC who is in the room
      */
     public void addNPC (NPC n) {
-        
+        characterRoom.add(n);
     } 
     
     /**
@@ -77,7 +77,7 @@ public class Room {
      * @param c a Chest which is in the Room
      */
     public void addChest (Chest c) {
-        
+        chestRoom.add(c);
     }
     
 }

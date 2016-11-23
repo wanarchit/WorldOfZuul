@@ -65,50 +65,25 @@ public class DoorTest {
 
     /**
      * Test of getNextRoom method, of class Door.
-     * This test allowed to check if the method NameGetNextRoom the correct name 
-     * of the next room of the player.
+     * This test allowes to check if the method GetNextRoom give the correct room.
      */
     @Test
-    public void testNameGetNextRoom() {
+    public void testGetNextRoom() {
         System.out.println("getNextRoom");
         Room result = d.getNextRoom();
-        assertEquals("Salon", result.getNameRoom());
+        assertEquals(r2, result);
     }
     
-    /**
-     * Test of getNextRoom method, of class Door.
-     * This test allowed to check if the method ClearGetNextRoom will return
-     * the next room of the player after he passed a room.
-     */
-    @Test
-    public void testClearGetNextRoom() {
-        System.out.println("getNextRoom");
-        Room result = d.getNextRoom();
-        assertEquals(false, result.isClear());
-    }
 
     /**
      * Test of getActualRoom method, of class Door.
-     * This test allowed to check if the method NameGetActualRoom will allowed the player
-     * to get the actual room name of the player. 
-     */
-    @Test
-    public void testNameGetActualRoom() {
-        System.out.println("getActualRoom");
-        Room result = d.getActualRoom();
-        assertEquals("Cuisine", result.getNameRoom());
-    }
-    
-    /**
-     * Test of getActualRoom method, of class Door.
-     * This test allowed to check if the method GetActualRoom will return a the
-     * good room were the player is after he pass a room
+     * This test allows to check if the method GetActualRoom give the good room.
      */
     @Test
     public void testGetActualRoom() {
         System.out.println("getActualRoom");
         Room result = d.getActualRoom();
-        assertEquals(true, result.isClear());
+        assertEquals(r1, result);
     }
     
     /**
