@@ -27,12 +27,13 @@ public class MagicDoor {
 
     /**
      *
+     * @param <error>
      */
 
     public MagicDoor( name, pwd )
 {
-    password = pwd;
-    name_magicdoor = name;
+        String password = pwd;
+        String name_magicdoor = name;
 }
 
     /*
@@ -41,13 +42,13 @@ public class MagicDoor {
     */
     
     /**
-     * @param pwd
+     * @param pwd_user
      * @return boolean
      */
     
     public boolean resolve (String pwd_user) {
-        
-        if (pwd_user.equals(password)){
+     
+        if (pwd_user.equals(pwd)){
         return true;
         
         }
@@ -55,4 +56,11 @@ public class MagicDoor {
         return false;
         }
     }
+    
+    
+    public String getMagicDoor() {
+    
+        return pwd;
+    }
+    
 }
