@@ -13,6 +13,7 @@ import static org.junit.Assert.*;
  */
 public class InventoryTest {
     private Inventory inv1;
+    private Item i1,i2;
     /**
      * Constructor for the InventoryTest class
      */
@@ -24,6 +25,8 @@ public class InventoryTest {
     public void setUp() 
     {
         inv1 = new Inventory(2);
+        i1 = new Item("casque", inv1, 50);
+        i2 = new Item("Epauliere", null, 60);
     }
     
     @After
@@ -49,4 +52,26 @@ public class InventoryTest {
     {
      assertEquals(2, inv1.getSize());
     } 
+    
+    /**
+     * Method testAddObject
+     * Check it correctly add an item to the inventory
+     */
+    @Test
+    public void testAddObject(){
+        assertEquals(1,inv1.getLength());
+        inv1.addObject(i2);
+        assertEquals(2,inv1.getLength());
+    }
+           
+    /**
+     * Method testDeleteObject
+     * Check it correctly delete an item from the inventory
+     */
+    @Test
+    public void testDeleteObject(){
+        assertEquals(1,inv1.getLength());
+        inv1.deleteObject(i1);
+        assertEquals(0,inv1.getLength());
+    }
 }

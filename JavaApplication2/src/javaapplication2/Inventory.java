@@ -30,7 +30,6 @@ public Inventory(int s)
 public void setSize(int s)
 {
     size=s;
-    
 }
 /**
  * getter for the inventory size
@@ -40,12 +39,19 @@ public int getSize()
 {
     return size;
 }
+
+public int getLength(){
+    return inv.size();
+}
 /**
  * Method that allows to add an item to the inventory
  * @param i object added to the inventory
  */
 public void addObject(Item i)
 {
+    if(inv.size()!= size){
+        inv.add(i);
+    }
 }
 /**
  * Method that allows to delete an item from the inventory
@@ -53,6 +59,9 @@ public void addObject(Item i)
  */
 public void deleteObject(Item i)
 {
+    for(int j = 0; j < inv.size(); j++){
+        if(inv.get(j).equals(i));
+    }
 }
 
 }
