@@ -50,10 +50,11 @@ public class LockedDoor extends Door {
     */
     
     public boolean checkKey(){
-        if (name.equals()){     // ajouter un getItems(Name) mais pour sa ajouter getItems dans la méthode items.
-            return true;
+        if (name.equals(Key.getNamekey())) return true;
+        else {
+            // ajouter un getItems(Name) mais pour sa ajouter getItems dans la méthode items.
+            return false;
         }
-        else return false;
         }
     
     /**
@@ -68,5 +69,6 @@ public class LockedDoor extends Door {
     public String getName(){
        return name;
     }
+
 }
 

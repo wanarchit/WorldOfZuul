@@ -6,7 +6,9 @@ package javaapplication2;
  * version 22/11/2016
  */
 public class Key extends Item{
+    
     private LockedDoor nameDoor;
+    private String nameKey; // test Babu
 
     /**
      * Constructor of the key Class
@@ -18,6 +20,7 @@ public class Key extends Item{
 public Key(String nI, Inventory inve, int pc, LockedDoor d1){
     super(nI, inve, pc);
     nameDoor=d1;
+    nameKey=nI; // test Babu
 }
 /**
  * use a key to unlock a door.
@@ -30,5 +33,9 @@ public void use(){}
  */
 public LockedDoor getDoor(){
     return nameDoor;
+}
+
+public String getNamekey(){ // test Babu
+    return nameKey;
 }
 }
