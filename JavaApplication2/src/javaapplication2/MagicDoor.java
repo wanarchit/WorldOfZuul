@@ -12,9 +12,15 @@ package javaapplication2;
  */
 
 
-public class MagicDoor {
-    String pwd; 
+public class MagicDoor { 
     
+    String pwd;
+    String pwd_user;
+    String name;
+    
+
+
+
 /* The constructor allowed the creation of a MagicDoor
  * The magic door is closed and can only be open thanks to a code.
 */
@@ -23,9 +29,10 @@ public class MagicDoor {
      *
      */
 
-    public MagicDoor()
+    public MagicDoor( name, pwd )
 {
-    
+    password = pwd;
+    name_magicdoor = name;
 }
 
     /*
@@ -38,9 +45,9 @@ public class MagicDoor {
      * @return boolean
      */
     
-    public boolean resolve (String pwd) {
+    public boolean resolve (String pwd_user) {
         
-        if (pwd.equals("")){
+        if (pwd_user.equals(password)){
         return true;
         
         }
