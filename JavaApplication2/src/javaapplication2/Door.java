@@ -18,7 +18,10 @@ public class Door {
      * @param actual the room in which the door is
      * @param next the room behind the door
      */
-    public Door(boolean l, Room actual, Room next){       
+    public Door(boolean l, Room actual, Room next){     
+        locked = l;
+        actualRoom = actual;
+        nextRoom = next;
     }
     
     /**
@@ -35,6 +38,7 @@ public class Door {
      * and vice versa
      */
     public void setLocked(){    
+        locked = !locked;
     }
 
     /**
@@ -42,7 +46,7 @@ public class Door {
      * @return the next Room
      */
     public Room getNextRoom(){
-        return null; 
+        return nextRoom; 
     }
 
     /**
@@ -50,6 +54,6 @@ public class Door {
      * @return the actual room
      */
     public Room getActualRoom(){  
-        return null;
+        return actualRoom;
     }
 }

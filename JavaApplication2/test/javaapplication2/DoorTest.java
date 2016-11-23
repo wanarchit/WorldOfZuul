@@ -13,6 +13,7 @@ import static org.junit.Assert.*;
  */
 public class DoorTest {
     private Door d;
+    private Room r1, r2;
     public DoorTest() {
     }
     
@@ -26,7 +27,9 @@ public class DoorTest {
     
     @Before
     public void setUp() {
-        d = new Door(false, new Room("Cuisine", true), new Room("Salon", false));
+        r1 = new Room("Cuisine", true);
+        r2 = new Room("Salon", false);
+        d = new Door(false, r1, r2);
     }
     
     @After

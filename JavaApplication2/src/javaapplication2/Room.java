@@ -1,7 +1,6 @@
 package javaapplication2;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 /**
  * This class allows to handle Room. Each Room has a name,a set of character, 
@@ -11,8 +10,8 @@ import java.util.HashMap;
  */
 public class Room {
     private boolean clear;
-    private ArrayList<NPC> characterRoom; //pas deux fois le meme
-    private ArrayList<Chest> chestRoom; // pas deux fois le meme
+    private Set<NPC> characterRoom; //pas deux fois le meme
+    private Set<Chest> chestRoom; // pas deux fois le meme
     private String nameRoom;
     private HashMap <String, Door> exit; //pas deux fois la meme porte
 
@@ -24,7 +23,11 @@ public class Room {
      * @param empty set the boolean clear in the constructor
      */
     public Room(String name, boolean empty){
-        
+        clear = empty;
+        nameRoom = name;
+        exit = new HashMap <>();
+        characterRoom = new HashSet<NPC>();
+        chestRoom = new HashSet<Chest>();
     }
 
     /**
@@ -32,7 +35,7 @@ public class Room {
      * @return a boolean depending if the room is clear or not
      */
     public boolean isClear(){
-        return false;
+        return clear;
     }
 
     /**
@@ -40,7 +43,7 @@ public class Room {
      * @return a String, the name of the Room
      */
     public String getNameRoom(){
-        return null;
+        return nameRoom;
     }
 
     /**
@@ -48,7 +51,7 @@ public class Room {
      * true it becomes false and vice versa.
      */
     public void setClear(){
-        
+        clear = !clear;
     }
 
     /**
@@ -77,47 +80,4 @@ public class Room {
         
     }
     
-    /**
-     * Get a NPC in the ArrayList
-     * @param i the number of the line of the List
-     * @return a NPC
-     */
-    public NPC getLineNPCList(int i)
-    {
-        
-    }
-    
-    /**
-     * Get a Chest in the ArrayList
-     * @param i the number of the line of the List
-     * @return a Chest
-     */
-    public Chest getLineChestList(int i){
-        
-    }
-    
-    /**
-     * Get the size of the Chest list
-     * @return the size of the list
-     */
-    public int getSizeChestList() {
-        
-    }
-    
-    /**
-     * Get the size of the NPC list
-     * @return the size of the list
-     */
-    public int getSizeNPCList() {
-        
-    }
-    
-    /**
-     * Get a Door in the HashMap
-     * @param i the number of the line of the HashMap
-     * @return a Door
-     */
-    public Door getHashMapLine(int i) {
-        
-    }
 }
