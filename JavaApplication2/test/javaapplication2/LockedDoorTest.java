@@ -22,7 +22,6 @@ public class LockedDoorTest {
         private LockedDoor ld;
         private LockedDoor ld1;
         private LockedDoor ld2;
-        private final String namedoor="yolo";
         private Room r1;
         private Room r2;
         private Inventory v;
@@ -39,9 +38,9 @@ public class LockedDoorTest {
         r1 = new Room ("bedroom", false);
         r2 = new Room ("garden", false);
         v = new Inventory(5);
-        ld = new LockedDoor (false, r1, r2, namedoor);
-        ld1 = new LockedDoor(false, r1, r2, "haha");
-        myKey = new Key ("First_key", v , 3);   // d1 the door the key open ? 
+        ld = new LockedDoor (false, r1, r2, "bedroom","key1",50);
+        ld1 = new LockedDoor(false, r1, r2, "garden","key2",50);
+        myKey = new Key("FirstKey", v , 3,ld);
     }
     
     @After
