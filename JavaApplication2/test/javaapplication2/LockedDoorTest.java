@@ -35,7 +35,7 @@ public class LockedDoorTest {
     @Before
     public void setUp() {
         r1 = new Room ("bedroom", false);
-       // r2 = new Room ("garden", false);
+        r2 = new Room ("garden", false);
         ld = new LockedDoor (false, r1, r2, "DoorBedroom","key1",50);
       //  ld1 = new LockedDoor(false, r1, r2, "DoorGarden","key2",50);
         //myKey = new Key("FirstKey", 3,ld);
