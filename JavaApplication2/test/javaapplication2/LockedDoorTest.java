@@ -24,7 +24,6 @@ public class LockedDoorTest {
         private LockedDoor ld2;
         private Room r1;
         private Room r2;
-        private Inventory v;
         private boolean check;
         
         
@@ -37,10 +36,9 @@ public class LockedDoorTest {
     public void setUp() {
         r1 = new Room ("bedroom", false);
         r2 = new Room ("garden", false);
-        v = new Inventory(5);
         ld = new LockedDoor (false, r1, r2, "bedroom","key1",50);
         ld1 = new LockedDoor(false, r1, r2, "garden","key2",50);
-        myKey = new Key("FirstKey", v , 3,ld);
+        myKey = new Key("FirstKey", 3,ld);
     }
     
     @After
@@ -48,7 +46,6 @@ public class LockedDoorTest {
         r1 = null;
         r2 = null;
         ld = null;
-        v = null;
         ld = null;
         myKey = null; 
     }
