@@ -161,7 +161,8 @@ public class Character
      * @param newWeapon which will be carried by character
      */
     public void setWeaponEquipped(Weapon newWeapon){
-        weaponEquipped = newWeapon;
+        if(inv.checkInv(newWeapon)){
+        weaponEquipped = newWeapon;}
     }
     
     /**
@@ -178,7 +179,8 @@ public class Character
      * @param newArmor which will be carried by character
      */
     public void setArmorEquipped(Armor newArmor){
-        armorEquipped = newArmor;
+        if(inv.checkInv(newArmor)){
+        armorEquipped = newArmor;}
     }
     
     /**
