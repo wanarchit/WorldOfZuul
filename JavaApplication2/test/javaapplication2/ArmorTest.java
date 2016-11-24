@@ -14,7 +14,6 @@ import static org.junit.Assert.*;
 public class ArmorTest {
     //Theses declarations will allow the creation of object only created to test functions
     private Armor armor;//Creation of a new armor
-    private Inventory inv1;//Creation of an inventary
     
     public ArmorTest() 
     {
@@ -22,15 +21,13 @@ public class ArmorTest {
     
     @Before
     public void setUp() {
-        inv1 = new Inventory(2);//creation of an inventory of a list of 2 items
-        armor = new Armor ("name1", inv1, 5, 5);
+        armor = new Armor ("name1", 5, 5);
     }
     
     @After
     public void tearDown() 
     // At the end of tests, inv1 and armor take a null value
     {
-        inv1 = null;
         armor = null;
     }
     

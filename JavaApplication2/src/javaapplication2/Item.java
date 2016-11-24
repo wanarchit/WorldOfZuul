@@ -21,7 +21,6 @@ abstract class Item {
     /**
      * The constructor of Item with name parameter
      * @param nI it is the name of object
-     * @param inve it is the inventory which will contain this object
      * @param pc  it is the price of this object
      */
 

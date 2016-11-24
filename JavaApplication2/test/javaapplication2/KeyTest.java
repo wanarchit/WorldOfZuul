@@ -7,7 +7,6 @@ import static org.junit.Assert.*;
 
 public class KeyTest {
     private Key key;
-    private Inventory inv1;
     private LockedDoor r1;
     
      /**
@@ -20,14 +19,12 @@ public class KeyTest {
         
     @Before
     public void setUp() {
-        inv1 = new Inventory(2);
-        key = new Key("name", inv1, 5, r1);
+        key = new Key("name", 5, r1);
     }
     
     @After
     public void tearDown() 
     {
-        inv1 = null;
         key = null;
     }
 

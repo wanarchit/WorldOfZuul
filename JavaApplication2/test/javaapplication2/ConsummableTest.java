@@ -13,7 +13,6 @@ import static org.junit.Assert.*;
 public class ConsummableTest {
     //Theses declarations will allow the creation of object only created to test functions
     private Consummable consummable;// creation of a new consummable
-    private Inventory inv1;//creation of a new inventary
     
     public ConsummableTest() 
     {
@@ -22,15 +21,13 @@ public class ConsummableTest {
     @Before
     public void setUp() 
     {
-        inv1 = new Inventory(2); //creation of an inventory of a list of 2 items
-        consummable = new Consummable ("name1", inv1, 5, 5); 
+        consummable = new Consummable ("name1", 5, 5); 
     }
     
     @After
     public void tearDown() 
     // At the end of tests, inv1 and consummable take a null value
     {
-        inv1 = null;
         consummable = null;
     }
 

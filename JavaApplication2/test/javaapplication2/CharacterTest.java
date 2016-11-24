@@ -32,9 +32,8 @@ public class CharacterTest {
     public void setUp()
     {
         myCharacter = new Character("Toto",3,4,50,10, null,null);
-        Inventory inv = myCharacter.getInv();
-        myWeapon = new Weapon("axe",inv,5,4);
-        myArmor = new Armor("head",inv,6,5);
+        myWeapon = new Weapon("axe",5,4);
+        myArmor = new Armor("head",6,5);
     }
     
     /**
