@@ -24,7 +24,9 @@ public class Armor extends Item {
  * @param def defense 
  */
 public Armor(String nI, Inventory inve, int px, int def){
-    super(nI, inve, px);
+    this.nameItem = nI;
+    this.inv = inve;
+    this.price = px;
     defense = def;   
 }
 
