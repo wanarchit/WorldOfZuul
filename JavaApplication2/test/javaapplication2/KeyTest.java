@@ -36,4 +36,10 @@ public class KeyTest {
     {
        assertEquals(r1,key.getDoor());
     }  
+    
+    
+    public void testcheckgetKey(){
+    
+        assertEquals(key.getKey(), "key1");
+    }
 }

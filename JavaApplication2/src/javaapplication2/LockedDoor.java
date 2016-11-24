@@ -59,14 +59,12 @@ public class LockedDoor extends Door {
      *
      * @return
      */
-    public Key getKey(){
-    
-        return key;
-    }
     
     public String getName(){
        return name;
     }
+    
+    
 
 }
 

@@ -17,8 +17,8 @@ import static org.junit.Assert.*;
  */
 public class LockedDoorTest {
     
-        private Key myKey;
-        private Door mydoor;
+        private Key myKey;  //
+        private Door mydoor;    //
         private LockedDoor ld;
         private LockedDoor ld1;
         private LockedDoor ld2;
@@ -75,5 +75,6 @@ public class LockedDoorTest {
         assertEquals(ld.getName(), "DoorBedroom");
         
     }
+    
 }
 
