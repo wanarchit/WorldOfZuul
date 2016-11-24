@@ -13,8 +13,6 @@ import static org.junit.Assert.*;
  */
 public class RoomTest {
     private Room r;
-    private NPC character1, character2;
-    private Chest c1, c2;
     private Door d1, d2;
     
     public RoomTest() {
@@ -66,4 +64,17 @@ public class RoomTest {
         r.setClear();
         assertEquals(true, r.isClear());
     }  
+    
+    /** 
+     * Test if there is not the same door twice in a Room
+     */
+    @Test
+    public void testDoorTwice() {
+        System.out.println("DoorTwice");
+        d1 = new Door(true, r, r);
+        d2 = d1;
+        r.setExit("North", d1);
+        r.setExit("South", d2);
+        assertNotSame(r.getHashMap().get("South"), r.getHashMap().get("North"));
+    }
 }

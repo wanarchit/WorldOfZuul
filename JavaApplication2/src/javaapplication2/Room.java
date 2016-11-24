@@ -61,7 +61,16 @@ public class Room {
      * @param d a Door between two Rooms (knows actual and next room)
      */
     public void setExit(String s, Door d){
-        exit.put(s,d);
+        boolean bool = true;
+        for (HashMap.Entry<String, Door> entry : exit.entrySet()) {
+            String st = entry.getKey();
+            if (exit.get(st)==d) {
+                bool = false;
+            }
+        }
+        if (bool) {
+            exit.put(s,d);
+        }
     }
     
     /**
@@ -78,6 +87,14 @@ public class Room {
      */
     public void addChest (Chest c) {
         chestRoom.add(c);
+    }
+    
+    /**
+     * Get the whole HashMap
+     * @return the HashMap containing the exits
+     */
+    public HashMap getHashMap() {
+        return exit;
     }
     
 }
