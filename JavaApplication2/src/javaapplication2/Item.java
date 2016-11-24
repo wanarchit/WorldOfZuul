@@ -9,14 +9,14 @@ package javaapplication2;
  * @author Marion
  * @version 22/11/2016 
  */
-public class Item {
+abstract class Item {
     // Name of item, it cannot be changed
-    private final String nameItem;
+    protected String nameItem;
     //Item must belong to an inventory (of character or chest)
     // So we add in inventory the item
-    private Inventory inv;
+    protected Inventory inv;
     // Price of item, which will using for the sale of object.
-    private int price;    
+    protected int price;    
 
     /**
      * The constructor of Item with name parameter
@@ -24,11 +24,7 @@ public class Item {
      * @param inve it is the inventory which will contain this object
      * @param pc  it is the price of this object
      */
-public Item(String nI, Inventory inve, int pc){
-    nameItem=nI;
-    inv= inve;
-    price=pc;
-}
+
 
     /**
      *
@@ -43,4 +39,14 @@ public void use(){
 public int getPrice(){
     return price;
 }
+
+
+public String getName(){
+return nameItem;
+}
+
+public Inventory getInventory(){
+    return inv;
+}
+
 }

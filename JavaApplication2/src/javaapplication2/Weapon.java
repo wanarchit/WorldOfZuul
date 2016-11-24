@@ -17,7 +17,9 @@ public class Weapon extends Item {
  * @param dg how much damage the weapon deals
  */
 public Weapon(String nI, Inventory inve, int pc, int dg){
-    super(nI, inve, pc);
+    this.nameItem=nI;
+    this.inv=inve;
+    this.price=pc;
     damage = dg;
 }
 
