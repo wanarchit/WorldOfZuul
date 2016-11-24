@@ -108,7 +108,7 @@ public class Character
         int life = getHP();
         if (life-nbLoseHP < 0){
             setHP(0);}
-        else{setHP(nbLoseHP);}
+        else{setHP(life-nbLoseHP);}
     }
     
     /**
@@ -120,7 +120,7 @@ public class Character
         int life = getHP();
         if (life+nbGainHP > 100){
             setHP(100);}
-        else{setHP(nbGainHP);}
+        else{setHP(life+nbGainHP);}
     }
     
     /**
