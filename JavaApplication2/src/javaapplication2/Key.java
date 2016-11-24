@@ -8,8 +8,7 @@ package javaapplication2;
 public class Key extends Item{
     
     private LockedDoor nameDoor;
-    private String nameKey; // test Babu
-
+    
     /**
      * Constructor of the key Class
      * @param nI Item name, here key name
@@ -20,12 +19,13 @@ public Key(String nI, int pc, LockedDoor d1){
     this.nameItem=nI;
     this.price=pc;
     nameDoor=d1;
-    nameKey=nI; // test Babu
 }
 /**
  * use a key to unlock a door.
  */
-public void use(){}
+    public void use(){
+        
+    }
 
 /**
  * Get the door opens by the key
@@ -35,7 +35,4 @@ public LockedDoor getDoor(){
     return nameDoor;
 }
 
-public String getNamekey(){ // test Babu
-    return nameKey;
-}
 }

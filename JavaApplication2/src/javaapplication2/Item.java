@@ -16,13 +16,7 @@ abstract class Item {
     // So we add in inventory the item
     //protected Inventory inv;
     // Price of item, which will using for the sale of object.
-    protected int price;    
-
-    /**
-     * The constructor of Item with name parameter
-     * @param nI it is the name of object
-     * @param pc  it is the price of this object
-     */
+    protected int price;   
 
 
     /**

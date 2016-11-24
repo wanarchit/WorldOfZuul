@@ -78,7 +78,7 @@ public class Character
  * 
  * @return inventory
  */
-   public Inventory getInv(){
+   public Inventory getInventory(){
         return inv;
     }
 /**
@@ -202,6 +202,6 @@ public class Character
         }
         money = newMoney;
 }
-
+    
 }
             

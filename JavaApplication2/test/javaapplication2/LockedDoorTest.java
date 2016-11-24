@@ -35,19 +35,14 @@ public class LockedDoorTest {
     @Before
     public void setUp() {
         r1 = new Room ("bedroom", false);
-        r2 = new Room ("garden", false);
-        ld = new LockedDoor (false, r1, r2, "bedroom","key1",50);
-        ld1 = new LockedDoor(false, r1, r2, "garden","key2",50);
-        myKey = new Key("FirstKey", 3,ld);
+       // r2 = new Room ("garden", false);
+        ld = new LockedDoor (false, r1, r2, "DoorBedroom","key1",50);
+      //  ld1 = new LockedDoor(false, r1, r2, "DoorGarden","key2",50);
+        //myKey = new Key("FirstKey", 3,ld);
     }
     
     @After
     public void tearDown() {
-        r1 = null;
-        r2 = null;
-        ld = null;
-        ld = null;
-        myKey = null; 
     }
         
     
@@ -60,12 +55,12 @@ public class LockedDoorTest {
     
     @Test
     public void testcheckKey(){
-                 
-        check = ld.checkKey();   
-        assertEquals(true, check);
+        
+        
+        assertEquals(true, ld.checkKey(ld.getKey()));
                 
-        check = ld1.checkKey();
-        assertEquals(false, check);
+        //check = ld1.checkKey();
+        //assertEquals(false, check);
     
     }
     
@@ -77,9 +72,7 @@ public class LockedDoorTest {
      */  
     
     public void testgetName(){
-        System.out.println("getName");
-        String result = ld1.getName();
-        assertEquals(namedoor, result);
+        assertEquals(ld.getName(), "DoorBedroom");
         
     }
 }
