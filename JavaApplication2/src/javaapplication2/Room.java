@@ -97,4 +97,19 @@ public class Room {
         return exit;
     }
     
+    /**
+     * Get the set of character who are present in the room
+     * @return a set containing all the character in the room
+     */
+    public Set getCharcterRoom() {
+        return characterRoom;
+    }
+    
+    /**
+     * Get the set of chest which are in the room
+     * @return a set containing all he chest in the room
+     */
+    public Set getChestRoom() {
+        return chestRoom;
+    }
 }
