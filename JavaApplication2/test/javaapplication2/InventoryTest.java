@@ -69,7 +69,7 @@ public class InventoryTest {
            
     /**
      * Method testDeleteObject
-     * Check it correctly delete an item from the inventory
+     * Checks it correctly delete an item from the inventory
      */
     @Test
     public void testDeleteObject(){
@@ -78,5 +78,16 @@ public class InventoryTest {
         inv1.deleteObject(myWeapon);
         assertEquals(0,inv1.getLength());
         
+    }
+    
+    /**
+     * Method testCheckInv
+     * Checks if the checking of inventory is correct or not
+     */
+    @Test
+    public void testCheckInv(){
+        assertEquals(false,inv1.checkInv(myWeapon));
+        inv1.addObject(myWeapon);
+        assertEquals(true,inv1.checkInv(myWeapon));
     }
 }

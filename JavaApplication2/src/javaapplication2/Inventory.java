@@ -67,5 +67,17 @@ public void deleteObject(Item i)
     }
 }
 
+/**
+ * Method that allow researching in inventory if an object is present or not
+ * @param itemResearch object which is checked
+ * @return boolean true or false
+ */
+public boolean checkInv(Item itemResearch){
+    for(int j = 0; j < inv.size(); j++){
+        if(inv.get(j).equals(itemResearch)){
+            return true;}
+    }
+    return false;
+}
 }
 
