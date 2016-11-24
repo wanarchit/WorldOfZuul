@@ -11,13 +11,17 @@ package javaapplication2;
  */
 abstract class Item {
     // Name of item, it cannot be changed
-    protected String nameItem;
+    private String nameItem;
     //Item must belong to an inventory (of character or chest)
     // So we add in inventory the item
     //protected Inventory inv;
     // Price of item, which will using for the sale of object.
-    protected int price;   
-
+    private int price;   
+    
+    public Item (String n, int p){
+        nameItem =n;
+        price = p;
+    }
 
     /**
      *

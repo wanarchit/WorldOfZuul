@@ -22,9 +22,8 @@ public class Armor extends Item {
  * @param px price of the object
  * @param def defense 
  */
-public Armor(String nI, int px, int def){
-    this.nameItem = nI;
-    this.price = px;
+public Armor(String nI, int pc, int def){
+    super(nI,pc);
     defense = def;   
 }
 

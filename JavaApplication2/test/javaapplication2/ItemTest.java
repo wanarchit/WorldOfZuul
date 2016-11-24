@@ -7,8 +7,9 @@ import static org.junit.Assert.*;
 
 public class ItemTest {
     private Item item;
-    private Inventory inv1;
-    
+    private int pc;
+    private String nameI;
+       
     /**
      * The constructor for the class ItemTest.
      */
@@ -24,7 +25,9 @@ public class ItemTest {
     @Before
     public void setUp() 
     {
-      //s item = new Item("name1", inv1, 50);
+     pc = 50;
+     nameI = "tintin";
+     item = new Weapon(nameI,pc,10);    
     }
     
     /**
@@ -53,7 +56,11 @@ public class ItemTest {
      */
     @Test
     public void testGetPrice() {
-        assertEquals(50, item.getPrice());
+        assertEquals(pc, item.getPrice());
     }
     
+    @Test 
+    public void testGetName() {
+        assertEquals(nameI, item.getName());
+    }
 }

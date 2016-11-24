@@ -21,8 +21,7 @@ public class Consummable extends Item{
      * @param bns bonus obtained thanks to the consummable
      */
 public Consummable(String nI, int pc, int bns){
-    this.nameItem=nI;
-    this.price=pc;
+    super(nI,pc);
     bonus = bns; 
 }
 
