@@ -22,6 +22,7 @@ public class Inventory {
  */
 public Inventory(int s)
 {
+    inv = new ArrayList<Item>();
     size=s;
 }
 /**
@@ -60,7 +61,9 @@ public void addObject(Item i)
 public void deleteObject(Item i)
 {
     for(int j = 0; j < inv.size(); j++){
-        if(inv.get(j).equals(i));
+        if(inv.get(j).equals(i)){
+            inv.remove(j);
+        }
     }
 }
 

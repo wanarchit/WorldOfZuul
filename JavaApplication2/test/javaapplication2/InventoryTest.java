@@ -33,7 +33,6 @@ public class InventoryTest {
     
     @After
     public void tearDown() {
-        inv1 = null;
     }
     /**
      * Method testSetSize
@@ -65,7 +64,7 @@ public class InventoryTest {
         assertEquals(1,inv1.getLength());
         inv1.addObject(myWeapon);
         assertEquals(2,inv1.getLength());
-        System.out.println("l'inventaire est compose de "+inv1);
+        
     }
            
     /**
@@ -74,9 +73,10 @@ public class InventoryTest {
      */
     @Test
     public void testDeleteObject(){
+        inv1.addObject(myWeapon);
         assertEquals(1,inv1.getLength());
         inv1.deleteObject(myWeapon);
         assertEquals(0,inv1.getLength());
-        System.out.println("l'inventaire est compose de "+inv1);
+        
     }
 }

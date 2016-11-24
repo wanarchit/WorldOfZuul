@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class ChestTest {
     //Theses declarations will allow the creation of object only created to test functions
     private Chest chest; // creation of a new chest
-    private Inventory inv1;// creation of a new inventory
+    //private Inventory inv1;// creation of a new inventory
     
     public ChestTest() 
     {
@@ -22,28 +22,17 @@ public class ChestTest {
     @Before
     public void setUp() 
     {
-        chest = new Chest("chest1", 50);
+        chest = new Chest("chest1", 50, 3);
     }
     
     @After
-    public void tearDown() 
-    // At the end of tests, inv1 and chest take a null value
-    {
-        inv1 = null;
-        chest = null;
-    }
+    public void tearDown(){ }
     
     //test allows to check the getMoney method in the Chest class
     @Test
     public void testGetDMoney() 
     {
-        assertEquals(5, chest.getMoney());//check if the money value obtained by the method is similar to the value enter by the user
+        assertEquals(50, chest.getMoney());//check if the money value obtained by the method is similar to the value enter by the user
     }
-    
-    //test allows to check the getInventory method in the Chest class
-    @Test
-    public void testGetInventory() 
-    {
-        assertEquals(inv1, chest.getInventory());//check if the inventary obtained by the method is similar to the value enter by the user
-    }   
+      
 }

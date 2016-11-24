@@ -20,10 +20,10 @@ public class Chest {
      * @param name name of the chest to do a difference between the different chest
      * @param m money presents in the chest
      */
-    public Chest(String name, int m){
+    public Chest(String name, int m, int sizeInv){
         money = m;
         nameChest = name;
-        inv = new Inventory(5);
+        inv = new Inventory(sizeInv);
     }
     
     //method which allows to change the money in the chest
