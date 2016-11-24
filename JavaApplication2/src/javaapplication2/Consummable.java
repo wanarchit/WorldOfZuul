@@ -16,14 +16,12 @@ public class Consummable extends Item{
 
     /**
      * Constructor of the consummable object, allows its creation
-     * @param nI name of the inventary
-     * @param inve inventary
+     * @param nI name of the item
      * @param px price 
      * @param bns bonus obtained thanks to the consummable
      */
-public Consummable(String nI, Inventory inve, int pc, int bns){
+public Consummable(String nI, int pc, int bns){
     this.nameItem=nI;
-    this.inv=inve;
     this.price=pc;
     bonus = bns; 
 }

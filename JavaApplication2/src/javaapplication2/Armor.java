@@ -18,14 +18,12 @@ public class Armor extends Item {
 
 /**
  * Constructor with the parameteers of the class Item and the defense pararmeter.
- * @param nI name of the inventary
- * @param inve inventary
+ * @param nI name of the item
  * @param px price of the object
  * @param def defense 
  */
-public Armor(String nI, Inventory inve, int px, int def){
+public Armor(String nI, int px, int def){
     this.nameItem = nI;
-    this.inv = inve;
     this.price = px;
     defense = def;   
 }

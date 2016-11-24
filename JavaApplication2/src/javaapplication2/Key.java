@@ -13,13 +13,11 @@ public class Key extends Item{
     /**
      * Constructor of the key Class
      * @param nI Item name, here key name
-     * @param inve In which inventory the key is
      * @param pc the price of the item
      * @param d1 the door the key opens
      */
-public Key(String nI, Inventory inve, int pc, LockedDoor d1){
+public Key(String nI, int pc, LockedDoor d1){
     this.nameItem=nI;
-    this.inv=inve;
     this.price=pc;
     nameDoor=d1;
     nameKey=nI; // test Babu

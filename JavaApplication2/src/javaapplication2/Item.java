@@ -14,7 +14,7 @@ abstract class Item {
     protected String nameItem;
     //Item must belong to an inventory (of character or chest)
     // So we add in inventory the item
-    protected Inventory inv;
+    //protected Inventory inv;
     // Price of item, which will using for the sale of object.
     protected int price;    
 
@@ -45,8 +45,5 @@ public String getName(){
 return nameItem;
 }
 
-public Inventory getInventory(){
-    return inv;
-}
 
 }
