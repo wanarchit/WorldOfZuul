@@ -40,6 +40,6 @@ public class KeyTest {
     
     public void testcheckgetKey(){
     
-        assertEquals(key.getKey(), "key1");
+        assertEquals(key.getKey(), key);
     }
 }
