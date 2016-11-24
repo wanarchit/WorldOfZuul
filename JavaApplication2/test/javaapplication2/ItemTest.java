@@ -24,7 +24,7 @@ public class ItemTest {
     @Before
     public void setUp() 
     {
-       item = new Item("name1", inv1, 50);
+      //s item = new Item("name1", inv1, 50);
     }
     
     /**
