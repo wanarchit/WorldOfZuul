@@ -18,7 +18,9 @@ public class Key extends Item{
      * @param d1 the door the key opens
      */
 public Key(String nI, Inventory inve, int pc, LockedDoor d1){
-    super(nI, inve, pc);
+    this.nameItem=nI;
+    this.inv=inve;
+    this.price=pc;
     nameDoor=d1;
     nameKey=nI; // test Babu
 }
