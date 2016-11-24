@@ -39,7 +39,7 @@ public class LockedDoor extends Door {
         super(open,actual,next);
         name = doorName;
         v = new Inventory (5);           /// problem inventaire à mettre en paramètre peut être 
-        key = new Key (keyName, v , keyPrice, null);
+        key = new Key (keyName, v , keyPrice, this);
 
         
     }
