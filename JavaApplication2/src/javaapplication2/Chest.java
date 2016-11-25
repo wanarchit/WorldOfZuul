@@ -27,7 +27,7 @@ public class Chest {
     }
     
     //method which allows to change the money in the chest
-    private void setMoney(int mt)
+    public void setMoney(int mt)
     {  
         money = mt;
     }

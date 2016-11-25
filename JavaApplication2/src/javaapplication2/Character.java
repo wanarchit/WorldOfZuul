@@ -202,7 +202,7 @@ public class Character
         if ((money+newMoney)<0){
             newMoney=0;
         }
-        money = newMoney;
+        money += newMoney;
 }
     
     public int getTotalStr(){

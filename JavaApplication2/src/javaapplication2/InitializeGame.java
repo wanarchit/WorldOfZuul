@@ -16,13 +16,16 @@ public class InitializeGame {
     private Consummable healthPotion;
     private Weapon sword,axe,axe2;
     private Armor shield;
-    private Room room1;
+    private Room room1, room2;
+    private Door door1;
+    private Chest chest1;
+    private Trading trad = new Trading();
     
     public InitializeGame(){
         
         // Room : name, empty (true/false)
         room1 = new Room("Enter",false);
-        
+        room2 = new Room("Jardin",true);
         // Item :
             // Armor : name, price, defense
             // Weapon : name, price, damage
@@ -50,9 +53,18 @@ public class InitializeGame {
         seller1.getInventory().addObject(healthPotion);
         
         // Player : name, strength, defense, money, sizeInv, weaponEquipped, armorEquipped, actuelRoom
-        myPlayer = new Player("Paul",2,2,2,10,null,null,room1);
+        myPlayer = new Player("Paul",2,2,25,10,null,null,room1);
         myPlayer.getInventory().addObject(axe2);
         myPlayer.setWeaponEquipped(axe2);
+        
+        //Door : boolean locked, room actual, room next
+        door1 = new Door(false, room1, room2);
+        
+        //Chest : String name, int money, int sizeInt
+        chest1 = new Chest("Dédé", 15, 80);
+        
+        //set axe in chest
+        chest1.getInventory().addObject(axe);
         
         // Adding NPC in room
         room1.addNPC(monster1);
@@ -60,9 +72,18 @@ public class InitializeGame {
         room1.addNPC(friend1);
         room1.addNPC(seller1);
         
-        Battle combat = new Battle(monster1,myPlayer);
-        combat.beat();
+        //set the exit of room1 to room2
+        room1.setExit("South",door1);
+        
+        trad.tradeMoneyPlayerToCharacter(myPlayer, seller1, trad.tradeObjectCharacterToPlayer(myPlayer, seller1, "Life Potion"));
+        if (myPlayer.getInventory().checkInv(healthPotion)){
+            System.out.println("GG !");
+        }
+        else {
+            System.out.println("Gros naze !");
+        }
+        System.out.println(myPlayer.getMoney());
+//        Battle combat = new Battle(monster1,myPlayer);
+//        combat.beat();
     }
-    
-    
 }
