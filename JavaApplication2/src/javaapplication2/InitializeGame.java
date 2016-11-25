@@ -75,7 +75,7 @@ public class InitializeGame {
         //set the exit of room1 to room2
         room1.setExit("South",door1);
         
-        trad.tradeMoneyPlayerToCharacter(myPlayer, seller1, trad.tradeObjectCharacterToPlayer(myPlayer, seller1, "Life Potion"));
+        trad.tradeMoneyPlayerToCharacter(myPlayer, seller1, trad.tradeObjectCharacterToPlayer(myPlayer, seller1, healthPotion));
         if (myPlayer.getInventory().checkInv(healthPotion)){
             System.out.println("GG !");
         }

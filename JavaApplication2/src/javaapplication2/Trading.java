@@ -17,10 +17,9 @@ public class Trading {
 //money contre objet, objet vs objet, objet vs rien, money vs rien, rien vs objet,
 //rien vs money, objet vs money
 //
-    public void tradeObjectPlayerToChest(Player p, Chest ch, String nameItem){ 
+    public void tradeObjectPlayerToChest(Player p, Chest ch, Item obj){ 
 
         if(ch.getInventory().getInv().size()!= ch.getInventory().getSize()){
-            Item obj = ch.getInventory().getItem(nameItem);
             ch.getInventory().addObject(obj);
             p.getInventory().deleteObject(obj);
         }
@@ -29,10 +28,9 @@ public class Trading {
         }
     }
 
-    public void tradeObjectChestToPlayer(Player p, Chest ch, String nameItem){ 
+    public void tradeObjectChestToPlayer(Player p, Chest ch, Item obj){ 
 
         if(p.getInventory().getInv().size()!= p.getInventory().getSize()){
-            Item obj = ch.getInventory().getItem(nameItem);
             p.getInventory().addObject(obj);
             ch.getInventory().deleteObject(obj);
         }
@@ -46,10 +44,9 @@ public class Trading {
         ch.setMoney(0);
     }
 
-    public int tradeObjectCharacterToPlayer(Player p, NPC chara, String nameItem) {
+    public int tradeObjectCharacterToPlayer(Player p, NPC chara, Item obj) {
 
         if(p.getInventory().getInv().size()!= p.getInventory().getSize()){
-            Item obj = chara.getInventory().getItem(nameItem);
             p.getInventory().addObject(obj);
             chara.getInventory().deleteObject(obj);
             return obj.getPrice();
@@ -60,10 +57,9 @@ public class Trading {
         return 0;
     }
 
-    public int tradeObjectPlayerToCharacter(Player p, NPC chara, String nameItem) {
+    public int tradeObjectPlayerToCharacter(Player p, NPC chara, Item obj) {
 
         if(chara.getInventory().getInv().size()!= chara.getInventory().getSize()){
-            Item obj = p.getInventory().getItem(nameItem);
             chara.getInventory().addObject(obj);
             p.getInventory().deleteObject(obj);
             return obj.getPrice();
@@ -89,10 +85,9 @@ public class Trading {
         chara.setMoney(price);
     }
 
-    public void tradeObjectDeadCharacterToPlayer(Player p, NPC chara, String nameItem) {
+    public void tradeObjectDeadCharacterToPlayer(Player p, NPC chara, Item obj) {
 
         if(p.getInventory().getInv().size()!= p.getInventory().getSize()){
-            Item obj = chara.getInventory().getItem(nameItem);
             p.getInventory().addObject(obj);
             chara.getInventory().deleteObject(obj);
         }
@@ -101,10 +96,9 @@ public class Trading {
         }
     }
 
-    public void tradeObjectPlayerToDeadCharacter(Player p, NPC chara, String nameItem) {
+    public void tradeObjectPlayerToDeadCharacter(Player p, NPC chara, Item obj) {
 
         if(chara.getInventory().getInv().size()!= chara.getInventory().getSize()){
-            Item obj = p.getInventory().getItem(nameItem);
             chara.getInventory().addObject(obj);
             p.getInventory().deleteObject(obj);
         }

@@ -85,16 +85,5 @@ public boolean checkInv(Item itemResearch){
     return false;
 }
 
-public Item getItem(String nameObj) {
-    for (int j = 0; j < inv.size(); j++) {
-        if (inv.get(j).getName().equals(nameObj)) {
-            System.out.println("1");
-            return inv.get(j);
-        }
-    }
-    Weapon w = new Weapon("w", 15, 8);
-    System.out.println("2");
-    return w;
-}
 }
 
