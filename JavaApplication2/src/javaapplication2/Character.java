@@ -205,5 +205,27 @@ public class Character
         money = newMoney;
 }
     
+    public int getTotalStr(){
+        int totStr;
+        if (weaponEquipped != null){
+            totStr = strength + weaponEquipped.getDamage();
+        }
+        else{
+            totStr = strength;
+        }
+        return totStr;
+    }
+   
+   public int getTotalDef(){
+        int totDef;
+        if (armorEquipped != null){
+            totDef = defense + armorEquipped.getDefense();
+        }
+        else{
+            totDef = defense;
+        }
+        return totDef;
+    }
+    
 }
             
