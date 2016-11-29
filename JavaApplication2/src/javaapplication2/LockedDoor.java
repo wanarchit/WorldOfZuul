@@ -19,6 +19,7 @@ public class LockedDoor extends Door {
     
     private final Key key;
     private final String name;
+    private LockedDoor Lock_Door; // Ajout pour extraire le locked door.
 
      
     
@@ -68,6 +69,13 @@ public class LockedDoor extends Door {
        return name;
     }
     
+    
+    // modif 25/11
+    // Lock_Door;
+   
+    public LockedDoor getLockedDoor(){
+        return Lock_Door;
+    }
     
 
 }

@@ -56,4 +56,10 @@ public class Door {
     public Room getActualRoom(){  
         return actualRoom;
     }
+    
+        
+    public void replaceRoom(){
+        actualRoom = nextRoom;
+    }
+    
 }

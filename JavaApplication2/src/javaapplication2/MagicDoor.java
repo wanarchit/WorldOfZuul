@@ -17,6 +17,7 @@ public class MagicDoor extends Door {
     private String pwd; 
     private String pwd_user;
     private String name;
+    private boolean lock;
     
     
 
@@ -71,4 +72,9 @@ public class MagicDoor extends Door {
         return pwd;
     }
     
+    
+    // babujhi modif 25/11
+    public boolean getlockdoor( MagicDoor m){
+        return lock;
+    }
 }
