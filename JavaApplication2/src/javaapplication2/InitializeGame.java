@@ -15,9 +15,10 @@ public class InitializeGame {
     private Room room1,room2,room3,room4;
     private Icon pic1,pic2,pic3,pic4,pic5,pic6,pic7,pic8;
     private LockedDoor door1,door2,door3;
+    private Sound s;
     
     public InitializeGame(){
-        
+        s= new Sound();
         // Room : name, empty (true/false)
         room1 = new Room("Enter",false,null);
         room2 = new Room("Saloon",false,null);
@@ -97,6 +98,7 @@ public class InitializeGame {
         //Battle combat = new Battle(monster1,myPlayer);
         //combat.beat();
         myPlayer.loseHP(-40);
+        s.playSound("music/truc.wav");
         //InterfaceInventory obj_game = new InterfaceInventory(myPlayer);
         InterfaceTest3 obj_game = new InterfaceTest3(myPlayer);
         Graphique aff = new Graphique();
