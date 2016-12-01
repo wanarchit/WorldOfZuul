@@ -98,7 +98,7 @@ public class InitializeGame {
         //Battle combat = new Battle(monster1,myPlayer);
         //combat.beat();
         myPlayer.loseHP(-40);
-        s.playSound("music/truc.wav");
+        s.playSoundInfinite("music/amb.wav");
         //InterfaceInventory obj_game = new InterfaceInventory(myPlayer);
         InterfaceTest3 obj_game = new InterfaceTest3(myPlayer);
         Graphique aff = new Graphique();

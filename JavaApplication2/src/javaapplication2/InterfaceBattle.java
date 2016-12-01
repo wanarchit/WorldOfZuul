@@ -29,6 +29,7 @@ public class InterfaceBattle extends JPanel implements ActionListener{
     private Icon imgRunAway = new ImageIcon("images/fuite2.PNG");
     //private JFrame mainFrame;
     private InterfaceTest3 mainFrame;
+    private Sound s;
     
     public InterfaceBattle(Player myPlayer, NPC enemyNPC, InterfaceTest3 frame){
         p = myPlayer;
@@ -38,6 +39,7 @@ public class InterfaceBattle extends JPanel implements ActionListener{
         karmaB = frame.getKarmaBar();
         // my Button
         
+        s = new Sound();
         
        // myPanelBattle.setBorder(BorderFactory.createLineBorder(Color.black));
         this.setLayout(new GridLayout(6,1));
@@ -126,6 +128,7 @@ public class InterfaceBattle extends JPanel implements ActionListener{
        
        
          if (e.getSource().equals(beat)){
+            s.playSoundSingle("music/combat.wav");
             round += 1;
             Battle duel = new Battle(p,enemy);
             if (round != 1){
