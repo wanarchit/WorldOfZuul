@@ -86,12 +86,14 @@ public class InitializeGame {
         room1.addNPC(monster2);
         room1.addNPC(friend1);
         room1.addNPC(seller1);
-        
+        room1.setExit("South",door1);
         //Battle combat = new Battle(monster1,myPlayer);
         //combat.beat();
         myPlayer.loseHP(-40);
         //InterfaceInventory obj_game = new InterfaceInventory(myPlayer);
         InterfaceTest3 obj_game = new InterfaceTest3(myPlayer);
+        Graphique aff = new Graphique();
+        aff.Affiche(myPlayer);
         //InterfaceTrade obj_game = new InterfaceTrade(myPlayer,seller1);
     }
     
