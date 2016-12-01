@@ -2,7 +2,7 @@
 *
 */
 package javaapplication2;
-
+import javax.swing.*;
 /**
  * The class Item
  * 
@@ -16,17 +16,20 @@ abstract class Item {
     // So we add in inventory the item
     //protected Inventory inv;
     // Price of item, which will using for the sale of object.
-    private int price;   
+    private int price;
+    private Icon pic;
     
-    public Item (String n, int p){
+    public Item (String n, int p, Icon pict){
         nameItem =n;
         price = p;
+        pic = pict;
     }
 
     /**
      *
      */
-public void use(){
+public void use(Character c){
+    
 }
 
 /**
@@ -42,5 +45,11 @@ public String getName(){
 return nameItem;
 }
 
-
+/**
+ * 
+ * @return picture of 
+ */
+public Icon getPicture(){
+    return pic;
+}
 }

@@ -31,9 +31,14 @@ public class CharacterTest {
     @Before
     public void setUp()
     {
-        myCharacter = new Character("Toto",3,4,50,10, null,null);
-        myWeapon = new Weapon("axe",5,4);
-        myArmor = new Armor("head",6,5);
+        // str = 3 et def = 4
+        myCharacter = new Character("Toto",3,4,50,10, null,null,null);
+        myWeapon = new Weapon("axe",5,4,null);
+        // weapon : bonusStr = 4
+        myArmor = new Armor("head",6,5,null);
+        // armor : nonusDef = 5
+        myCharacter.getInventory().addObject(myWeapon);
+        myCharacter.getInventory().addObject(myArmor);
     }
     
     /**
@@ -60,8 +65,8 @@ public class CharacterTest {
      */
     @Test
     public void testDefaultName(){
-        Character bad = new Character("",3,4,50,10, null,null);
-        assertEquals("Tata", bad.getName());
+        Character bad = new Character("",3,4,50,10, null,null,null);
+        assertEquals("WoZChar", bad.getName());
     }
     
     /**
@@ -72,7 +77,7 @@ public class CharacterTest {
     public void testHealthNeg(){
         // The parameter HP can not be negative, it initialized at 100
         // So if charcter loose 110 HP, HP has to be at 0 and not -10 (negative)
-        myCharacter.LoseHP(110);
+        myCharacter.loseHP(-110);
         assertEquals(0,myCharacter.getHP());
     }
     
@@ -84,10 +89,11 @@ public class CharacterTest {
     public void testHealth100(){
         // The parameter HP can not be negative, it initialized at 100
         // So if charcter gain 10 HP, HP has to be at 1000 and not 110
-        myCharacter.GainHP(10);
+        myCharacter.gainHP(10);
         assertEquals(100,myCharacter.getHP());
     }
     
+        
     /**
      * Method testStrength
      * Check if value returned by method getStrenght return the good value
@@ -176,5 +182,27 @@ public class CharacterTest {
     public void testSetWeapon(){
         myCharacter.setWeaponEquipped(myWeapon);
         assertEquals(myWeapon,myCharacter.getWeaponEquipped());
+    }
+    
+    /**
+     * Method testGetTotalStr
+     * Checks if value that return by method is good value
+     * The amount of both parameters (base str + damage weapon) = 7
+     */
+    @Test
+    public void testGetTotalStr(){
+        myCharacter.setWeaponEquipped(myWeapon);
+        assertEquals(7,myCharacter.getTotalStr());
+    }
+    
+    /**
+     * Method testGetTotalDef
+     * Checks if value that return by method is good value
+     * The amount of both parameters (base def + defense armor) = 7
+     */
+    @Test
+    public void testGetTotalDef(){
+        myCharacter.setArmorEquipped(myArmor);
+        assertEquals(9,myCharacter.getTotalDef());
     }
 }

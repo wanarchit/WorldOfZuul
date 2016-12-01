@@ -4,14 +4,15 @@
  */
 package javaapplication2;
 
+import javax.swing.Icon;
+
 /**
  * @author Marin
  */
 public class Player extends Character
 {
-    private int karmaBar = 50;
+    private int karmaBar = 50;//Karma default value is always set on 50
     private Room actualRoom;
-    
     /**
      * Constructor for the object Player
      * Stength and defense of character are using for battle
@@ -26,11 +27,13 @@ public class Player extends Character
      * @param sizeInt : it is the size of inventory
      * @param wea : it is the weapon which is carried by character
      * @param amo : it is the armor which is carried by character
+     * @param pict: Correspond to picture of the player
      */
-    public Player(String name,int stren, int def, int mon,int sizeInt, Weapon wea, Armor amo,Room r1)
+    public Player(String name,int stren, int def, int mon,int sizeInt, Weapon wea, Armor amo,Room r1,Icon pict)
     {
-        super(name,stren,def,mon,sizeInt,wea,amo);
+        super(name,stren,def,mon,sizeInt,wea,amo,pict);
         actualRoom=r1;
+        
     }
     /*
     * get for karma attribute
@@ -46,10 +49,12 @@ public class Player extends Character
     }
     /**
      * setter for the karma attribute
-     * @param k which is the karma value that need to be set
+     * @param k karma value between 0 and 100
      */
     public void setKarma(int k){
+        if(k <= 100 && k >= 0){
         karmaBar=k;
+        }
     }
     
     /*
@@ -101,4 +106,5 @@ public class Player extends Character
     {
         actualRoom=r;
     }
+    
 }

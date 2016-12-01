@@ -1,9 +1,6 @@
 package javaapplication2;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+import javax.swing.Icon;
 
 /**
  * The class Character
@@ -44,6 +41,8 @@ public class Character
     // It is the gold quantity that possosses by character
     // Money cannot be negative but can be equal 0, there is no positive limit
     private int money;
+    private Icon pic;
+   
     
     /**
      * Constructor with name parameter
@@ -59,18 +58,20 @@ public class Character
      * @param sizeInt : it is the size of inventory
      * @param wea : it is the weapon which is carried by character
      * @param amo : it is the armor which is carried by character
+     * @param pict : it is the picture of character
      */
-    public Character(String name,int stren, int def, int mon, int sizeInt, Weapon wea, Armor amo){
+    public Character(String name,int stren, int def, int mon, int sizeInt, Weapon wea, Armor amo, Icon pict){
         hP=100;
         if (name.equals("")){
-            name="Tata";}
+            name="WoZChar";}
         namePerso=name;
         strength=stren;
         defense=def;
         money=mon;
         inv = new Inventory(sizeInt);
         weaponEquipped=wea;
-        armorEquipped=amo;        
+        armorEquipped=amo;   
+        pic = pict;
     }
 
 /**
@@ -104,11 +105,11 @@ public class Character
      * If character loose more than the remaining HP, HP are set to 0
      * @param nbLoseHP the number of HP which is loose
      */
-    public void LoseHP(int nbLoseHP){
+    public void loseHP(int nbLoseHP){
         int life = getHP();
-        if (life-nbLoseHP < 0){
+        if (life+nbLoseHP < 0){
             setHP(0);}
-        else{setHP(life-nbLoseHP);}
+        else{setHP(life+nbLoseHP);}
     }
     
     /**
@@ -116,7 +117,7 @@ public class Character
      * If character gain more than the remaining HP, HP are set to 100
      * @param nbGainHP the number of HP which is gained
      */
-    public void GainHP(int nbGainHP){
+    public void gainHP(int nbGainHP){
         int life = getHP();
         if (life+nbGainHP > 100){
             setHP(100);}
@@ -162,7 +163,8 @@ public class Character
      */
     public void setWeaponEquipped(Weapon newWeapon){
         if(inv.checkInv(newWeapon)){
-        weaponEquipped = newWeapon;}
+            weaponEquipped = newWeapon;}
+        else{weaponEquipped = null;}
     }
     
     /**
@@ -181,6 +183,7 @@ public class Character
     public void setArmorEquipped(Armor newArmor){
         if(inv.checkInv(newArmor)){
         armorEquipped = newArmor;}
+        else{weaponEquipped = null;}
     }
     
     /**
@@ -202,10 +205,14 @@ public class Character
         if ((money+newMoney)<0){
             newMoney=0;
         }
-        money += newMoney;
+        money = newMoney;
 }
-    
-    public int getTotalStr(){
+   /**
+    * Utility function to get the character total strenght
+    * 
+    * @return the total value of strenght (weapon carried + base strenght)
+    */ 
+   public int getTotalStr(){
         int totStr;
         if (weaponEquipped != null){
             totStr = strength + weaponEquipped.getDamage();
@@ -216,6 +223,11 @@ public class Character
         return totStr;
     }
    
+   /**
+    * Utility function to get the character total defense
+    * 
+    * @return the total value of defense (armor carried + base defense)
+    */
    public int getTotalDef(){
         int totDef;
         if (armorEquipped != null){
@@ -226,6 +238,10 @@ public class Character
         }
         return totDef;
     }
+   
+   public Icon getIconChar(){
+       return pic;
+   }
     
 }
             

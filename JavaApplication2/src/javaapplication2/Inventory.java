@@ -27,6 +27,7 @@ public Inventory(int s)
 }
 /**
  * Setter for the inventory size
+ * @param s Inventory size to be set
  */
 public void setSize(int s)
 {
@@ -44,11 +45,6 @@ public int getSize()
 public int getLength(){
     return inv.size();
 }
-
-public ArrayList getInv(){
-    return inv;
-}
-
 /**
  * Method that allows to add an item to the inventory
  * @param i object added to the inventory
@@ -68,12 +64,13 @@ public void deleteObject(Item i)
     for(int j = 0; j < inv.size(); j++){
         if(inv.get(j).equals(i)){
             inv.remove(j);
+            break;
         }
     }
 }
 
 /**
- * Method that allow researching in inventory if an object is present or not
+ * 
  * @param itemResearch object which is checked
  * @return boolean true or false
  */
@@ -83,6 +80,11 @@ public boolean checkInv(Item itemResearch){
             return true;}
     }
     return false;
+}
+
+
+public Item getItem(int numObject){
+    return inv.get(numObject);
 }
 
 }

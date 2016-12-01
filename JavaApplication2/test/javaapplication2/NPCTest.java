@@ -25,7 +25,7 @@ public class NPCTest {
      */
     public NPCTest() 
     {
-        myNPC= new NPC ("toto",3,3,3,3,wea,amo,true,"");
+        myNPC= new NPC ("toto",3,3,3,3,wea,amo,true,"",null);
     }
     
     @BeforeClass
@@ -59,6 +59,7 @@ public class NPCTest {
     public void testSetSpeech()
     {
         myNPC.setSpeech("test");
+        //Assuming that with SetSpeech method, the string value is set to "test"
         assertEquals("test",myNPC.getSpeech());
     }
 

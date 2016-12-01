@@ -1,6 +1,6 @@
 package javaapplication2;
 
-import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.String;
+import javax.swing.Icon;
 
 /*
  * This class inherite from the character class
@@ -35,10 +35,11 @@ public class NPC extends Character
      * @param amo : it is the armor which is carried by character
      * @param host: it is the boolean value defining if hostile or not
      * @param txt: it is the string value displayed when interacting with the NPC
+     * @param pict: correspond to NPC picture
      */    
-    public NPC(String name,int stren, int def, int mon,int sizeInt, Weapon wea, Armor amo,boolean host,String txt)
+    public NPC(String name,int stren, int def, int mon,int sizeInt, Weapon wea, Armor amo,boolean host,String txt,Icon pict)
     {
-        super(name,stren,def,mon,sizeInt,wea,amo);
+        super(name,stren,def,mon,sizeInt,wea,amo,pict);
         hostile=host;
         speech=txt;
     }
@@ -53,7 +54,7 @@ public class NPC extends Character
     }
 /**
  * Allows to change the displayed text by the NPC
- * @param NPC displayed text as string
+ * @param txt NPC text displayed as String value
  */
     public void setSpeech(String txt)
     {

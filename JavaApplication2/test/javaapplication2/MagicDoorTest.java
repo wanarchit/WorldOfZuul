@@ -27,9 +27,9 @@ public class MagicDoorTest {
     
     @Before
     public void setUp() {
-        r1 = new Room ("kitchen", false);
-        r2 = new Room ("bedroom", false);
-        md = new MagicDoor("magicD","password", false, r1, r2);
+        r1 = new Room ("kitchen", false, null);
+        r2 = new Room ("bedroom", false, null);
+        md = new MagicDoor("magicD","password", false, r1, r2, null);
     }
     
     @After
@@ -53,9 +53,7 @@ public class MagicDoorTest {
     public void testResolve() {
         System.out.println("resolve");
         String pwd = "";
-        boolean expResult = false;
-        boolean result = md.resolve(pwd);
-        assertEquals(expResult, result);
+        assertEquals(false, md.resolve(pwd));
     }
     
 }

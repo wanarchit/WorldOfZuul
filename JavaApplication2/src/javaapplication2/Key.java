@@ -1,5 +1,5 @@
 package javaapplication2;
-
+import javax.swing.*;
 /**
 * The key is an item and it can unlock door.
  * @author Marion, Clément
@@ -9,15 +9,15 @@ public class Key extends Item{
     
     private LockedDoor nameDoor;
     private Key key;
-    
     /**
      * Constructor of the key Class
      * @param nI Item name, here key name
      * @param pc the price of the item
      * @param d1 the door the key opens
+     * @param pict of the key
      */
-public Key(String nI, int pc, LockedDoor d1){
-    super(nI, pc);
+public Key(String nI, int pc, LockedDoor d1, Icon pict){
+    super(nI, pc, pict);
     nameDoor=d1;
 }
 /**

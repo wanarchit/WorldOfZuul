@@ -22,17 +22,22 @@ public class ChestTest {
     @Before
     public void setUp() 
     {
-        chest = new Chest("chest1", 50, 3);
+        chest = new Chest("chest1", 50, 3,null);
     }
     
     @After
     public void tearDown(){ }
     
-    //test allows to check the getMoney method in the Chest class
+    /**
+     * Method testGetMoney
+     * test allows to check the getMoney method in the Chest class
+     */
     @Test
     public void testGetDMoney() 
     {
         assertEquals(50, chest.getMoney());//check if the money value obtained by the method is similar to the value enter by the user
     }
+    
+    // other function are only getter and setter and they are already tested
       
 }

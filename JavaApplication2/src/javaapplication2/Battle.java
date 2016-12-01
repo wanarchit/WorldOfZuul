@@ -13,75 +13,56 @@ public class Battle {
     
     private NPC myEnemy;
     private Player myPlayer;
+    private boolean enemyKO=false;
     
-    public Battle(NPC enemy, Player player){
+    public Battle(Player player,NPC enemy){
         myEnemy = enemy;
         myPlayer = player;
     }
     
     public void beat(){
-        boolean again = true;
-        System.out.println("Battle GO !!!");
-        int cpt =0;
-        while (again){
-            
-            if(myPlayer.getHP()!=0&&myEnemy.getHP()!=0){
+            int hpP = myPlayer.getHP();
+            int hpE = myEnemy.getHP();
+            if(hpP !=0 && hpE !=0){
                 playerAttack(2);
-                cpt+=1;
+                hpE = myEnemy.getHP();
             }
-            if(myPlayer.getHP()!=0&&myEnemy.getHP()!=0){
+            if(hpP !=0 && hpE !=0){
                 enemyAttack(1);
-                cpt+=1;
+                hpP = myPlayer.getHP();
             }
-            if(myPlayer.getHP()==0||myEnemy.getHP()==0){
-                again=false;
+            if(hpP ==0|| hpE ==0){
             }
-            if(myPlayer.getHP()==0){
-                System.out.println("Player KO en "+cpt+" tours");
+            if(hpP ==0){  
             }
-            if(myEnemy.getHP()==0){
-                System.out.println("Enemy KO en "+cpt+" tours");
-            
-            if (myEnemy.isHostile())
-                {
-                        myPlayer.GainHP(10);
-                        myPlayer.add10Karma();
-                            
-                }
-                else 
-                {
-                        myPlayer.LoseHP(10);
-                        myPlayer.del10Karma();
-                        myEnemy.setHostile(true);
-                }
+            if(hpE ==0){
+                enemyKO = true;
             }
-        }
         
     }
     
+   
     public void enemyAttack(int intensity){
         int damage = (int)((myEnemy.getTotalStr()*intensity*myEnemy.getHP()*0.01)/(myPlayer.getTotalDef()*myPlayer.getHP()*0.01));
         if(damage==0){
-            myPlayer.LoseHP(1);
+            myPlayer.loseHP(-1);
         }
         else{
-            myPlayer.LoseHP(damage);
+            myPlayer.loseHP(-damage);
         }
-        System.out.println("PV Player = "+myPlayer.getHP());
-        System.out.println("PV Enemy = "+myEnemy.getHP());
-        System.out.println("----------------------");
     }
     
     public void playerAttack(int intensity){
         int damage = (int)((myPlayer.getTotalStr()*intensity*myPlayer.getHP()*0.01)/(myEnemy.getTotalDef()*myEnemy.getHP()*0.01));
         if(damage==0){
-            myEnemy.LoseHP(1);
+            myEnemy.loseHP(-1);
         }
         else{
-            myEnemy.LoseHP(damage);
+            myEnemy.loseHP(-damage);
         }
-        System.out.println("PV Player = "+myPlayer.getHP());
-        System.out.println("PV Enemy = "+myEnemy.getHP());
-        System.out.println("----------------------");
+    }
+    
+    public boolean isEnemyKO(){
+        return enemyKO;
     }
 }

@@ -14,6 +14,7 @@ import static org.junit.Assert.*;
 public class ArmorTest {
     //Theses declarations will allow the creation of object only created to test functions
     private Armor armor;//Creation of a new armor
+    private Character charact;
     
     public ArmorTest() 
     {
@@ -21,22 +22,31 @@ public class ArmorTest {
     
     @Before
     public void setUp() {
-        armor = new Armor ("name1", 5, 5);
+        charact = new Character("nameChar",10,10,10,5,null,null,null);
+        armor = new Armor ("name1", 5, 5,null);
+        charact.getInventory().addObject(armor);
     }
     
     @After
     public void tearDown() 
-    // At the end of tests, inv1 and armor take a null value
-    {
-        armor = null;
-    }
+    {}
     
-    //test allows to check the use method in the Armor class
+    /**
+     * Method testUse
+     * test allows to check the use method in the Armor class
+     */
     @Test
     public void testUse() 
     {
+        assertEquals(null, charact.getArmorEquipped());        
+        armor.use(charact);
+        assertEquals(armor, charact.getArmorEquipped());
     }
-    //test allows to check the getDefense method in the Armor class
+
+    /**
+     * Method testGetDefense
+     * test allows to check the getDefense method in the Armor class
+     */
     @Test
     public void testGetDefense() 
     {
