@@ -41,10 +41,21 @@ public class Battle {
             }
             if(myEnemy.getHP()==0){
                 System.out.println("Enemy KO en "+cpt+" tours");
+            
+            if (myEnemy.isHostile())
+                {
+                        myPlayer.GainHP(10);
+                        myPlayer.add10Karma();
+                            
+                }
+                else 
+                {
+                        myPlayer.LoseHP(10);
+                        myPlayer.del10Karma();
+                        myEnemy.setHostile(true);
+                }
             }
         }
-        
-        
         
     }
     
