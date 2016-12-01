@@ -6,7 +6,7 @@
 package javaapplication2;;
 
 /**
- *
+ *;
  * @author saspaanithy
  */
 public class Move {
@@ -20,6 +20,7 @@ public class Move {
     private Key mykey;
     private Room actualroom, nextroom;
     private Key key; 
+    private Player p;
     
     
 public Move( ){
@@ -41,7 +42,7 @@ public Move( ){
             else {
                 System.out.println("La porte est ouverte");
                 // code pour cliquer sur la porte alors replaceRoom fonction ( If)
-                d.replaceRoom();
+                p.setActualRoom(actualroom);
                 }
         }
         
@@ -51,7 +52,8 @@ public Move( ){
                     
                 if (md.resolve(pwd_user) == true){
                         System.out.println("Bonne réponse, la porte s'ouvre");
-                        d.replaceRoom();
+                    p.setActualRoom(actualroom);
+
                 }
                 
                 else if (md.resolve(pwd_user) == false){
@@ -61,7 +63,8 @@ public Move( ){
             
         else {
                 System.out.println("La porte est ouverte");
-                d.replaceRoom();
+                    p.setActualRoom(actualroom);
+
              }    
         }
         
@@ -72,7 +75,8 @@ public Move( ){
                 
                 if(ld.checkKey(key) == true){
                     System.out.println("La porte viens de s'ouvrir grâce à la clé");
-                    d.replaceRoom();
+                    p.setActualRoom(actualroom);
+
                     }   
                 
                 else {
@@ -82,7 +86,8 @@ public Move( ){
         
             else {
                 System.out.println("La porte est ouverte");
-                d.replaceRoom();
+                    p.setActualRoom(actualroom);
+
                 }
         }
     }
