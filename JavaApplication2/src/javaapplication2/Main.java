@@ -18,6 +18,7 @@ public class Main {
     public static void main(String[] args) {
         
         InitializeGame obj_game = new InitializeGame();
+        //Home toto = new Home();
     }
     
 }
