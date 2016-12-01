@@ -12,9 +12,9 @@ public class InitializeGame {
     private Consummable healthPotion, poisonPotion;
     private Weapon sword,axe,axe2;
     private Armor shield;
-    private Room room1,room2,room3;
+    private Room room1,room2,room3,room4;
     private Icon pic1,pic2,pic3,pic4,pic5,pic6,pic7,pic8;
-    private LockedDoor door1,door2;
+    private LockedDoor door1,door2,door3;
     
     public InitializeGame(){
         
@@ -22,12 +22,14 @@ public class InitializeGame {
         room1 = new Room("Enter",false,null);
         room2 = new Room("Saloon",false,null);
         room3 = new Room("Bathroom",false,null);
+        room4 = new Room("Big room",false,null);
         
         // Door : locked ?, Room actual, Room next, Icon Door
             // Locked door : open?, Room actual, Room next, doorName, keyName, keyPrice, pictKey, pictDoor
         pic7 = new ImageIcon("images/key1.PNG");
         door1 = new LockedDoor(false,room1,room2,"Salon Door","Big Key",2,pic7,null);
-        door2 = new LockedDoor(false,room2,room3,"Bathroom Door","Small Key",5,pic8,null);
+        door2 = new LockedDoor(false,room1,room3,"Bathroom Door","Small Key",5,pic8,null);
+        door3 = new LockedDoor(false,room2,room4,"Door je sais pas cb","Key",5,pic6,null);
         
         
         // Item :
@@ -90,6 +92,8 @@ public class InitializeGame {
         room1.addNPC(seller1);
         room1.setExit("South",door1);
         room1.setExit("West", door2);
+        //----------------------------------------
+        room2.setExit("East",door3);
         //Battle combat = new Battle(monster1,myPlayer);
         //combat.beat();
         myPlayer.loseHP(-40);
