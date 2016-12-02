@@ -36,13 +36,16 @@ public Move( ){
         if(Type_Door(d) == 3){
             
             if(d.isLocked() == true){
-                System.out.println("La porte est fermé");
+                System.out.println("La porte viens de s'ouvrir");
+                d.setLocked();
+                p.setActualRoom(nextroom);
+
                 }
         
             else {
                 System.out.println("La porte est ouverte");
                 // code pour cliquer sur la porte alors replaceRoom fonction ( If)
-                p.setActualRoom(actualroom);
+                p.setActualRoom(nextroom);
                 }
         }
         
@@ -52,7 +55,8 @@ public Move( ){
                     
                 if (md.resolve(pwd_user) == true){
                         System.out.println("Bonne réponse, la porte s'ouvre");
-                    p.setActualRoom(actualroom);
+                    d.setLocked();
+                    p.setActualRoom(nextroom);
 
                 }
                 
@@ -63,7 +67,7 @@ public Move( ){
             
         else {
                 System.out.println("La porte est ouverte");
-                    p.setActualRoom(actualroom);
+                    p.setActualRoom(nextroom);
 
              }    
         }
@@ -75,7 +79,8 @@ public Move( ){
                 
                 if(ld.checkKey(key) == true){
                     System.out.println("La porte viens de s'ouvrir grâce à la clé");
-                    p.setActualRoom(actualroom);
+                    d.setLocked();
+                    p.setActualRoom(nextroom);
 
                     }   
                 
@@ -86,7 +91,7 @@ public Move( ){
         
             else {
                 System.out.println("La porte est ouverte");
-                    p.setActualRoom(actualroom);
+                    p.setActualRoom(nextroom);
 
                 }
         }
