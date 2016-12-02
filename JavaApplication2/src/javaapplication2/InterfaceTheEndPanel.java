@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package javaapplication2;
+
 import java.awt.Graphics;
 import java.awt.Image;
 import java.io.File;
@@ -33,7 +34,7 @@ public class InterfaceTheEndPanel extends JPanel {
         try{
             if( pl.getKarma() <= 50){
             try{
-                Image img = ImageIO.read(new File("/Users/saspaanithy/NetBeansProject/WorldOfZuul/local_babujhi/src/image/TheEndBad.png"));              
+                Image img = ImageIO.read(new File("\"/images/TheEndBad.png"));              
                 g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
             }
             
@@ -45,7 +46,7 @@ public class InterfaceTheEndPanel extends JPanel {
             
             else if (pl.getKarma() >= 50){
                 try{  
-        Image img = ImageIO.read(new File("/Users/saspaanithy/NetBeansProject/WorldOfZuul/local_babujhi/src/image/TheEndGood.png"));
+        Image img = ImageIO.read(new File("\"/images/TheEndGood.png"));
         g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
         }
         

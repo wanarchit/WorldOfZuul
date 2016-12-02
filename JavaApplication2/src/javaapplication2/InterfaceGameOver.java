@@ -32,7 +32,7 @@ public class InterfaceGameOver extends JPanel {
             
         if (pl.getHP() == 0){
         try{
-                Image img = ImageIO.read(new File("/Users/saspaanithy/NetBeansProject/WorldOfZuul/local_babujhi/src/image/TheGameOver.png"));              
+                Image img = ImageIO.read(new File("/images/TheGameOver.png"));              
                 g.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
             }
         
