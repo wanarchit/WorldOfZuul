@@ -118,7 +118,7 @@ private int rdVal;
         //-----------------------------Adding Doors-----------------------------
                 if(south==true && nbButt==22)
                 {
-                    ImageIcon porte = new ImageIcon(new ImageIcon("C:/imgWoz/dungeonDoor.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
+                    ImageIcon porte = new ImageIcon(new ImageIcon("C:/Users/Marin/Documents/NetBeansProjects/WorldOfZuul/JavaApplication2/images/dungeonDoor.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
                     doorSouth = new JButton(porte);
                     doorSouth.setPreferredSize(new Dimension(100,100));
                     doorSouth.setMinimumSize(new Dimension(100,100));
@@ -128,7 +128,7 @@ private int rdVal;
                 }
                 else if(north==true && nbButt==2)
                 {
-                    ImageIcon porte = new ImageIcon(new ImageIcon("C:/imgWoz/dungeonDoor.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
+                    ImageIcon porte = new ImageIcon(new ImageIcon("C:/Users/Marin/Documents/NetBeansProjects/WorldOfZuul/JavaApplication2/images/dungeonDoor.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
                     JButton doorNorth = new JButton(porte);
                     doorNorth.setPreferredSize(new Dimension(100,100));
                     doorNorth.setMinimumSize(new Dimension(100,100));
@@ -138,7 +138,7 @@ private int rdVal;
                 }
                 else if(west==true && nbButt==10)
                 {
-                    ImageIcon porte = new ImageIcon(new ImageIcon("C:/imgWoz/dungeonDoor.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
+                    ImageIcon porte = new ImageIcon(new ImageIcon("C:/Users/Marin/Documents/NetBeansProjects/WorldOfZuul/JavaApplication2/images/dungeonDoor.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
                     JButton doorWest = new JButton(porte);
                     doorWest.setPreferredSize(new Dimension(100,100));
                     doorWest.setMinimumSize(new Dimension(100,100));
@@ -148,7 +148,7 @@ private int rdVal;
                 }
                 else if(east==true && nbButt==14)
                 {
-                    ImageIcon porte = new ImageIcon(new ImageIcon("C:/imgWoz/dungeonDoor.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
+                    ImageIcon porte = new ImageIcon(new ImageIcon("C:/Users/Marin/Documents/NetBeansProjects/WorldOfZuul/JavaApplication2/images/dungeonDoor.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
                     JButton doorEast = new JButton(porte);
                     doorEast.setPreferredSize(new Dimension(100,100));
                     doorEast.setMinimumSize(new Dimension(100,100));
@@ -162,7 +162,7 @@ private int rdVal;
                 
         //-----------------------------Adding NPC-------------------------------
                 else if(listHost.contains(nbButt)){
-                        ImageIcon host = new ImageIcon(new ImageIcon("C:/imgWoz/monstre1.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
+                        ImageIcon host = new ImageIcon(new ImageIcon("C:/Users/Marin/Documents/NetBeansProjects/WorldOfZuul/JavaApplication2/images/monstre1.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
                         JButton btHost= new JButton(host);
                         btHost.setPreferredSize(new Dimension(100,100));
                         btHost.setMinimumSize(new Dimension(100,100));
@@ -172,7 +172,7 @@ private int rdVal;
         //----------------------------------------------------------------------
         //-----------------------------Adding Friendly--------------------------            
                 else if(listFriend.contains(nbButt)){
-                        ImageIcon friendly = new ImageIcon(new ImageIcon("C:/imgWoz/dungeonDwarf.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
+                        ImageIcon friendly = new ImageIcon(new ImageIcon("C:/Users/Marin/Documents/NetBeansProjects/WorldOfZuul/JavaApplication2/images/dungeonDwarf.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
                         JButton btFriend= new JButton(friendly);
                         btFriend.setPreferredSize(new Dimension(100,100));
                         btFriend.setMinimumSize(new Dimension(100,100));
@@ -182,7 +182,7 @@ private int rdVal;
         //----------------------------------------------------------------------
         //-----------------------------Adding Chests----------------------------        
                 else if(listChest.contains(nbButt)){
-                    ImageIcon chest= new ImageIcon(new ImageIcon("C:/imgWoz/dungeonChest.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
+                    ImageIcon chest= new ImageIcon(new ImageIcon("C:/Users/Marin/Documents/NetBeansProjects/WorldOfZuul/JavaApplication2/images/dungeonChest.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
                     JButton btChest= new JButton(chest);
                     btChest.setPreferredSize(new Dimension(100,100));
                     btChest.setMinimumSize(new Dimension(100,100));
@@ -192,7 +192,7 @@ private int rdVal;
         //----------------------------------------------------------------------
         //-----------------------------Adding Floor-----------------------------        
                 else{   
-                    ImageIcon dalle1 = new ImageIcon(new ImageIcon("C:/imgWoz/dalleFinal.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
+                    ImageIcon dalle1 = new ImageIcon(new ImageIcon("C:/Users/Marin/Documents/NetBeansProjects/WorldOfZuul/JavaApplication2/images/dalleFinal.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
                     JButton button2 = new JButton(dalle1);
                     button2.setPreferredSize(new Dimension(100,100));
                     button2.setMinimumSize(new Dimension(100,100));
