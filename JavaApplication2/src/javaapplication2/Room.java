@@ -10,7 +10,7 @@ import javax.swing.*;
  * @author Jonathan, Babujhi
  */
 public class Room {
-    private boolean clear;
+    private boolean clear,visited;
     private ArrayList<NPC> characterRoom; //pas deux fois le meme
     private ArrayList<Chest> chestRoom; // pas deux fois le meme
     private String nameRoom;
@@ -23,8 +23,9 @@ public class Room {
      * @param name if there is no name, it automatically set to "Room"
      * @param empty set the boolean clear in the constructor
      */
-    public Room(String name, boolean empty, Icon pic){
+    public Room(String name, boolean empty, boolean visit, Icon pic){
         clear = empty;
+        visited = visit;
         nameRoom = name;
         exit = new HashMap <>();
         characterRoom = new ArrayList<NPC>();
@@ -38,6 +39,22 @@ public class Room {
      */
     public boolean isClear(){
         return clear;
+    }
+    
+    /**
+     * Get if the room is visited (true : visited, false : not visited)
+     * @return a boolean depending if the room is visited or not
+     */
+    public boolean isVisited(){
+        return visited;
+    }
+    
+    /**
+     * Allows to modify the parameter visited, which is a boolean. If the boolean is 
+     * true it becomes false and vice versa.
+     */
+    public void setVisited(){
+        visited = !visited;
     }
 
     /**
@@ -140,5 +157,9 @@ public class Room {
      */
     public Chest getChest(int posListChest) {
         return chestRoom.get(posListChest);
+    }
+    
+    public Icon getPicture(){
+        return pictRoom;
     }
 }

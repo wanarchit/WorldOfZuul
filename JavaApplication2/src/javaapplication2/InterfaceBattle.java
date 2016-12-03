@@ -28,10 +28,10 @@ public class InterfaceBattle extends JPanel implements ActionListener{
     private int round;
     private Icon imgRunAway = new ImageIcon("images/fuite2.PNG");
     //private JFrame mainFrame;
-    private InterfaceTest3 mainFrame;
+    private Game mainFrame;
     private Sound s;
     
-    public InterfaceBattle(Player myPlayer, NPC enemyNPC, InterfaceTest3 frame){
+    public InterfaceBattle(Player myPlayer, NPC enemyNPC, Game frame){
         p = myPlayer;
         enemy = enemyNPC;
         mainFrame = frame;
@@ -186,7 +186,7 @@ public class InterfaceBattle extends JPanel implements ActionListener{
             
         }else if (e.getSource().equals(end)){
             this.setVisible(false);
-            JButton[] arrayButtons = mainFrame.getNPCButton();
+            JButton[] arrayButtons = mainFrame.getGameGrid().getNPCButton();
             for (int j =0;j<mainFrame.getNbNPC();j++){
                 arrayButtons[j].setEnabled(true);  
             }

@@ -35,9 +35,9 @@ public class InterfaceInventory extends JFrame implements ActionListener, Window
     private KarmaBar kBar;
     private int weaponEq = -1;
     private int armorEq = -1;
-    private InterfaceTest3 mainFrame;
+    private Game mainFrame;
     
-    public InterfaceInventory(Player pl, NPC enemy, InterfaceTest3 intTest){
+    public InterfaceInventory(Player pl, NPC enemy, Game intTest){
         mainFrame = intTest;
         p = pl;
         // Title

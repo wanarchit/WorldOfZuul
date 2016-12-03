@@ -23,9 +23,9 @@ public class InterfaceSeller extends JPanel implements ActionListener{
     private Player p;
     private NPC seller;
 
-    private InterfaceTest3 mainFrame;
+    private Game mainFrame;
     
-    public InterfaceSeller(Player myPlayer, NPC enemyNPC, InterfaceTest3 frame){
+    public InterfaceSeller(Player myPlayer, NPC enemyNPC, Game frame){
         p = myPlayer;
         seller = enemyNPC;
         mainFrame = frame;
@@ -66,7 +66,7 @@ public class InterfaceSeller extends JPanel implements ActionListener{
     
         }else if (e.getSource().equals(end)){
             this.setVisible(false);
-            JButton[] arrayButtons = mainFrame.getNPCButton();
+            JButton[] arrayButtons = mainFrame.getGameGrid().getNPCButton();
             for (int j =0;j<mainFrame.getNbNPC();j++){
                 arrayButtons[j].setEnabled(true);  
             }

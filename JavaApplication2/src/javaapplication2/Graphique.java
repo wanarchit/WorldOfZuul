@@ -22,14 +22,9 @@ import java.util.HashMap;
 import java.util.concurrent.ThreadLocalRandom;
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.Box;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.SwingUtilities;
 
-public class Graphique extends JFrame implements ActionListener {
+
+public class Graphique extends JPanel implements ActionListener {
 private Room actRoom;
 private HashMap <String, Door> roomHM;
 private boolean north,south,east,west;
@@ -45,25 +40,38 @@ private int c=0; // Chest counter
 private int cpt=0;
 private ArrayList<NPC> listNPC;
 private ArrayList<Chest> listCh;
-//private ArrayList<Integer> listHost;
-//private ArrayList<Integer> listFriend;
-//private ArrayList<Integer> listChest;
 private int min=0;
 private int max=24;
 private int rdVal;
+private int nbNPC;
+private int nbChest;
+private NPC npc = null;
+private boolean isSeller;
+private boolean activeFight;
+private InterfaceBattle myPanelBattle;
+private InterfaceSeller myPanelSeller;
+private Player myPlayer;
+private Game myGame;
+private int cptM,cptF,cptC=0;
 
-
-    public JPanel Affiche(Player myPlayer) {
+    public Graphique(Player play,Game game){
+        myGame = game;
+        myPlayer = play;
+        nbNPC = myPlayer.getActualRoom().getNPCRoom().size();
+        nbChest = myPlayer.getActualRoom().getChestRoom().size();
         ArrayList<Integer> listHost = new ArrayList<Integer>();
         ArrayList<Integer> listFriend = new ArrayList<Integer>();
         ArrayList<Integer> listChest = new ArrayList<Integer>();
-        mPlayer=myPlayer;
+        
+        
         listNPC=myPlayer.getActualRoom().getNPCRoom();
         listCh=myPlayer.getActualRoom().getChestRoom();
-        nbPos=(myPlayer.getActualRoom().getNPCRoom().size())+(myPlayer.getActualRoom().getChestRoom().size());
-        JFrame frame = new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(new BorderLayout());
+        //nbPos=(myPlayer.getActualRoom().getNPCRoom().size())+(myPlayer.getActualRoom().getChestRoom().size());
+
+
+        //----------------------------------------------------------------------
+        arrayButton = new JButton[myPlayer.getActualRoom().getNPCRoom().size()];
+        arrayChest = new JButton[myPlayer.getActualRoom().getChestRoom().size()];
         //----------------------------------------------------------------------
         ArrayList<Integer> listPos = new ArrayList<Integer>();
         listPos.add(22);
@@ -110,8 +118,7 @@ private int rdVal;
             listChest.add(rdVal);
         }
         //----------------------------------------------------------------------
-        arrayButton = new JButton[myPlayer.getActualRoom().getNPCRoom().size()];
-        arrayChest = new JButton[myPlayer.getActualRoom().getChestRoom().size()];
+        
         //---------------------------
         for(int nbButt=0; nbButt <25; nbButt++){
         //----------------------------------------------------------------------
@@ -163,31 +170,35 @@ private int rdVal;
         //-----------------------------Adding NPC-------------------------------
                 else if(listHost.contains(nbButt)){
                         ImageIcon host = new ImageIcon(new ImageIcon("images/monstre1.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
-                        JButton btHost= new JButton(host);
-                        btHost.setPreferredSize(new Dimension(100,100));
-                        btHost.setMinimumSize(new Dimension(100,100));
-                        gameGrid.add(btHost);
-                        btHost.addActionListener(this);
+                        arrayButton[cptM]= new JButton(host);
+                        System.out.println(cptM);
+                        arrayButton[cptM].setPreferredSize(new Dimension(100,100));
+                        arrayButton[cptM].setMinimumSize(new Dimension(100,100));
+                        gameGrid.add(arrayButton[cptM]);
+                        arrayButton[cptM].addActionListener(this);
+                        cptM++;
                     }
         //----------------------------------------------------------------------
         //-----------------------------Adding Friendly--------------------------            
                 else if(listFriend.contains(nbButt)){
                         ImageIcon friendly = new ImageIcon(new ImageIcon("images/dungeonDwarf.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
-                        JButton btFriend= new JButton(friendly);
-                        btFriend.setPreferredSize(new Dimension(100,100));
-                        btFriend.setMinimumSize(new Dimension(100,100));
-                        gameGrid.add(btFriend);
-                        btFriend.addActionListener(this);
+                        arrayButton[cptM]= new JButton(friendly);
+                        arrayButton[cptM].setPreferredSize(new Dimension(100,100));
+                        arrayButton[cptM].setMinimumSize(new Dimension(100,100));
+                        gameGrid.add(arrayButton[cptM]);
+                        arrayButton[cptM].addActionListener(this);
+                        cptM++;
                     }
         //----------------------------------------------------------------------
         //-----------------------------Adding Chests----------------------------        
                 else if(listChest.contains(nbButt)){
                     ImageIcon chest= new ImageIcon(new ImageIcon("images/dungeonChest.png").getImage().getScaledInstance(190,190, Image.SCALE_DEFAULT));
-                    JButton btChest= new JButton(chest);
-                    btChest.setPreferredSize(new Dimension(100,100));
-                    btChest.setMinimumSize(new Dimension(100,100));
-                    gameGrid.add(btChest);
-                    btChest.addActionListener(this);
+                    arrayChest[cptC]= new JButton(chest);
+                    arrayChest[cptC].setPreferredSize(new Dimension(100,100));
+                    arrayChest[cptC].setMinimumSize(new Dimension(100,100));
+                    gameGrid.add(arrayChest[cptC]);
+                    arrayChest[cptC].addActionListener(this);
+                    cptC++;
                 }
         //----------------------------------------------------------------------
         //-----------------------------Adding Floor-----------------------------        
@@ -199,8 +210,49 @@ private int rdVal;
                     gameGrid.add(button2);
                 }
             }
-                
-        
+    }
+    public void actionPerformed (ActionEvent e){
+        for (int i =0;i<nbNPC;i++){
+            if (e.getSource() == arrayButton[i]){
+                npc = listNPC.get(i);
+                if (npc.isHostile()){
+                    isSeller = false;
+                    activeFight = true;
+                    myPanelBattle = new InterfaceBattle(myPlayer,npc,myGame);
+                    myGame.getPanelEast().add(myPanelBattle,BorderLayout.EAST);
+                    for (int j =0;j<nbNPC;j++){
+                         arrayButton[j].setEnabled(false);  
+                    }
+                    for (int j =0;j<nbChest;j++){
+                         arrayChest[j].setEnabled(false);  
+                    }
+                    myGame.revalidate();
+                }else{
+                    isSeller = true;
+                    myPanelSeller = new InterfaceSeller(myPlayer,npc,myGame);
+                    myGame.getPanelEast().add(myPanelSeller,BorderLayout.EAST);
+                    myGame.revalidate();
+                    for (int j =0;j<nbNPC;j++){
+                         arrayButton[j].setEnabled(false);
+                    }
+                    for (int j =0;j<nbChest;j++){
+                         arrayChest[j].setEnabled(false);  
+                    }
+                }
+            }
+        }
+    }
+    
+    public JPanel getPanel(){
+        return gameGrid;
+    }
+    
+     public JButton[] getNPCButton(){
+        return arrayButton;
+    }
+}
+
+        /**
         gameGrid.setPreferredSize(new Dimension(900,900));//largeur,hauteur
         gameGrid.setMinimumSize(new Dimension(900,900));
         this.add(gameGrid,BorderLayout.WEST);
@@ -210,7 +262,7 @@ private int rdVal;
     }
      //--------------------------------------------------------------------------
     //----------------------ActionListener---------------------------
-    public void actionPerformed (ActionEvent e){
+    //*public void actionPerformed (ActionEvent e){
          if (e.getSource().equals(doorSouth)){
             Graphique newAffiche = new Graphique();
             gameGrid=newAffiche.Affiche(mPlayer);
@@ -236,6 +288,7 @@ private int rdVal;
             this.setContentPane(newAffiche.Affiche(mPlayer));     
         }
 
-       
-}
-}
+     
+        
+}**/
+
