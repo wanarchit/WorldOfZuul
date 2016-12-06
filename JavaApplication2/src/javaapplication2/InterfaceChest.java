@@ -61,9 +61,9 @@ public class InterfaceChest extends JPanel implements ActionListener{
     
         }else if (e.getSource().equals(end)){
             this.setVisible(false);
-            JButton[] arrayButtons = mainFrame.getNPCButton();
+           // JButton[] arrayButtons = mainFrame.getNPCButton();
             for (int j =0;j<mainFrame.getNbNPC();j++){
-                arrayButtons[j].setEnabled(true);  
+          //      arrayButtons[j].setEnabled(true);  
             }
             JButton[] arrayButtons2 = mainFrame.getChestButton();
             for (int j =0;j<mainFrame.getNbChest();j++){

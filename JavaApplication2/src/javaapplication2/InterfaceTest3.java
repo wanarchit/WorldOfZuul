@@ -97,21 +97,21 @@ public class InterfaceTest3 extends JFrame implements ActionListener{
     
     public void actionPerformed (ActionEvent e){
         if (e.getSource().equals(myButton)){
-            InterfaceInventory inventoryFrame = new InterfaceInventory(p,npc,this);   
+     //       InterfaceInventory inventoryFrame = new InterfaceInventory(p,npc,this);   
         }
         for (int i =0;i<nbNPC;i++){
             if (e.getSource() == arrayButton[i]){
                 npc = npcRoom.get(i);
                 if (npc.isHostile()){
                     activeFight = true;
-                    myPanelBattle = new InterfaceBattle(p,npc,this);
+     //               myPanelBattle = new InterfaceBattle(p,npc,this);
                     myPanelG.add(myPanelBattle,BorderLayout.EAST);
                     for (int j =0;j<nbNPC;j++){
                          arrayButton[j].setEnabled(false);  
                     }
                     myFrame.revalidate();
                 }else{
-                    myPanelSeller = new InterfaceSeller(p,npc,this);
+      //              myPanelSeller = new InterfaceSeller(p,npc,this);
                     myPanelG.add(myPanelSeller,BorderLayout.EAST);
                     myFrame.revalidate();
                 }
